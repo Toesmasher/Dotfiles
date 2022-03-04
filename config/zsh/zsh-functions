@@ -1,0 +1,32 @@
+ZSH_PLUGINS_DIR="${HOME}/.local/share/zfs/plugins"
+
+function zsh_add_file() {
+  if [ -f "$1" ]; then
+    source "$1"
+  elif [ -f "${ZDOTDIR}/$1" ]; then
+    source "${ZDOTDIR}/$1"
+  fi
+}
+
+function zsh_add_plugin() {
+  PLUGIN_NAME="$(echo $1 | cut -d "/" -f 2)"
+  THIS_DIR="${ZSH_PLUGINS_DIR}/${PLUGIN_NAME}"
+
+  if [ ! -d "${THIS_DIR}" ]; then
+    git clone "https://github.com/$1.git" "${THIS_DIR}"
+  fi
+
+  zsh_add_file "${THIS_DIR}/${PLUGIN_NAME}.plugin.zsh" ||
+    zsh_add_file "${THIS_DIR}/${PLUGIN_NAME}.zsh"
+}
+
+function zsh_add_completion() {
+  PLUGIN_NAME=$(echo $1 | cut -d "/" -f 2)
+  THIS_DIR="${ZSH_PLUGINS_DIR}/${PLUGIN_NAME}"
+
+  zsh_add_plugin $1
+
+  completion_file_path=$(ls ${THIS_DIR}/_*) 
+  fpath+="$(dirname ${completion_file_path})"
+  [ "$2" = true ] && compinit "${completion_file:1}"
+}

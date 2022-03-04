@@ -1,0 +1,2 @@
+export PAGER=""
+export EDITOR="nvim"
