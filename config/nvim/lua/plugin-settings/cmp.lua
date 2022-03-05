@@ -1,3 +1,8 @@
+local status_ok, icons = pcall(require, 'icons')
+if not status_ok then
+  return
+end
+
 local status_ok, cmp = pcall(require, 'cmp')
 if not status_ok then
   return
@@ -15,9 +20,11 @@ cmp.setup({
     end,
   },
   mapping = {
-    ['<Tab>'] = cmp.mapping.select_next_item(),
+    ['<Down']   = cmp.mapping.select_next_item(),
+    ['<Up>']    = cmp.mapping.select_prev_item(),
+    ['<Tab>']   = cmp.mapping.select_next_item(),
     ['<S-Tab>'] = cmp.mapping.select_prev_item(),
-    ['<CR>'] = cmp.mapping.confirm({
+    ['<CR>']    = cmp.mapping.confirm({
       behavior = cmp.ConfirmBehavior.Replace,
       select = true
     })
@@ -30,9 +37,9 @@ cmp.setup({
   formatting = {
     format = function(entry, item)
       item.menu = ({
-        nvim_lsp = "[LSP]",
-        path =     "[Path]",
-        luasnip =  "[Snippet]",
+        nvim_lsp = icons.kind.Function,
+        path =     icons.kind.File,
+        luasnip =  icons.kind.Snippet,
       })[entry.source.name]
 
       return item

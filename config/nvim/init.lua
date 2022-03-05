@@ -24,7 +24,6 @@ require('plugin-settings.colorizer')
 require('plugin-settings.gitsigns')
 require('plugin-settings.lualine')
 require('plugin-settings.nvimtree')
-require('plugin-settings.signify')
 require('plugin-settings.tree-sitter')
 
 require('plugin-settings.lsp')
@@ -32,4 +31,4 @@ require('plugin-settings.lsp')
 require('plugin-settings.colors.dracula')
 --require('plugin-settings.colors.darkplus')
 
--- vim.cmd([[ hi Normal guibg=None ctermbg=None ]])
+vim.cmd([[ hi Normal guibg=None ctermbg=None ]])
