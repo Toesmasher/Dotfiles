@@ -1,3 +1,8 @@
+local status_ok, icons = pcall(require, 'icons')
+if not status_ok then
+  return
+end
+
 local status_ok, lualine = pcall(require, 'lualine')
 if not status_ok then
   return
@@ -22,7 +27,7 @@ local diff = {
 local branch = {
   'branch',
   icons_enabled = true,
-  icon = ''
+  icon = icons.git.Branch
 }
 
 lualine.setup({
