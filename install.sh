@@ -1,16 +1,3 @@
-#!/usr/bin/env sh
-
-SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
-TARGET=$1
-
-PLATFORM=$(uname -s)
-
-CONFIG_SRC="${SCRIPT_DIR}/config"
-CONFIG_DST="${HOME}/.config"
-
-LINUX_FONT_SRC="${SCRIPT_DIR}/local/share/fonts"
-LINUX_FONT_DST="${HOME}/.local/share/fonts"
-
 function symlinker() {
   SRC_PATH="$1"
   DST_PATH="$2"
@@ -23,6 +10,18 @@ function symlinker() {
     ln -s "${SRC_PATH}" "${DST_PATH}"
   fi
 }
+
+SCRIPT_DIR=$(dirname ${0})
+TARGET=$1
+
+PLATFORM=$(uname -s)
+
+CONFIG_SRC="${SCRIPT_DIR}/config"
+CONFIG_DST="${HOME}/.config"
+
+LINUX_FONT_SRC="${SCRIPT_DIR}/local/share/fonts"
+LINUX_FONT_DST="${HOME}/.local/share/fonts"
+
 
 # Find all direcories in config/
 CONFIG_NAMES=()
