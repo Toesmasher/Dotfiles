@@ -1,6 +1,6 @@
 colors:
   primary:
-    background: "#111111"
+    background: "#282A36" # Dracula vim theme color
     foreground: "#D8DEE9"
 
   normal:

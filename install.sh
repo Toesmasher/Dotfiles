@@ -1,0 +1,62 @@
+#!/usr/bin/env sh
+
+SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
+TARGET=$1
+
+PLATFORM=$(uname -s)
+
+CONFIG_SRC="${SCRIPT_DIR}/config"
+CONFIG_DST="${HOME}/.config"
+
+LINUX_FONT_SRC="${SCRIPT_DIR}/local/share/fonts"
+LINUX_FONT_DST="${HOME}/.local/share/fonts"
+
+function symlinker() {
+  SRC_PATH="$1"
+  DST_PATH="$2"
+
+  if [ -e "${DST_PATH}" ]; then
+    echo "${DST_PATH} already exists"
+  else
+    echo "${SRC_PATH} -> ${DST_PATH}"
+    mkdir -p "$(dirname "${DST_PATH}")"
+    ln -s "${SRC_PATH}" "${DST_PATH}"
+  fi
+}
+
+# Find all direcories in config/
+CONFIG_NAMES=()
+for d in ${CONFIG_SRC}/*/; do
+  CONFIG_NAMES+=("$(basename "${d}")")
+done
+
+LINUX_FONT_NAMES=()
+for f in ${SCRIPT_DIR}/local/share/fonts/*; do
+  LINUX_FONT_NAMES+=("$(basename "${f}")")
+done
+
+# Platform-specific stuff
+case ${PLATFORM} in
+  Linux)
+    for f in "${LINUX_FONT_NAMES[@]}"; do
+      symlinker "${LINUX_FONT_SRC}/${f}" "${LINUX_FONT_DST}/${f}"
+    done
+    fc-cache -f &
+    ;;
+
+  Darwin)
+    ;;
+
+  FreeBSD)
+    ;;
+
+  *)
+    echo "Unknown platform, bailing out"
+    exit -1
+    ;;
+esac
+
+for d in ${CONFIG_NAMES[@]}; do
+  symlinker "${CONFIG_SRC}/${d}" "${CONFIG_DST}/${d}"
+done
+
