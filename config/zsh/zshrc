@@ -1,4 +1,4 @@
-export ZDOTDIR="${HOME}/.config/zsh"
+export ZCONFDIR="${HOME}/.config/zsh"
 
 # Some useful options (man zshoptions)
 setopt appendhistory
@@ -23,7 +23,7 @@ autoload -U down-line-or-beginning-search
 zle -N up-line-or-beginning-search
 zle -N down-line-or-beginning-search
 
-source "${ZDOTDIR}/zsh-functions"
+source "${ZCONFDIR}/zsh-functions"
 
 zsh_add_file "zsh-prompt"
 zsh_add_file "zsh-exports"
