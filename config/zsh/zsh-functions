@@ -30,3 +30,18 @@ function zsh_add_completion() {
   fpath+="$(dirname ${completion_file_path})"
   compinit "${completion_file:1}"
 }
+
+function zsh_add_git_completion() {
+  THIS_DIR="${ZSH_PLUGINS_DIR}/git"
+  GIT_CMP_ZSH_SRC="https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.zsh" 
+  GIT_CMP_BASH_SRC="https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash"
+
+  if [ ! -d ${THIS_DIR} ]; then
+    mkdir -p "${THIS_DIR}"
+    curl -o "${THIS_DIR}/_git" "${GIT_CMP_ZSH_SRC}" 
+    curl -o "${THIS_DIR}/git-completion.bash" "${GIT_CMP_BASH_SRC}"
+  fi
+
+  fpath+="${ZSH_PLUGINS_DIR}/git"
+  compinit "${THIS_DIR}/git/_git" 
+}
