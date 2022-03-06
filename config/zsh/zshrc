@@ -1,21 +1,27 @@
 export ZCONFDIR="${HOME}/.config/zsh"
 
+# History
+HISTSIZE=10000
+SAVEHIST=10000
+HISTFILE="${HOME}/.cache/zsh/history"
+
 # Some useful options (man zshoptions)
 setopt appendhistory
 setopt autolist
 #setopt autocd
 setopt extendedglob
 setopt interactive_comments
-#setopt menucomplete
+setopt menucomplete
 setopt nomatch
 
 unsetopt BEEP
 
 # Completions
-autoload -Uz compinit
+autoload -Uz compinit && compinit
 
 zmodload zsh/complist
 _comp_options+=(globdots) # Include hidden files
+zstyle ':completion:*' menu select
 
 autoload -U up-line-or-beginning-search
 autoload -U down-line-or-beginning-search
@@ -31,3 +37,5 @@ zsh_add_file "zsh-aliases"
 
 zsh_add_plugin "zsh-users/zsh-autosuggestions"
 zsh_add_plugin "zsh-users/zsh-syntax-highlighting"
+
+zsh_add_git_completion
