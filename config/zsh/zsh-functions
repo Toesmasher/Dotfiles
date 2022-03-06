@@ -28,5 +28,5 @@ function zsh_add_completion() {
 
   completion_file_path=$(ls ${THIS_DIR}/_*) 
   fpath+="$(dirname ${completion_file_path})"
-  [ "$2" = true ] && compinit "${completion_file:1}"
+  compinit "${completion_file:1}"
 }

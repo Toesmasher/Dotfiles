@@ -47,6 +47,7 @@ keys = [
     Key([mod], "j", lazy.layout.down(), desc="Move focus down"),
     Key([mod], "k", lazy.layout.up(), desc="Move focus up"),
     Key([mod], "space", lazy.layout.next(), desc="Move window focus to other window"),
+    Key([mod], "Tab", lazy.next_layout(), desc="Toggle between layouts"),
     # Move windows between left/right columns or move up/down in current stack.
     # Moving out of range in Columns layout will create new column.
     Key([mod, "shift"], "h", lazy.layout.shuffle_left(), desc="Move window to the left"),
@@ -61,14 +62,22 @@ keys = [
     Key([mod, "control"], "k", lazy.layout.grow_up(), desc="Grow window up"),
     Key([mod], "n", lazy.layout.normalize(), desc="Reset all window sizes"),
 
-    Key([mod], "Return", lazy.spawn(terminal), desc="Launch terminal"),
-    # Toggle between different layouts as defined below
-    Key([mod], "Tab", lazy.next_layout(), desc="Toggle between layouts"),
+    # Window control
     Key([mod], "w", lazy.window.kill(), desc="Kill focused window"),
     Key([mod], "f", lazy.window.toggle_fullscreen(), desc="Window to fullscreen"),
+
+    # QTile control
     Key([mod, "control"], "r", lazy.reload_config(), desc="Reload the config"),
     Key([mod, "control"], "q", lazy.shutdown(), desc="Shutdown Qtile"),
+
+    # Program starters
+    Key([mod], "Return", lazy.spawn(terminal), desc="Launch terminal"),
     Key([mod], "r", lazy.spawn("rofi -show combi"), desc="Rofi"),
+
+    # Media keys
+    Key([], "XF86AudioRaiseVolume", lazy.spawn("pulsemixer --change-volume +5"), desc="Raise volume"),
+    Key([], "XF86AudioLowerVolume", lazy.spawn("pulsemixer --change-volume -5"), desc="Lower volume"),
+    Key([], "XF86AudioMute"       , lazy.spawn("pulsemixer --toggle-mute"), desc="Mute audio"),
 ]
 
 groups = [
@@ -127,6 +136,7 @@ leftbar = bar.Bar(
     widget.GroupBox(),
     widget.WindowName(),
     widget.Systray(),
+    widget.Volume(),
     widget.Clock(format="%Y-%m-%d %a %H:%M"),
     ],
     24,
@@ -137,11 +147,11 @@ leftbar = bar.Bar(
 screens = [
     Screen(
         top=leftbar,
-        wallpaper="/home/nicke/Pictures/wallpapers/wanderers.jpeg",
+        wallpaper="/home/nicke/pictures/wallpapers/Mountain.png",
         wallpaper_mode="fill",
     ),
     Screen(
-        wallpaper="/home/nicke/Pictures/wallpapers/wanderers.jpeg",
+        wallpaper="/home/nicke/pictures/wallpapers/Mountain.png",
         wallpaper_mode="fill",
     ),
 
