@@ -1,9 +1,13 @@
 export ZCONFDIR="${HOME}/.config/zsh"
+export ZCACHEDIR="${HOME}/.cache/zsh"
 
 # History
 HISTSIZE=10000
 SAVEHIST=10000
-HISTFILE="${HOME}/.cache/zsh/history"
+if [ ! -d "${ZCACHEDIR}/zsh" ]; then
+  mkdir -p "${ZCACHEDIR}/.cache/zsh"
+fi
+HISTFILE="${ZCACHEDIR}/history"
 
 # Some useful options (man zshoptions)
 setopt appendhistory
@@ -11,7 +15,7 @@ setopt autolist
 #setopt autocd
 setopt extendedglob
 setopt interactive_comments
-setopt menucomplete
+#setopt menucomplete
 setopt nomatch
 
 unsetopt BEEP
