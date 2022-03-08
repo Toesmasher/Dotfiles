@@ -31,4 +31,7 @@ require('plugin-settings.lsp')
 require('plugin-settings.colors.dracula')
 --require('plugin-settings.colors.darkplus')
 
-vim.cmd([[ hi Normal guibg=None ctermbg=None ]])
+vim.cmd([[
+  autocmd VimResized * wincmd =
+  hi Normal guibg=None ctermbg=None
+]])
