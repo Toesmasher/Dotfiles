@@ -24,6 +24,7 @@ return require('packer').startup(function(use)
   -- Colorschemes
   use { 'mofiqul/dracula.nvim' }
   use { 'lunarvim/darkplus.nvim' }
+  use { 'ellisonleao/gruvbox.nvim' }
 
   -- Buffer closer
   use { 'moll/vim-bbye' }
