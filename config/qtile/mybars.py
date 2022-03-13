@@ -58,7 +58,7 @@ __newbar = bar.Bar(
         ),
         __arrowbox_left("dark", "yellow"),
         widget.Memory(
-            padding = 0,
+            padding = 5,
             foreground = __widget_color("dark"),
             background = __widget_color("yellow"),
         ),

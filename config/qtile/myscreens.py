@@ -4,7 +4,7 @@ from libqtile.config import Screen
 
 import mybars
 
-__wallpaper = os.path.expanduser("~/pictures/wallpapers/Mountain.png")
+__wallpaper = os.path.expanduser("~/Pictures/wallpapers/Mountain.png")
 
 __screens = [
     Screen(

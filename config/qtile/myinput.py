@@ -58,7 +58,7 @@ __keys = [
 
     # Program starters
     Key([__mod], "Return", lazy.spawn(__terminal), desc="Launch terminal"),
-    Key([__mod], "r", lazy.spawn("rofi -show combi"), desc="Rofi"),
+    Key([__mod], "r", lazy.spawn("rofi -show run"), desc="Rofi"),
 
     # Media keys
     Key([], "XF86AudioRaiseVolume", lazy.spawn("pulsemixer --change-volume +5"), desc="Raise volume"),
