@@ -28,9 +28,9 @@ require('plugin-settings.tree-sitter')
 
 require('plugin-settings.lsp')
 
---require('plugin-settings.colors.dracula')
+require('plugin-settings.colors.dracula')
 --require('plugin-settings.colors.darkplus')
-require('plugin-settings.colors.gruvbox')
+--require('plugin-settings.colors.gruvbox')
 
 vim.cmd([[
   autocmd VimResized * wincmd =
