@@ -4,6 +4,8 @@ alias ll="ls -la"
 alias ccls_gen="find . -type f -name '*.h' | sed -r 's|/[^/]+$||' | \
   sort | uniq | sed -r 's/^\.\//-I\.\//' > .ccls"
 
+alias clangd_gen="make -wn | compiledb -o- > compile_commands.json"
+
 case "$(uname -s)" in
   Darwin)
     alias ls="ls -CFG"

@@ -14,7 +14,7 @@ capabilities = cmp_nvim_lsp.update_capabilities(capabilities)
 capabilities.offsetEncoding = { 'utf-16' } -- Temporary fix
 
 -- Start up the servers
-lspconfig.ccls.setup({
+lspconfig.clangd.setup({
   capabilities = capabilities,
 
   -- Put cache in tmp
@@ -32,5 +32,9 @@ lspconfig.ccls.setup({
 })
 
 lspconfig.pyright.setup({
+  capabilities = capabilities
+})
+
+lspconfig.sumneko_lua.setup({
   capabilities = capabilities
 })

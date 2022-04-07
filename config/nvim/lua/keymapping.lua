@@ -26,7 +26,7 @@ local keys = {
   {'n', '<Leader>c', ':Bdelete<CR>', opts_default},
 
   -- Hop
-  {'n', '<Leader>hw', ':HopWord<CR>', opts_default},
+  {'n', '<Leader>w', ':HopWord<CR>', opts_default},
 
   -- Nvimtree
   {'n', '<Leader>nt', ':NvimTreeRefresh<CR>:NvimTreeToggle<CR>', opts_default},
@@ -38,9 +38,10 @@ local keys = {
   {'n', '<Leader>sv', '<C-w>v', opts_default},
   {'n', '<Leader>se', '<C-w>=', opts_default},
 
-  -- LSP avigation, Prefix: <Leader>n
+  -- LSP navigation, Prefix: <Leader>n
   {'n', '<Leader>nd', ':lua vim.lsp.buf.declaration()<CR>', opts_default},
   {'n', '<Leader>ni', ':lua vim.lsp.buf.definition()<CR>',  opts_default},
+  {'n', '<Leader>no', ':lua vim.lsp.buf.implementation()<CR>', opts_default},
   {'n', '<Leader>nb', '<C-o>',                              opts_default},
   
   -- LSP symbols, Prefix: <Leader>n
