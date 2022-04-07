@@ -22,7 +22,9 @@ require('plugin-settings.bufferline')
 require('plugin-settings.cmp')
 require('plugin-settings.colorizer')
 require('plugin-settings.gitsigns')
+require('plugin-settings.hop')
 require('plugin-settings.lualine')
+require('plugin-settings.nvim-notify')
 require('plugin-settings.nvimtree')
 require('plugin-settings.tree-sitter')
 
@@ -30,9 +32,7 @@ require('plugin-settings.lsp')
 
 require('plugin-settings.colors.dracula')
 --require('plugin-settings.colors.darkplus')
---require('plugin-settings.colors.gruvbox')
 
 vim.cmd([[
   autocmd VimResized * wincmd =
-  hi Normal guibg=None ctermbg=None
 ]])

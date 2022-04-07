@@ -6,9 +6,9 @@ if not status_ok then
 end
 
 local g = {
-  dracula_transparent_bg = true
+  dracula_transparent_bg = false
 }
-h.set_globals(g)
+--h.set_globals(g)
 
 vim.cmd([[
   color dracula

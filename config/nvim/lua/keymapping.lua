@@ -25,6 +25,9 @@ local keys = {
   {'n', '<S-Tab>',   ':bprev<CR>',   opts_default},
   {'n', '<Leader>c', ':Bdelete<CR>', opts_default},
 
+  -- Hop
+  {'n', '<Leader>hw', ':HopWord<CR>', opts_default},
+
   -- Nvimtree
   {'n', '<Leader>nt', ':NvimTreeRefresh<CR>:NvimTreeToggle<CR>', opts_default},
 

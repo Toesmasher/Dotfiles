@@ -3,7 +3,7 @@ if not status_ok then
   return
 end
 
-local uncrustify_cfg = '~/Repos/xbus_fw/extra/uncrustify.cfg'
+local uncrustify_cfg = '~/Projects/xbus_fw/extra/uncrustify.cfg'
 
 nls.setup({
   sources = {
