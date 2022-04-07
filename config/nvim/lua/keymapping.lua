@@ -30,6 +30,7 @@ local keys = {
 
   -- Prefixed bindings
   -- Splitting, Prefix: <Leader>s
+  {'',  's',          '<nop>',  opts_default},
   {'n', '<Leader>ss', '<C-w>s', opts_default},
   {'n', '<Leader>sv', '<C-w>v', opts_default},
   {'n', '<Leader>se', '<C-w>=', opts_default},

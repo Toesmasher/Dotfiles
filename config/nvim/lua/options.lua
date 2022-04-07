@@ -48,6 +48,7 @@ local o = {
   smartcase = true,       -- Don't ignore case when search term includes case
 
   -- Swap and backup stuff
+  autoread = true,        -- Automatically reload changed files
   backup = false,         -- No backup files
   swapfile = false,       -- No swap files
   writebackup = false     -- No write-backup
