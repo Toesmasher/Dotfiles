@@ -21,10 +21,15 @@ return require('packer').startup(function(use)
     }
   }
 
+  -- Navigation
+  use { 'phaazon/hop.nvim' }
+
+  -- Notifications
+  use { 'rcarriga/nvim-notify' }
+
   -- Colorschemes
   use { 'mofiqul/dracula.nvim' }
   use { 'lunarvim/darkplus.nvim' }
-  use { 'ellisonleao/gruvbox.nvim' }
 
   -- Buffer closer
   use { 'moll/vim-bbye' }
