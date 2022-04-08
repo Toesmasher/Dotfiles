@@ -3,6 +3,13 @@ if not status_ok then
   return
 end
 
+local h = require('helpers')
+local keys = {
+  {'n', '<Leader>gh', ':Gitsigns toggle_linehl<CR>', h.key_opts_default},
+  {'n', '<Leader>gd', ':Gitsigns preview_hunk<CR>',  h.key_opts_default},
+}
+h.map_keys(keys)
+
 gs.setup {
   signs = {
     add          = {hl = 'GitSignsAdd'   , text = '│', numhl='GitSignsAddNr'   , linehl='GitSignsAddLn'},

@@ -1,4 +1,5 @@
 local M = {}
+M.key_opts_default = { silent = true }
 
 -- Pass a table to do :set
 function M.set_options(t)

@@ -40,6 +40,9 @@ return require('packer').startup(function(use)
     requires = { 'kyazdani42/nvim-web-devicons' }
   }
 
+  -- Project management
+  use { 'ahmedkhalf/project.nvim' }
+
   -- Bufferline
   use { 'akinsho/bufferline.nvim',
     requires = { 'kyazdani42/nvim-web-devicons' }
@@ -59,7 +62,7 @@ return require('packer').startup(function(use)
   use { 'neovim/nvim-lspconfig' }
   use { 'ray-x/lsp_signature.nvim' }
   use { 'tami5/lspsaga.nvim' }
-  
+
   -- Autocomplete with LSP and luasnip
   use { 'hrsh7th/nvim-cmp',
     requires = {

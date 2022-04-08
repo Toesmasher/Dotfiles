@@ -3,6 +3,12 @@ if not status_ok then
   return
 end
 
+local h = require('helpers')
+local keys = {
+  {'n', '<Leader>nt', ':NvimTreeRefresh<CR>:NvimTreeToggle<CR>', h.key_opts_default},
+}
+h.map_keys(keys)
+
 nt.setup{
   git = {
     enable = true,
