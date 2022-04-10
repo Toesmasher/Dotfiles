@@ -20,8 +20,6 @@ cmp.setup({
     end,
   },
   mapping = {
-    ['<Down']   = cmp.mapping.select_next_item(),
-    ['<Up>']    = cmp.mapping.select_prev_item(),
     ['<Tab>']   = cmp.mapping.select_next_item(),
     ['<S-Tab>'] = cmp.mapping.select_prev_item(),
     ['<CR>']    = cmp.mapping.confirm({
@@ -31,6 +29,7 @@ cmp.setup({
   },
   sources = {
     { name = 'nvim_lsp' },
+    { name = 'nvim_lsp_signature_help' },
     { name = 'path' },
     { name = 'luasnip' },
   },

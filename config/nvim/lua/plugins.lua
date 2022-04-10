@@ -60,13 +60,14 @@ return require('packer').startup(function(use)
 
   --LSP
   use { 'neovim/nvim-lspconfig' }
-  use { 'ray-x/lsp_signature.nvim' }
+  --use { 'ray-x/lsp_signature.nvim' }
   use { 'tami5/lspsaga.nvim' }
 
   -- Autocomplete with LSP and luasnip
   use { 'hrsh7th/nvim-cmp',
     requires = {
       { 'hrsh7th/cmp-nvim-lsp' },
+      { 'hrsh7th/cmp-nvim-lsp-signature-help' },
       { 'hrsh7th/cmp-path' },
 
       { 'saadparwaiz1/cmp_luasnip' },

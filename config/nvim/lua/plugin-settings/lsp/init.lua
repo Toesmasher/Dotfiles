@@ -1,6 +1,5 @@
 require('plugin-settings.lsp.lspconfig')
 require('plugin-settings.lsp.lspsaga')
-require('plugin-settings.lsp.lspsignature')
 require('plugin-settings.lsp.null-ls')
 
 -- Let diagnostic use popups instad of virtual text
