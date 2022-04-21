@@ -1,19 +1,12 @@
 require('plugins')
 
-local status_ok, _ = pcall(require, 'packer')
-if not status_ok then
-  vim.notify('No packer available!')
-  return
-end
-
--- Resource files on update and sync plug-ins if necessary
-vim.cmd([[
-  augroup LuaConfig
-    autocmd!
-    autocmd BufWritePost *nvim/*.lua source <afile>
-    autocmd BufWritePost *lua/plugins.lua PackerSync
-  augroup end
-]])
+local group = vim.api.nvim_create_augroup('ToeInit', { clear = true })
+vim.api.nvim_create_autocmd('BufWritePost',
+  { pattern = '*nvim/*.lua', command = 'source <afile>', group = group })
+vim.api.nvim_create_autocmd('BufWritePost',
+  { pattern = '*lua/plugins.lua', command = 'PackerSync', group = group })
+vim.api.nvim_create_autocmd('VimResized',
+  { command = 'wincmd =', group = group })
 
 require('keymapping')
 require('options')
@@ -30,12 +23,10 @@ require('plugin-settings.project')
 require('plugin-settings.telescope')
 require('plugin-settings.tree-sitter')
 
-require('plugin-settings.lsp')
+require('plugin-settings.lsp.lspconfig')
+require('plugin-settings.lsp.lspsaga')
+require('plugin-settings.lsp.null-ls')
 
 --require('plugin-settings.colors.dracula')
 --require('plugin-settings.colors.darkplus')
 require('plugin-settings.colors.gruvbox')
-
-vim.cmd([[
-  autocmd VimResized * wincmd =
-]])

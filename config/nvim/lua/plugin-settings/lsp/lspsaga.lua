@@ -3,7 +3,7 @@ if not status_ok then
   return
 end
 
-lspsaga.setup { -- defaults ...
+lspsaga.setup({ -- defaults ...
   debug = false,
   use_saga_diagnostic_sign = true,
   -- diagnostic sign
@@ -50,4 +50,4 @@ lspsaga.setup { -- defaults ...
   diagnostic_prefix_format = "%d. ",
   diagnostic_message_format = "%m %c",
   highlight_prefix = false,
-}
+})

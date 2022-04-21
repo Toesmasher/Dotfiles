@@ -5,15 +5,15 @@ local o = {
   -- Basic look
   cmdheight = 2,          -- Height of command window
   conceallevel = 0,       -- Don't conceal syntax stuff
-  cursorline = true,      -- Highlight the line with the cursor 
+  cursorline = true,      -- Highlight the line with the cursor
   -- gcr = '',            -- Cursor look override
-  hidden = true,          -- Hide buffers when abandoned 
-  laststatus = 2,         -- Always show last status
+  hidden = true,          -- Hide buffers when abandoned
+  laststatus = 3,         -- Use single statusbar (nvim 0.7.0)
   number = true,          -- Show line numbers
   pumheight = 10,         -- Popup menu max height
-  ruler = true,           -- Show ruler 
+  ruler = true,           -- Show ruler
   showmode = false,       -- Don't show mode, lualine does that
-  showtabline = 2,        -- Always show the tabline 
+  showtabline = 2,        -- Always show the tabline
   signcolumn = 'yes',     -- Add the sign column
   termguicolors = true,
   title = true,           -- Set the terminal title
@@ -54,4 +54,10 @@ local o = {
   writebackup = false     -- No write-backup
 }
 
+local g = {
+  do_filetype_lua = 1,    -- Use 0.7.0 LUA method of detecting filetypes
+  did_load_filetypes = 0, -- Do not load old vim filetypes as fallback
+}
+
 h.set_options(o)
+h.set_globals(g)

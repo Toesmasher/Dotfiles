@@ -33,8 +33,9 @@ local branch = {
 lualine.setup({
   options = {
     icons_enabled = true,
-    theme = 'dracula-nvim',
+    theme = 'gruvbox',
     always_divide_middle = true,
+    globalstatus = true,
   },
   -- branch, diagnostics, diff, encoding, filetype, fileformat, location, mode, progress
   sections = {

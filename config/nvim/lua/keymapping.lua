@@ -29,17 +29,6 @@ local keys = {
   {'n', '<Leader>ss', '<C-w>s', h.key_opts_default},
   {'n', '<Leader>sv', '<C-w>v', h.key_opts_default},
   {'n', '<Leader>se', '<C-w>=', h.key_opts_default},
-
-  -- LSP navigation, Prefix: <Leader>n
-  {'n', '<Leader>nd', ':lua vim.lsp.buf.declaration()<CR>',    h.key_opts_default},
-  {'n', '<Leader>ni', ':lua vim.lsp.buf.definition()<CR>',     h.key_opts_default},
-  {'n', '<Leader>no', ':lua vim.lsp.buf.implementation()<CR>', h.key_opts_default},
-  {'n', '<Leader>nb', '<C-o>',                                 h.key_opts_default},
-
-  -- LSP symbols, Prefix: <Leader>n
-  {'n', '<Leader>nc', ':Lspsaga hover_doc<CR>',  h.key_opts_default},
-  {'n', '<Leader>nx', ':Lspsaga rename<CR>',     h.key_opts_default},
-  {'n', '<Leader>nr', ':Lspsaga lsp_finder<CR>', h.key_opts_default},
 }
 
 h.map_keys(keys)
