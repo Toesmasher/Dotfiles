@@ -5,11 +5,6 @@ if not status_ok then
   return
 end
 
-local status_ok, cmp_nvim_lsp = pcall(require, 'cmp_nvim_lsp')
-if not status_ok then
-  return
-end
-
 -- Define keybinds
 local lsp_keybinds = function()
   local keys = {
@@ -17,9 +12,9 @@ local lsp_keybinds = function()
     { 'n', '<Leader>nd', ':lua vim.lsp.buf.declaration()<CR>',    h.key_opts_default },
     { 'n', '<Leader>ni', ':lua vim.lsp.buf.definition()<CR>',     h.key_opts_default },
     { 'n', '<Leader>no', ':lua vim.lsp.buf.implementation()<CR>', h.key_opts_default },
-    { 'n', '<Leader>nb', '<C-o',                                  h.key_opts_default },
+    { 'n', '<Leader>nb', '<C-o>',                                 h.key_opts_default },
 
-    -- LSP Symbols, via saga
+    -- LSP Saga
     { 'n', '<Leader>nc', ':Lspsaga hover_doc<CR>',                h.key_opts_default },
     { 'n', '<Leader>nx', ':Lspsaga rename<CR>',                   h.key_opts_default },
     { 'n', '<Leader>nr', ':Lspsaga lsp_finder<CR>',               h.key_opts_default },
@@ -29,12 +24,11 @@ end
 
 -- Define autocmd
 local lsp_autocmd = function()
-  local group = vim.api.nvim_create_augroup("ToeLSP", { clear = true })
-
-  vim.api.nvim_create_autocmd('CursorHold',
-    { command = 'Lspsaga show_line_diagnostics', group = group })
-  vim.api.nvim_create_autocmd('CursorHoldI',
-    { command = 'Lspsaga signature_help', group = group})
+  local cmds = {
+    { 'CursorHold',  { group = group, command = 'Lspsaga show_line_diagnostics' } },
+    { 'CursorHoldI', { group = group, command = 'Lspsaga signature_help' } },
+  }
+  h.create_autocmds('ToeLsp', cmds)
 end
 
 local default_attach = function(client)
@@ -49,12 +43,10 @@ local default_attach = function(client)
   })
 end
 
--- Get capabilities, attach CMP
 local capabilities = vim.lsp.protocol.make_client_capabilities()
-capabilities = cmp_nvim_lsp.update_capabilities(capabilities)
-capabilities.offsetEncoding = { 'utf-16' } -- Temporary fix for clangd + NullFS
+capabilities.offsetEncoding = { 'utf-16' } -- Temporary fix for clangd + null-ls
 
--- Start up the servers
+-- The servers
 lspconfig.clangd.setup({
   capabilities = capabilities,
 
@@ -74,4 +66,17 @@ lspconfig.pyright.setup({
 lspconfig.sumneko_lua.setup({
   capabilities = capabilities,
   on_attach = default_attach,
+
+  settings = {
+    Lua = {
+      diagnostics = {
+        globals = { "vim" },
+      },
+      workspace = {
+        library = {
+          [vim.fn.expand("$VIMRUNTIME/lua")] = true,
+        },
+      },
+    },
+  },
 })

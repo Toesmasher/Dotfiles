@@ -1,12 +1,12 @@
 require('plugins')
+local h = require('helpers')
 
-local group = vim.api.nvim_create_augroup('ToeInit', { clear = true })
-vim.api.nvim_create_autocmd('BufWritePost',
-  { pattern = '*nvim/*.lua', command = 'source <afile>', group = group })
-vim.api.nvim_create_autocmd('BufWritePost',
-  { pattern = '*lua/plugins.lua', command = 'PackerSync', group = group })
-vim.api.nvim_create_autocmd('VimResized',
-  { command = 'wincmd =', group = group })
+local cmds = {
+  { 'BufWritePost', { group = group, pattern = '*nvim/*.lua', command = 'source <afile>' } },
+  { 'BufWritePost', { group = group, pattern = '*lua/plugins.lua', command = 'PackerSync' } },
+  { 'VimResized',   { group = group, command = 'wincmd =' } },
+}
+h.create_autocmds('ToeInit', cmds)
 
 require('keymapping')
 require('options')

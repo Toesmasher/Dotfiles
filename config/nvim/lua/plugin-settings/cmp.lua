@@ -25,7 +25,7 @@ cmp.setup({
     ['<CR>']    = cmp.mapping.confirm({
       behavior = cmp.ConfirmBehavior.Replace,
       select = true
-    })
+    }),
   },
   sources = {
     { name = 'nvim_lsp' },
@@ -35,10 +35,11 @@ cmp.setup({
   },
   formatting = {
     format = function(entry, item)
+      item.kind = icons.kind[item.kind]
       item.menu = ({
-        nvim_lsp = icons.kind.Function,
-        path =     icons.kind.File,
-        luasnip =  icons.kind.Snippet,
+        nvim_lsp = "[LSP]",
+        path =     "[Path]",
+        luasnip =  "[Snippet]",
       })[entry.source.name]
 
       return item

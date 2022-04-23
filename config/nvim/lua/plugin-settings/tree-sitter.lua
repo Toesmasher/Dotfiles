@@ -26,11 +26,20 @@ configs.setup({
     'python',
     'regex',
     'rust',
-    'vim', 
+    'vim',
     'yaml'
   },
   ignore_install = {},
-  highlight = {
+
+  highlight = { enable = true },
+  indent = { enable = true },
+  incremental_selection = {
     enable = true,
+    keymaps = {
+      init_selection = '<Leader>t',
+      node_incremental = 'n',
+      node_decremental = 'N',
+      scope_incremental = 's',
+    }
   },
 })
