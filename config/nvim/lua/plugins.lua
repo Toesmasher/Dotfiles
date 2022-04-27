@@ -58,10 +58,10 @@ return require('packer').startup(function(use)
     run = { ':TSUpdate' }
   }
   use { 'nvim-treesitter/nvim-treesitter-textobjects' }
+  use { 'lewis6991/nvim-treesitter-context' }
 
   --LSP
   use { 'neovim/nvim-lspconfig' }
-  --use { 'ray-x/lsp_signature.nvim' }
   use { 'tami5/lspsaga.nvim' }
 
   -- Autocomplete with LSP and luasnip

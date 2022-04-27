@@ -9,7 +9,7 @@ local keys = {
 }
 h.map_keys(keys)
 
-nt.setup{
+nt.setup({
   git = {
     enable = true,
     ignore = false,
@@ -18,15 +18,20 @@ nt.setup{
   view = {
     width = 35,
     height = 30,
-    auto_resize = true,
     hide_root_folder = false,
     side = 'left',
   },
-  show_icons={
-    git = 1,
-    folders = 0,
-    files = 0,
-    folder_arrows = 0,
-    tree_width = 30
-  }
-}
+  renderer = {
+    indent_markers = {
+      enable = true,
+      icons = {
+        corner = "└ ",
+        edge = "│ ",
+        none = "  ",
+      },
+    },
+    icons = {
+      webdev_colors = true,
+    },
+  },
+})

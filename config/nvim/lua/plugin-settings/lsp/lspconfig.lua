@@ -9,29 +9,30 @@ end
 local lsp_keybinds = function()
   local keys = {
     -- LSP Navigation
-    { 'n', '<Leader>nd', ':lua vim.lsp.buf.declaration()<CR>',    h.key_opts_default },
-    { 'n', '<Leader>ni', ':lua vim.lsp.buf.definition()<CR>',     h.key_opts_default },
-    { 'n', '<Leader>no', ':lua vim.lsp.buf.implementation()<CR>', h.key_opts_default },
-    { 'n', '<Leader>nb', '<C-o>',                                 h.key_opts_default },
+    { 'n', '<Leader>nd', vim.lsp.buf.declaration,        h.key_opts_default },
+    { 'n', '<Leader>ni', vim.lsp.buf.definition,         h.key_opts_default },
+    { 'n', '<Leader>no', vim.lsp.buf.implementation,     h.key_opts_default },
+    { 'n', '<Leader>nb', '<C-o>',                        h.key_opts_default },
 
     -- LSP Saga
-    { 'n', '<Leader>nc', ':Lspsaga hover_doc<CR>',                h.key_opts_default },
-    { 'n', '<Leader>nx', ':Lspsaga rename<CR>',                   h.key_opts_default },
-    { 'n', '<Leader>nr', ':Lspsaga lsp_finder<CR>',               h.key_opts_default },
+    { 'n', '<Leader>na', ':Lspsaga code_action<CR>',     h.key_opts_default },
+    { 'n', '<Leader>nc', ':Lspsaga hover_doc<CR>',       h.key_opts_default },
+    { 'n', '<Leader>nx', ':Lspsaga rename<CR>',          h.key_opts_default },
+    { 'n', '<Leader>nr', ':Lspsaga lsp_finder<CR>',      h.key_opts_default },
   }
   h.map_keys(keys)
 end
 
 -- Define autocmd
-local lsp_autocmd = function()
+local function lsp_autocmd()
   local cmds = {
-    { 'CursorHold',  { group = group, command = 'Lspsaga show_line_diagnostics' } },
-    { 'CursorHoldI', { group = group, command = 'Lspsaga signature_help' } },
+    { 'CursorHold',  { command = 'Lspsaga show_line_diagnostics' } },
+    --{ 'CursorHoldI', { command = 'Lspsaga signature_help' } },
   }
   h.create_autocmds('ToeLsp', cmds)
 end
 
-local default_attach = function(client)
+local function default_attach(client)
   lsp_keybinds()
   lsp_autocmd()
 
@@ -40,6 +41,7 @@ local default_attach = function(client)
     virtual_text = false,
     underline = true,
     severity_sort = true,
+    update_in_insert = true,
   })
 end
 
@@ -52,7 +54,7 @@ lspconfig.clangd.setup({
 
   -- Disable formatter, let uncrustify do it via null-ls
   on_attach = function(client)
-    default_attach()
+    default_attach(client)
     client.resolved_capabilities.document_formatting = false
     client.resolved_capabilities.document_range_formatting = false
   end,

@@ -20,8 +20,8 @@ local o = {
   wrap = false,           -- Don't softwrap text
 
   -- Timings
-  timeoutlen = 200,       -- Wait 200ms between keys in sequences
-  updatetime = 300,       -- Wait 300ms after input for things to trigger
+  timeoutlen = 500,       -- Wait 500ms between keys in sequences
+  updatetime = 500,       -- Wait 500ms after input for things to trigger
 
   -- Scrolling
   scrolloff = 10,         -- Move up/down 10 lines ahead of cursor

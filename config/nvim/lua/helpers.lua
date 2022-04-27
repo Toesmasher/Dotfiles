@@ -22,7 +22,7 @@ end
 -- Pass an array with arguments to nvim_set_keymap
 function M.map_keys(keys)
   for _, v in ipairs(keys) do
-    vim.api.nvim_set_keymap(unpack(v))
+    vim.keymap.set(unpack(v))
   end
 end
 

@@ -1,22 +1,24 @@
-local status_ok, icons = pcall(require, 'icons')
-if not status_ok then
-  return
-end
+local icons = require('icons')
 
 local status_ok, cmp = pcall(require, 'cmp')
 if not status_ok then
   return
 end
 
-local status_ok, luasnip = pcall(require, 'luasnip')
-if not status_ok then
-  return
-end
+local _, luasnip = pcall(require, 'luasnip')
 
 cmp.setup({
+  window = {
+    completion = {
+      border = 'rounded',
+      winhighlight = 'Normal:Normal,FloatBorder:Normal,CursorLine:Visual,Search:None'
+    },
+  },
   snippet = {
     expand = function(args)
-      luasnip.lsp_expand(args.body)
+      if luasnip then
+        luasnip.lsp_expand(args.body)
+      end
     end,
   },
   mapping = {
