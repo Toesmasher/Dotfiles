@@ -53,10 +53,11 @@ return require('packer').startup(function(use)
     requires = { 'kyazdani42/nvim-web-devicons' }
   }
 
-  -- Treesitter syntax highlighter
+  -- Treesitter
   use { 'nvim-treesitter/nvim-treesitter',
     run = { ':TSUpdate' }
   }
+  use { 'nvim-treesitter/nvim-treesitter-textobjects' }
 
   --LSP
   use { 'neovim/nvim-lspconfig' }

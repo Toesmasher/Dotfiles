@@ -1,9 +1,9 @@
-local status_ok, configs = pcall(require, 'nvim-treesitter.configs')
+local status_ok, tsconfig = pcall(require, 'nvim-treesitter.configs')
 if not status_ok then
   return
 end
 
-configs.setup({
+tsconfig.setup({
   sync_install = false,
   -- ensure_installed = 'maintained',
   ensure_installed = {
@@ -42,4 +42,21 @@ configs.setup({
       scope_incremental = 's',
     }
   },
+
+  -- nvim-treesitter-textobjects specific stuff
+  textobjects = {
+    select = {
+      enable = true,
+
+      -- Automatically jump forward to textobj
+      lookahead = true,
+
+      keymaps = {
+        ['af'] = '@function.outer',
+        ['if'] = '@function.inner',
+
+        ['ab'] = '@block.outer',
+      }
+    },
+  }
 })
