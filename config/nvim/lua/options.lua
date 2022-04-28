@@ -10,6 +10,7 @@ local o = {
   hidden = true,          -- Hide buffers when abandoned
   laststatus = 3,         -- Use single statusbar (nvim 0.7.0)
   number = true,          -- Show line numbers
+  pumblend = 30,          -- Slight popup transparency
   pumheight = 10,         -- Popup menu max height
   ruler = true,           -- Show ruler
   showmode = false,       -- Don't show mode, lualine does that
@@ -17,7 +18,7 @@ local o = {
   signcolumn = 'yes',     -- Add the sign column
   termguicolors = true,
   title = true,           -- Set the terminal title
-  wrap = false,           -- Don't softwrap text
+  wrap = true,            -- Softwrap text
 
   -- Timings
   timeoutlen = 500,       -- Wait 500ms between keys in sequences

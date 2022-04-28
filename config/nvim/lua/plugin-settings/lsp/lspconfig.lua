@@ -6,7 +6,7 @@ if not status_ok then
 end
 
 -- Define keybinds
-local lsp_keybinds = function()
+local function lsp_keybinds()
   local keys = {
     -- LSP Navigation
     { 'n', '<Leader>nd', vim.lsp.buf.declaration },
