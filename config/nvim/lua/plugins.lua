@@ -17,7 +17,8 @@ return require('packer').startup(function(use)
   use { 'wbthomason/packer.nvim',
     requires = {
       { 'nvim-lua/popup.nvim' },
-      { 'nvim-lua/plenary.nvim' }
+      { 'nvim-lua/plenary.nvim' },
+      { 'kyazdani42/nvim-web-devicons' }
     }
   }
 
@@ -36,22 +37,16 @@ return require('packer').startup(function(use)
   use { 'moll/vim-bbye' }
 
   -- File explorer
-  use { 'kyazdani42/nvim-tree.lua',
-    requires = { 'kyazdani42/nvim-web-devicons' }
-  }
+  use { 'kyazdani42/nvim-tree.lua' }
 
   -- Project management
   use { 'ahmedkhalf/project.nvim' }
 
   -- Bufferline
-  use { 'akinsho/bufferline.nvim',
-    requires = { 'kyazdani42/nvim-web-devicons' }
-  }
+  use { 'akinsho/bufferline.nvim', }
 
   -- Lualine
-  use { 'nvim-lualine/lualine.nvim',
-    requires = { 'kyazdani42/nvim-web-devicons' }
-  }
+  use { 'nvim-lualine/lualine.nvim' }
 
   -- Treesitter
   use { 'nvim-treesitter/nvim-treesitter',
@@ -76,17 +71,13 @@ return require('packer').startup(function(use)
     }
   }
   use { 'jose-elias-alvarez/null-ls.nvim' } -- Null LS for extras
+  use { 'simrat39/symbols-outline.nvim' }
 
   --Telescope
-  use { 'nvim-telescope/telescope.nvim',
-    requires = { 'nvim-lua/plenary.nvim' }
-  }
+  use { 'nvim-telescope/telescope.nvim' }
 
-  -- GIT highlighter
-  use { 'lewis6991/gitsigns.nvim',
-    requires = { 'nvim-lua/plenary.nvim' }
-  }
-
+  -- GIT handler
+  use { 'lewis6991/gitsigns.nvim' }
   -- Color highlighter
   use { 'norcalli/nvim-colorizer.lua' }
 

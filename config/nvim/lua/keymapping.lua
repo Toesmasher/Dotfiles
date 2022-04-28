@@ -9,26 +9,26 @@ h.set_globals(g)
 -- Modes: 'n'ormal, 'i'nsert, 'v'isual, 'x'visual_block, 't'erm, 'c'ommand
 local keys = {
   -- Set space as leader
-  {'', '<Space>', '<Nop>', h.key_opts_default},
+  { '', '<Space>', '<Nop>' },
 
   -- No prefix bindings
   -- Window selection
-  {'n', '<Leader>h',  '<C-w><Left>',  h.key_opts_default},
-  {'n', '<Leader>j',  '<C-w><Down>',  h.key_opts_default},
-  {'n', '<Leader>k',  '<C-w><Up>',    h.key_opts_default},
-  {'n', '<Leader>l',  '<C-w><Right>', h.key_opts_default},
+  { 'n', '<Leader>h',  '<C-w><Left>' },
+  { 'n', '<Leader>j',  '<C-w><Down>' },
+  { 'n', '<Leader>k',  '<C-w><Up>' },
+  { 'n', '<Leader>l',  '<C-w><Right>' },
 
   -- Buffer handling
-  {'n', '<Tab>',     ':bnext<CR>',   h.key_opts_default},
-  {'n', '<S-Tab>',   ':bprev<CR>',   h.key_opts_default},
-  {'n', '<Leader>c', ':Bdelete<CR>', h.key_opts_default},
+  { 'n', '<Tab>',     ':bnext<CR>' },
+  { 'n', '<S-Tab>',   ':bprev<CR>' },
+  { 'n', '<Leader>c', ':Bdelete<CR>' },
 
   -- Prefixed bindings
   -- Splitting, Prefix: <Leader>s
-  {'',  's',          '<nop>',  h.key_opts_default},
-  {'n', '<Leader>ss', '<C-w>s', h.key_opts_default},
-  {'n', '<Leader>sv', '<C-w>v', h.key_opts_default},
-  {'n', '<Leader>se', '<C-w>=', h.key_opts_default},
+  { '',  's',          '<nop>' },
+  { 'n', '<Leader>ss', ':split<CR>' },
+  { 'n', '<Leader>sv', ':vsplit<CR>' },
+  { 'n', '<Leader>se', '<C-w>=' },
 }
 
 h.map_keys(keys)

@@ -9,16 +9,19 @@ end
 local lsp_keybinds = function()
   local keys = {
     -- LSP Navigation
-    { 'n', '<Leader>nd', vim.lsp.buf.declaration,        h.key_opts_default },
-    { 'n', '<Leader>ni', vim.lsp.buf.definition,         h.key_opts_default },
-    { 'n', '<Leader>no', vim.lsp.buf.implementation,     h.key_opts_default },
-    { 'n', '<Leader>nb', '<C-o>',                        h.key_opts_default },
+    { 'n', '<Leader>nd', vim.lsp.buf.declaration },
+    { 'n', '<Leader>ni', vim.lsp.buf.definition },
+    { 'n', '<Leader>no', vim.lsp.buf.implementation },
+    { 'n', '<Leader>nb', '<C-o>' },
 
     -- LSP Saga
-    { 'n', '<Leader>na', ':Lspsaga code_action<CR>',     h.key_opts_default },
-    { 'n', '<Leader>nc', ':Lspsaga hover_doc<CR>',       h.key_opts_default },
-    { 'n', '<Leader>nx', ':Lspsaga rename<CR>',          h.key_opts_default },
-    { 'n', '<Leader>nr', ':Lspsaga lsp_finder<CR>',      h.key_opts_default },
+    { 'n', '<Leader>na', ':Lspsaga code_action<CR>' },
+    { 'n', '<Leader>nc', ':Lspsaga hover_doc<CR>' },
+    { 'n', '<Leader>nx', ':Lspsaga rename<CR>' },
+    { 'n', '<Leader>nr', ':Lspsaga lsp_finder<CR>' },
+
+    -- Symbols-Outline
+    { 'n', '<Leader>ns', ':SymbolsOutline<CR>' },
   }
   h.map_keys(keys)
 end

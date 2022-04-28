@@ -5,18 +5,22 @@ end
 
 local h = require('helpers')
 local keys = {
-  {'n', '<Leader>gh', ':Gitsigns toggle_linehl<CR>', h.key_opts_default},
-  {'n', '<Leader>gd', ':Gitsigns preview_hunk<CR>',  h.key_opts_default},
+  { 'n', '<Leader>gh', ':Gitsigns toggle_linehl<CR>' },
+  { 'n', '<Leader>gd', ':Gitsigns preview_hunk<CR>' },
+  { 'n', '<Leader>gD', ':Gitsigns diffthis<CR>', },
+  { 'n', '<Leader>gn', ':Gitsigns next_hunk<CR>' },
+  { 'n', '<Leader>gN', ':Gitsigns prev_hunk<CR>' },
+  { 'n', '<Leader>gr', ':Gitsigns reset_hunk<CR>' },
 }
 h.map_keys(keys)
 
 gs.setup {
   signs = {
-    add          = {hl = 'GitSignsAdd'   , text = '│', numhl='GitSignsAddNr'   , linehl='GitSignsAddLn'},
-    change       = {hl = 'GitSignsChange', text = '│', numhl='GitSignsChangeNr', linehl='GitSignsChangeLn'},
-    delete       = {hl = 'GitSignsDelete', text = '_', numhl='GitSignsDeleteNr', linehl='GitSignsDeleteLn'},
-    topdelete    = {hl = 'GitSignsDelete', text = '‾', numhl='GitSignsDeleteNr', linehl='GitSignsDeleteLn'},
-    changedelete = {hl = 'GitSignsChange', text = '~', numhl='GitSignsChangeNr', linehl='GitSignsChangeLn'},
+    add          = { hl = 'GitSignsAdd'   , text = '│', numhl = 'GitSignsAddNr'   , linehl = 'GitSignsAddLn' },
+    change       = { hl = 'GitSignsChange', text = '│', numhl = 'GitSignsChangeNr', linehl = 'GitSignsChangeLn' },
+    delete       = { hl = 'GitSignsDelete', text = '_', numhl = 'GitSignsDeleteNr', linehl = 'GitSignsDeleteLn' },
+    topdelete    = { hl = 'GitSignsDelete', text = '‾', numhl = 'GitSignsDeleteNr', linehl = 'GitSignsDeleteLn' },
+    changedelete = { hl = 'GitSignsChange', text = '~', numhl = 'GitSignsChangeNr', linehl = 'GitSignsChangeLn' },
   },
   signcolumn = true,  -- Toggle with `:Gitsigns toggle_signs`
   numhl      = true, -- Toggle with `:Gitsigns toggle_numhl`

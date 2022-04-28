@@ -5,7 +5,7 @@ end
 
 local h = require('helpers')
 local keys = {
-  {'n', '<Leader>w', ':HopWord<CR>', h.key_opts_default},
+  { 'n', '<Leader>w', ':HopWord<CR>' },
 }
 h.map_keys(keys)
 

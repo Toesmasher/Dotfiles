@@ -5,7 +5,7 @@ end
 
 local h = require('helpers')
 local keys = {
-  {'n', '<Leader>nt', ':NvimTreeRefresh<CR>:NvimTreeToggle<CR>', h.key_opts_default},
+  { 'n', '<Leader>nt', ':NvimTreeRefresh<CR>:NvimTreeToggle<CR>' },
 }
 h.map_keys(keys)
 

@@ -1,6 +1,5 @@
 -- Simple helper functions for doing minor things in NVIM
 local M = {}
-M.key_opts_default = { silent = true }
 
 -- Set options
 -- Pass a table where the key is the option name
@@ -21,8 +20,15 @@ end
 -- Map keys
 -- Pass an array with arguments to nvim_set_keymap
 function M.map_keys(keys)
+  local key_opts_default = { silent = true }
+
   for _, v in ipairs(keys) do
-    vim.keymap.set(unpack(v))
+    local mode = v[1]
+    local binding = v[2]
+    local cmd = v[3]
+    local opts = v[4] or key_opts_default
+
+    vim.keymap.set(mode, binding, cmd, opts)
   end
 end
 
@@ -32,8 +38,10 @@ function M.create_autocmds(group_name, cmds)
   local gid = vim.api.nvim_create_augroup(group_name, { clear = true })
 
   for _, v in ipairs(cmds) do
-    v[2].group = gid
-    vim.api.nvim_create_autocmd(unpack(v))
+    local event = v[1]
+    local opts = v[2]
+    opts.group = opts.group or gid
+    vim.api.nvim_create_autocmd(event, opts)
   end
 end
 
