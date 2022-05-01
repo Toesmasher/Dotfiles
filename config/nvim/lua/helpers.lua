@@ -9,6 +9,14 @@ function M.set_options(options)
   end
 end
 
+-- Set buffer-local options
+-- Pass a table where the keys i the option name
+function M.set_local_options(options)
+  for k, v in pairs(options) do
+    vim.opt_local[k] = v
+  end
+end
+
 -- Set global variables
 -- Pass a table where the key is the variable name
 function M.set_globals(globals)

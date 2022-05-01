@@ -5,7 +5,7 @@ local o = {
   -- Basic look
   cmdheight = 2,          -- Height of command window
   conceallevel = 0,       -- Don't conceal syntax stuff
-  cursorline = true,      -- Highlight the line with the cursor
+  cursorline = false,     -- Highlight the line with the cursor
   -- gcr = '',            -- Cursor look override
   hidden = true,          -- Hide buffers when abandoned
   laststatus = 3,         -- Use single statusbar (nvim 0.7.0)

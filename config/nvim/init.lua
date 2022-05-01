@@ -1,19 +1,13 @@
 require('plugins')
-local h = require('helpers')
 
-local cmds = {
-  { 'BufWritePost', { group = group, pattern = '*nvim/*.lua', command = 'source <afile>' } },
-  { 'BufWritePost', { group = group, pattern = '*lua/plugins.lua', command = 'PackerSync' } },
-  { 'VimResized',   { group = group, command = 'wincmd =' } },
-}
-h.create_autocmds('ToeInit', cmds)
-
+require('autocmds')
 require('keymapping')
 require('options')
 
 require('plugin-settings.bufferline')
 require('plugin-settings.cmp')
 require('plugin-settings.colorizer')
+require('plugin-settings.comment')
 require('plugin-settings.gitsigns')
 require('plugin-settings.hop')
 require('plugin-settings.lualine')

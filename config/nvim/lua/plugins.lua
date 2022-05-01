@@ -48,6 +48,17 @@ return require('packer').startup(function(use)
   -- Lualine
   use { 'nvim-lualine/lualine.nvim' }
 
+  --Telescope
+  use { 'nvim-telescope/telescope.nvim' }
+
+  -- GIT handler
+  use { 'lewis6991/gitsigns.nvim' }
+
+  -- Color highlighter
+  use { 'norcalli/nvim-colorizer.lua' }
+
+  use { 'numToStr/Comment.nvim' }
+
   -- Treesitter
   use { 'nvim-treesitter/nvim-treesitter',
     run = { ':TSUpdate' }
@@ -72,14 +83,6 @@ return require('packer').startup(function(use)
   }
   use { 'jose-elias-alvarez/null-ls.nvim' } -- Null LS for extras
   use { 'simrat39/symbols-outline.nvim' }
-
-  --Telescope
-  use { 'nvim-telescope/telescope.nvim' }
-
-  -- GIT handler
-  use { 'lewis6991/gitsigns.nvim' }
-  -- Color highlighter
-  use { 'norcalli/nvim-colorizer.lua' }
 
   if PACKER_BOOTSTRAP then
     packer.sync()
