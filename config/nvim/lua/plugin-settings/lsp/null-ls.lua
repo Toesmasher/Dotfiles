@@ -7,8 +7,9 @@ local uncrustify_cfg = '~/Projects/xbus_fw/extra/uncrustify.cfg'
 
 nls.setup({
   sources = {
-    nls.builtins.formatting.uncrustify.with({
-      extra_args = {'-c', vim.fn.expand(uncrustify_cfg) }
-    })
+    nls.builtins.formatting.uncrustify.with(
+      { extra_args = { '-c', vim.fn.expand(uncrustify_cfg) } }
+    ),
+    nls.builtins.code_actions.gitsigns
   }
 })
