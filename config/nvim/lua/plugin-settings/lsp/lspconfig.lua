@@ -1,4 +1,3 @@
-local h = require('helpers')
 local common = require('plugin-settings.lsp.server-settings.common_functions')
 
 local status_ok, lspconfig = pcall(require, 'lspconfig')

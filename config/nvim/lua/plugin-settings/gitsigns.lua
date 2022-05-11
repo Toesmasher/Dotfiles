@@ -3,17 +3,6 @@ if not status_ok then
   return
 end
 
-local h = require('helpers')
-local keys = {
-  { 'n', '<Leader>gh', ':Gitsigns toggle_linehl<CR>' },
-  { 'n', '<Leader>gd', ':Gitsigns preview_hunk<CR>' },
-  { 'n', '<Leader>gD', ':Gitsigns diffthis<CR>', },
-  { 'n', '<Leader>gn', ':Gitsigns next_hunk<CR>' },
-  { 'n', '<Leader>gN', ':Gitsigns prev_hunk<CR>' },
-  { 'n', '<Leader>gr', ':Gitsigns reset_hunk<CR>' },
-}
-h.map_keys(keys)
-
 gs.setup {
   signs = {
     add          = { hl = 'GitSignsAdd'   , text = '│', numhl = 'GitSignsAddNr'   , linehl = 'GitSignsAddLn' },
@@ -55,3 +44,14 @@ gs.setup {
     enable = false
   },
 }
+
+local h = require('helpers')
+local keys = {
+  { 'n', '<Leader>gh', ':Gitsigns toggle_linehl<CR>' },
+  { 'n', '<Leader>gd', ':Gitsigns preview_hunk<CR>' },
+  { 'n', '<Leader>gD', ':Gitsigns diffthis<CR>', },
+  { 'n', '<Leader>gn', ':Gitsigns next_hunk<CR>' },
+  { 'n', '<Leader>gN', ':Gitsigns prev_hunk<CR>' },
+  { 'n', '<Leader>gr', ':Gitsigns reset_hunk<CR>' },
+}
+h.map_keys(keys)
