@@ -6,9 +6,9 @@ if not status_ok then
 end
 
 local servers = {
-  "clangd",
-  "pyright",
-  "sumneko_lua"
+  "clangd",                 -- C/C++
+  "jedi_language_server",   -- Python
+  "sumneko_lua"             -- LUA
 }
 
 local default_setup = {
@@ -20,7 +20,6 @@ for _, server in ipairs(servers) do
     if not cfg_ok then
       cfg = default_setup
     end
-    cfg = cfg or default_setup
 
     lspconfig[server].setup(cfg)
 end
