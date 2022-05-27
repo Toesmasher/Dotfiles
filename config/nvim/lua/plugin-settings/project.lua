@@ -4,7 +4,7 @@ if not status_ok then
 end
 
 p.setup({
-  silent_chdir = false,
+  silent_chdir = true,
   update_cwd = true,
   update_focused_file = {
     enable = true,

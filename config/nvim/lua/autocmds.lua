@@ -2,7 +2,7 @@ local h = require('helpers')
 
 local cmds = {
   -- Reload config files and sync plugins on write
-  { 'BufWritePost', { pattern = '*nvim/*.lua', command = 'source <afile>' } },
+  { 'BufWritePost', { pattern = '*/nvim/*.lua', command = 'source <afile>' } },
   { 'BufWritePost', { pattern = '*lua/plugins.lua', command = 'PackerSync' } },
 
   -- Resize windows on terminal resize

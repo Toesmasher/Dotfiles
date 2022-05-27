@@ -22,13 +22,13 @@ local n_keys = {
   { '',  's',          '<nop>' },
   { 'n', '<Leader>ss', ':split<CR>' },
   { 'n', '<Leader>sv', ':vsplit<CR>' },
-  { 'n', '<Leader>se', ':wincmd =' },
+  { 'n', '<Leader>se', ':wincmd =<CR>' },
 
   -- Window selection
-  { 'n', '<Leader>h',  '<C-w>h' }, -- Left
-  { 'n', '<Leader>j',  '<C-w>j' }, -- Down
-  { 'n', '<Leader>k',  '<C-w>k' }, -- Up
-  { 'n', '<Leader>l',  '<C-w>l' }, -- Right
+  { 'n', '<Leader>h',  ':wincmd h<CR>' }, -- Left
+  { 'n', '<Leader>j',  ':wincmd j<CR>' }, -- Down
+  { 'n', '<Leader>k',  ':wincmd k<CR>' }, -- Up
+  { 'n', '<Leader>l',  ':wincmd l<CR>' }, -- Right
 }
 
 local v_keys = {

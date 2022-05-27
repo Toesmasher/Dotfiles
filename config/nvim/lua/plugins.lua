@@ -29,12 +29,13 @@ return require('packer').startup(function(use)
   use { 'rcarriga/nvim-notify' }
 
   -- Colorschemes
-  use { 'mofiqul/dracula.nvim' }
-  use { 'lunarvim/darkplus.nvim' }
   use { 'ellisonleao/gruvbox.nvim' }
 
   -- Buffer closer
   use { 'moll/vim-bbye' }
+
+  -- Buffer selector
+  use { 'matbme/JABS.nvim' }
 
   -- File explorer
   use { 'kyazdani42/nvim-tree.lua' }
@@ -57,6 +58,7 @@ return require('packer').startup(function(use)
   -- Color highlighter
   use { 'norcalli/nvim-colorizer.lua' }
 
+  -- Code commentator
   use { 'numToStr/Comment.nvim' }
 
   -- Treesitter
