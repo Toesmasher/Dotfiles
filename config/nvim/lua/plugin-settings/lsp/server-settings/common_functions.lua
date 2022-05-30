@@ -17,9 +17,6 @@ function M.lsp_keybinds()
     { 'n', '<Leader>nc', ':Lspsaga hover_doc<CR>' },
     { 'n', '<Leader>nx', ':Lspsaga rename<CR>' },
     { 'n', '<Leader>nr', ':Lspsaga lsp_finder<CR>' },
-
-    -- Symbols-Outline
-    { 'n', '<Leader>ns', ':SymbolsOutline<CR>' },
   }
   h.map_keys(keys)
 end

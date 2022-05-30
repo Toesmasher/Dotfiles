@@ -86,7 +86,6 @@ return require('packer').startup(function(use)
     }
   }
   use { 'jose-elias-alvarez/null-ls.nvim' } -- Null LS for extras
-  use { 'simrat39/symbols-outline.nvim' }
 
   if PACKER_BOOTSTRAP then
     packer.sync()
