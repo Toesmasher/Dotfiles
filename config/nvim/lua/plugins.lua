@@ -44,7 +44,11 @@ return require('packer').startup(function(use)
   use { 'ahmedkhalf/project.nvim' }
 
   -- Bufferline
-  use { 'akinsho/bufferline.nvim', }
+  use { 'akinsho/bufferline.nvim', 
+    requires = {
+      'smiteshp/nvim-gps'
+    }
+  }
 
   -- Lualine
   use { 'nvim-lualine/lualine.nvim' }
@@ -66,7 +70,6 @@ return require('packer').startup(function(use)
     run = { ':TSUpdate' },
     requires = {
       { 'nvim-treesitter/nvim-treesitter-textobjects' },
-      { 'lewis6991/nvim-treesitter-context' },
     },
   }
 

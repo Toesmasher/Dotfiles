@@ -17,7 +17,6 @@ require('plugin-settings.nvim-tree')
 require('plugin-settings.project')
 require('plugin-settings.telescope')
 require('plugin-settings.treesitter')
-require('plugin-settings.treesitter-context')
 
 require('plugin-settings.lsp.lspconfig')
 require('plugin-settings.lsp.lspsaga')
