@@ -11,5 +11,6 @@ local cmds = {
   -- Add spellcheck for some files
   -- TODO: Figure out how to do setlocal in LUA
   { 'FileType',     { pattern = { 'gitcommit', 'markdown' }, command = 'setlocal spell' } },
+  { 'FileType',     { pattern = { 'markdown' }, command = 'setlocal textwidth=100' } },
 }
 h.create_autocmds('ToeAutoCmds', cmds)
