@@ -1,2 +1,2 @@
-export PAGER=""
+export PAGER="less"
 export EDITOR="nvim"
