@@ -1,0 +1,67 @@
+{
+  "layer": "top",
+  "positon": "top",
+  "height": 35,
+
+  "modules-left": ["river/tags"],
+  "modules-center": ["river/window"],
+  "modules-right": ["tray", "pulseaudio", "memory", "cpu", "network", "battery", "clock"],
+
+  "river/tags": {
+    "num-tags": 5
+  },
+
+  "river/window": {
+    "format": "{}"
+  },
+
+  "pulseaudio": {
+    //"scroll-step": 1,
+    "format": "{volume}% {icon}",
+    "format-bluetooth": "{volume}% {icon}",
+    "format-muted": "",
+    "format-icons": {
+        "headphones": "",
+        "handsfree": "",
+        "headset": "",
+        "phone": "",
+        "portable": "",
+        "car": "",
+        "default": ["", ""]
+    }
+  },
+
+  "memory": {
+    "format": "{}% "
+  },
+
+  "cpu": {
+    "format": "{usage}% "
+  },
+
+  "network": {
+    // "interface": "wlp2s0", // (Optional) To force the use of this interface
+    "format-wifi": "{essid} {signalStrength}% ",
+    "format-ethernet": "{ifname}: {ipaddr}/{cidr} ",
+    "format-disconnected": "Disconnected ⚠"
+  },
+
+  "battery": {
+    "bat": "BAT0",
+    "states": {
+      "good": 95,
+      "warning": 30,
+      "critical": 15
+    },
+    "format": "{capacity}% {icon}",
+    "format-icons": ["", "", "", "", ""]
+  },
+
+  "clock": {
+    "format-alt": "{:%a, %d. %b %H:%M}"
+  },
+
+  "tray": {
+    "spacing": 10
+  },
+}
