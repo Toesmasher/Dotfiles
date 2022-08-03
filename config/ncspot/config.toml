@@ -1,0 +1,54 @@
+# Basic options
+use_nerdfont = true
+notify = true
+gapless = true
+default_keybindings = false
+
+[keybindings]
+"Enter" = "play"
+"s" = "playpause"
+" " = "queue"
+
+"b" = "seek -5000"
+"f" = "seek +5000"
+"B" = "seek -60000"
+"F" = "seek +60000"
+
+"n" = "next"
+"p" = "previous"
+
+"r" = "repeat"
+"R" = "shuffle"
+
+"D" = "delete"
+"S" = "save"
+
+"1" = "focus queue"
+"2" = "focus library"
+"3" = "focus search"
+
+"h" = "move left 1"
+"j" = "move down 1"
+"k" = "move up 1"
+"l" = "move right 1"
+
+"Q" = "quit"
+
+# Gruvbox
+[theme]
+background = "default"
+primary = "#32302f"
+secondary = "light black"
+title = "#8ec07c"
+playing = "#689d6a"
+playing_bg = "#383838"
+playing_selected = "#ebdbb2"
+highlight = "#d5c4a1"
+highlight_bg = "#383838"
+error = "#fbf1c7"
+error_bg = "#cc241d"
+statusbar_progress = "#458588"
+statusbar_bg = "#282828"
+statusbar = "#98971a"
+cmdline = "#d5c4a1"
+cmdline_bg = "#383838"

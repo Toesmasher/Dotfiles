@@ -3,10 +3,12 @@
 # Non-river stuff
 monitors-home.sh
 swaybg -i ~/Pictures/wallpapers/forest_cabin.png --mode fill &
+swayidle -w & 
 waybar &
 
-riverctl map normal Super+Shift Return spawn kitty
-riverctl map normal Super       R      spawn bemenu-run
+riverctl map normal Super+Shift   Return spawn kitty
+riverctl map normal Super         R      spawn bemenu.sh
+riverctl map normal Super+Control L      spawn swaylock
 
 # Super+Q to close the focused view
 riverctl map normal Super W close
@@ -138,6 +140,7 @@ done
 riverctl background-color 0x002b36
 riverctl border-color-focused 0xF75520
 riverctl border-color-unfocused 0xD8DEE9
+riverctl border-width 2
 
 # Set keyboard repeat rate
 riverctl set-repeat 35 175
@@ -158,4 +161,4 @@ riverctl attach-mode bottom
 # Set and exec into the default layout generator, rivertile.
 # River will send the process group of the init executable SIGTERM on exit.
 riverctl default-layout rivertile
-exec rivertile -view-padding 5 -outer-padding 3
+exec rivertile -view-padding 2 -outer-padding 2

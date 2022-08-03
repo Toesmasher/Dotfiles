@@ -1,11 +1,11 @@
 {
   "layer": "top",
   "positon": "top",
-  "height": 35,
+  "height": 25,
 
-  "modules-left": ["river/tags"],
-  "modules-center": ["river/window"],
-  "modules-right": ["tray", "pulseaudio", "memory", "cpu", "network", "battery", "clock"],
+  "modules-left": ["river/tags", "river/window"],
+  "modules-center": [],
+  "modules-right": ["tray", "network", "pulseaudio", "battery", "clock"],
 
   "river/tags": {
     "num-tags": 5
