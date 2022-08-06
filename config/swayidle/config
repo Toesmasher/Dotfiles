@@ -1,1 +1,2 @@
 timeout 300 swaylock
+before-sleep swaylock

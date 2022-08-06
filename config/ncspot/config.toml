@@ -6,8 +6,7 @@ default_keybindings = false
 
 [keybindings]
 "Enter" = "play"
-"s" = "playpause"
-" " = "queue"
+" " = "playpause"
 
 "b" = "seek -5000"
 "f" = "seek +5000"
@@ -37,7 +36,8 @@ default_keybindings = false
 # Gruvbox
 [theme]
 background = "default"
-primary = "#32302f"
+#primary = "#32302f"
+primary = "#646261"
 secondary = "light black"
 title = "#8ec07c"
 playing = "#689d6a"

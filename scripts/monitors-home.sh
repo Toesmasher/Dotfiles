@@ -1,2 +1,8 @@
 #!/bin/env sh
-wlr-randr --output DP-4 --preferred --pos 0,0 --output HDMI-A-4 --transform 270 --pos 3440,-700
+
+LAPTOP_DISPLAY="eDP-1"
+MID_DISPLAY="HDMI-A-1"
+SIDE_DISPLAY="DP-3"
+
+wlr-randr --output ${LAPTOP_DISPLAY} --pos 0,700 --output ${MID_DISPLAY} --pos 1920,700 --output ${SIDE_DISPLAY} --pos 5360,0 --transform 270
+

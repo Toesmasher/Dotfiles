@@ -8,7 +8,8 @@
   "modules-right": ["tray", "network", "pulseaudio", "battery", "clock"],
 
   "river/tags": {
-    "num-tags": 5
+    "num-tags": 5,
+    "tag-labels": ["", "", "", "", ""] 
   },
 
   "river/window": {
@@ -24,8 +25,8 @@
         "headphones": "",
         "handsfree": "",
         "headset": "",
-        "phone": "",
-        "portable": "",
+        "phone": "",
+        "portable": "",
         "car": "",
         "default": ["", ""]
     }
