@@ -1,10 +1,10 @@
 #!/bin/sh
 
 # Non-river stuff
-monitors-home.sh
 swaybg -i ~/Pictures/wallpapers/forest_cabin.png --mode fill &
 swayidle -w & 
 waybar &
+kanshi &
 
 riverctl map normal Super+Shift   Return spawn kitty
 riverctl map normal Super         R      spawn bemenu.sh
@@ -139,7 +139,7 @@ done
 # Set background and border color
 riverctl background-color 0x002b36
 riverctl border-color-focused 0xF75520
-riverctl border-color-unfocused 0xD8DEE9
+riverctl border-color-unfocused 0x00000000
 riverctl border-width 2
 
 # Set keyboard repeat rate
@@ -157,6 +157,9 @@ riverctl focus-follows-cursor normal
 
 # New windows attach at the bottom of the stack
 riverctl attach-mode bottom
+
+# Enable touchpad tap
+riverctl input pointer-1739-52823-SYNA8009:00_06CB:CE57_Touchpad tap enabled
 
 # Set and exec into the default layout generator, rivertile.
 # River will send the process group of the init executable SIGTERM on exit.
