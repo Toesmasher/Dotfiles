@@ -1,0 +1,7 @@
+IdentityFile ~/.ssh/keys/private/id_ed25519
+AddKeysToAgent yes
+
+Host gitlab-work
+  Hostname gitlab.com
+  IdentityFile ~/.ssh/keys/work/id_ed25519
+  User git

@@ -1,7 +1,7 @@
 max-visible=5
 anchor=top-right
 font=Hack Nerd Font
-default-timeout=0
+default-timeout=5000
 
 icons=1
 markup=1

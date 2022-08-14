@@ -1,4 +1,5 @@
 # Basic options
+initial_screen = "queue"
 use_nerdfont = true
 notify = true
 gapless = true
@@ -7,6 +8,9 @@ default_keybindings = false
 [keybindings]
 "Enter" = "play"
 " " = "playpause"
+
+"o" = "open selected"
+"b" = "back"
 
 "b" = "seek -5000"
 "f" = "seek +5000"
@@ -32,6 +36,10 @@ default_keybindings = false
 "l" = "move right 1"
 
 "Q" = "quit"
+
+[notification_format]
+title = "NCSpot"
+body = "%artists - %title (%duration)"
 
 # Gruvbox
 [theme]
