@@ -9,7 +9,9 @@
 }
 
 window#waybar {
-    background: linear-gradient(to top, transparent, rgba(0, 0, 0, 0.5));
+    /* background: linear-gradient(to top, transparent, rgba(0, 0, 0, 0.5)); */
+    background: #32302f;
+    border-bottom: 2px solid #FE8019;
     color: honeydew;
 }
 

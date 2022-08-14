@@ -1,4 +1,4 @@
-#!/bin/env sh
+#!/usr/bin/env sh
 
 LAPTOP_DISPLAY="eDP-1"
 MID_DISPLAY="HDMI-A-1"

@@ -5,10 +5,12 @@ swaybg -i ~/Pictures/wallpapers/forest_cabin.png --mode fill &
 swayidle -w & 
 waybar &
 kanshi &
+mako &
 
 riverctl map normal Super+Shift   Return spawn kitty
 riverctl map normal Super         R      spawn bemenu.sh
 riverctl map normal Super+Control L      spawn swaylock
+riverctl map normal Super+Shift   S      spawn "screenshot-wayland.sh region-copy"
 
 # Super+Q to close the focused view
 riverctl map normal Super W close
@@ -138,9 +140,9 @@ done
 
 # Set background and border color
 riverctl background-color 0x002b36
-riverctl border-color-focused 0xF75520
+riverctl border-color-focused 0xFE8019
 riverctl border-color-unfocused 0x00000000
-riverctl border-width 2
+riverctl border-width 3
 
 # Set keyboard repeat rate
 riverctl set-repeat 35 175
