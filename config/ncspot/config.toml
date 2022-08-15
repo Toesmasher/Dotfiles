@@ -4,13 +4,14 @@ use_nerdfont = true
 notify = true
 gapless = true
 default_keybindings = false
+volnorm = true
 
 [keybindings]
 "Enter" = "play"
 " " = "playpause"
 
 "o" = "open selected"
-"b" = "back"
+"O" = "back"
 
 "b" = "seek -5000"
 "f" = "seek +5000"

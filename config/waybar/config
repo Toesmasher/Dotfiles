@@ -13,6 +13,7 @@
   },
 
   "river/window": {
+    "max-length": 120,
     "format": "{}"
   },
 

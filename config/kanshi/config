@@ -1,10 +1,20 @@
-profile home-laptop {
+profile laptop-standalone {
+  output eDP-1 position 0,0
+}
+
+profile laptop-home {
   output eDP-1 position 0,780
   output "34GN850 004NTBK70749" position 1920,780
   output "DELL U2715H GH85D69U092S" position 5360,0 transform 270
 }
 
-profile home-desktop {
+profile laptop-work {
+  output "D24F0 0x00000001 (HDMI-A-1)" position 0,0
+  output "D24F0 0x00000001 (DP-3 via HDMI)" position 1920,0
+  output eDP-1 position 3840,0
+}
+
+profile desktop {
   output "34GN850 004NTBK70749" position 0,780
   output "DELL U2715H GH85D69U092S" position 3440,0 transform 270
 }

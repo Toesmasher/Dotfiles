@@ -16,4 +16,7 @@ else
   exit 1
 fi
 
+
+bluetoothctl power on
+sleep 5
 bluetoothctl ${ARG} ${MAC_SONY}

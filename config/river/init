@@ -4,12 +4,12 @@
 swaybg -i ~/Pictures/wallpapers/forest_cabin.png --mode fill &
 swayidle -w & 
 waybar &
-kanshi &
+kanshi > ~/.local/kanshilog &
 mako &
 
 riverctl map normal Super+Shift   Return spawn kitty
 riverctl map normal Super         R      spawn bemenu.sh
-riverctl map normal Super+Control L      spawn swaylock
+riverctl map normal Super+Shift   L      spawn swaylock
 riverctl map normal Super+Shift   S      spawn "screenshot-wayland.sh region-copy"
 
 # Super+Q to close the focused view
