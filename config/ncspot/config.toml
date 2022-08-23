@@ -13,6 +13,9 @@ volnorm = true
 "o" = "open selected"
 "O" = "back"
 
+"a" = "queue"
+"d" = "delete"
+
 "b" = "seek -5000"
 "f" = "seek +5000"
 "B" = "seek -60000"

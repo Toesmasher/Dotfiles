@@ -1,2 +1,8 @@
-export PAGER="less"
+export PAGER="less -R"
 export EDITOR="nvim"
+
+# NNN control
+export NNN_FIFO="/tmp/nnn.fifo"
+export NNN_PLUG="p:preview-tui"
+export NNN_OPTS="de"
+export SPLIT="v"
