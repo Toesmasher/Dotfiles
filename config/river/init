@@ -7,8 +7,12 @@ waybar &
 kanshi &
 mako &
 
+dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=river
+systemctl --user stop pipewire wireplumber xdg-desktop-portal xdg-desktop-portal-wlr
+systemctl --user start wireplumber xdg-desktop-portal-wlr
+
 riverctl map normal Super+Shift   Return spawn kitty
-riverctl map normal Super         R      spawn bemenu.sh
+riverctl map normal Super         R      spawn fuzzel.sh
 riverctl map normal Super+Shift   L      spawn swaylock
 riverctl map normal Super+Shift   S      spawn "screenshot-wayland.sh region-copy"
 
