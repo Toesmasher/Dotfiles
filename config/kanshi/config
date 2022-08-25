@@ -4,8 +4,8 @@ profile laptop-standalone {
 
 profile laptop-home {
   output eDP-1 position 0,780
-  output "34GN850 004NTBK70749" position 1920,780
-  output "DELL U2715H GH85D69U092S" position 5360,0 transform 270
+  output "Goldstar Company Ltd 34GN850 004NTBK70749" position 1920,780
+  output "Dell Inc. DELL U2715H GH85D69U092S" position 5360,0 transform 270
 }
 
 profile laptop-work {
@@ -15,6 +15,6 @@ profile laptop-work {
 }
 
 profile desktop {
-  output "34GN850 004NTBK70749" position 0,780
-  output "DELL U2715H GH85D69U092S" position 3440,0 transform 270
+  output "Goldstar Company Ltd 34GN850 004NTBK70749" position 0,780
+  output "Dell Inc. DELL U2715H GH85D69U092S" position 3440,0 transform 270
 }
