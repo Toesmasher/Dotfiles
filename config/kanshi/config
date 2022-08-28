@@ -14,6 +14,11 @@ profile laptop-work {
   output eDP-1 position 3840,0
 }
 
+profile laptop-work-meeting {
+  output eDP-1 position 0,0
+  output "Samsung Electric Company SAMSUNG 0x00000F00" mode 4096x2160@60 position 1920,0
+}
+
 profile desktop {
   output "Goldstar Company Ltd 34GN850 004NTBK70749" position 0,780
   output "Dell Inc. DELL U2715H GH85D69U092S" position 3440,0 transform 270
