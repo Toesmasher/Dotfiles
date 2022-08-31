@@ -163,6 +163,9 @@ riverctl csd-filter-add app-id "gedit"
 # Window focus follows cursor
 riverctl focus-follows-cursor normal
 
+# Warp the cursor on output change
+riverctl set-cursor-warp on-output-change
+
 # New windows attach at the bottom of the stack
 riverctl attach-mode bottom
 

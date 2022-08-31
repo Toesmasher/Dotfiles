@@ -9,8 +9,8 @@ profile laptop-home {
 }
 
 profile laptop-work {
-  output "D24F0 0x00000001 (HDMI-A-1)" position 0,0
-  output "D24F0 0x00000001 (DP-3 via HDMI)" position 1920,0
+  output HDMI-A-1 position 0,0
+  output DP-3 position 1920,0
   output eDP-1 position 3840,0
 }
 

@@ -2,6 +2,7 @@ export PAGER="less -R"
 export EDITOR="nvim"
 
 # NNN control
+export BAT_THEME="gruvbox-dark"
 export NNN_FIFO="/tmp/nnn.fifo"
 export NNN_PLUG="p:preview-tui"
 export NNN_OPTS="de"
