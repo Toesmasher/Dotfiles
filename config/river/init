@@ -33,7 +33,7 @@ riverctl map normal Super+Shift K swap previous
 
 # Super+Period and Super+Comma to focus the next/previous output
 riverctl map normal Super Period focus-output right
-riverctl map normal Super Comma focus-output previous
+riverctl map normal Super Comma focus-output left
 
 # Super+Shift+{Period,Comma} to send the focused view to the next/previous output
 #riverctl map normal Super+Shift Period send-to-output right

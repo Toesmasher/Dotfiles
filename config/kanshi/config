@@ -1,22 +1,22 @@
 profile laptop-standalone {
-  output eDP-1 position 0,0
+  output eDP-1 position 0,0 scale 1
 }
 
 profile laptop-home {
-  output eDP-1 position 0,780
+  output eDP-1 position 0,780 scale 1
   output "Goldstar Company Ltd 34GN850 004NTBK70749" position 1920,780
   output "Dell Inc. DELL U2715H GH85D69U092S" position 5360,0 transform 270
 }
 
 profile laptop-work {
-  output HDMI-A-1 position 0,0
-  output DP-3 position 1920,0
-  output eDP-1 position 3840,0
+  output "Dell Inc. DELL U2419H G0Z3C23" position 0,0
+  output "Dell Inc. DELL U2419H 2XY3C23" position 1920,0
+  output eDP-1 position 3840,0 scale 1
 }
 
 profile laptop-work-meeting {
-  output eDP-1 position 0,0
-  output "Samsung Electric Company SAMSUNG 0x00000F00" mode 4096x2160@60 position 1920,0
+  output eDP-1 position 0,0 scale 1
+  output "Samsung Electric Company SAMSUNG 0x00000F00" mode 3840x2160@30 position 1920,0
 }
 
 profile desktop {

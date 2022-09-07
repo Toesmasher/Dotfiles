@@ -15,6 +15,7 @@ case "$(uname -s)" in
 
   Linux)
     alias ls="ls -CF --color=auto"
+    alias pacman_purge="sudo pacman -Rcdnus \$(pacman -Qdtq)"
     ;;
 
   *)
