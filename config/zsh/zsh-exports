@@ -1,5 +1,6 @@
 export PAGER="less -R"
 export EDITOR="nvim"
+export BROWSER="brave"
 
 # NNN control
 export BAT_THEME="gruvbox-dark"
