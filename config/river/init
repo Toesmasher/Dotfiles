@@ -1,7 +1,7 @@
 #!/bin/sh
 
 # Non-river stuff
-swaybg -i ~/Pictures/wallpapers/forest_cabin.png --mode fill &
+swaybg -i ~/Pictures/wallpapers/wallpaper.png --mode fill &
 swayidle -w & 
 waybar &
 kanshi &
