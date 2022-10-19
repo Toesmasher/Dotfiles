@@ -1,0 +1,15 @@
+# Start ssh-agent on non-darwin
+case $(uname -s) in
+  Darwin)
+    # Do nothing, already running
+    ;;
+
+  *)
+    SSH_AUTH_SOCK="/tmp/${USER}-ssh-agent.socket"
+    export SSH_AUTH_SOCK
+
+    if [ ! -e ${SSH_AUTH_SOCK} ]; then
+      ssh-agent -a ${SSH_AUTH_SOCK} > /dev/null 2>&1
+    fi
+    ;;
+esac
