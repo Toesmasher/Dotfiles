@@ -38,7 +38,7 @@ riverctl set-cursor-warp      on-output-change
 # New windows attach at the bottom of the stack
 riverctl attach-mode bottom
 
-riverctl default-layout rivertile
+riverctl default-layout toelayout
 
 # Spawns
 riverctl map normal Super+Shift   Return spawn kitty
@@ -100,7 +100,7 @@ riverctl map-pointer normal Super BTN_LEFT  move-view
 riverctl map-pointer normal Super BTN_RIGHT resize-view
 
 # Tagging
-for i in $(seq 1 9)
+for i in $(seq 1 5)
 do
     tags=$((1 << ($i - 1)))
 
@@ -123,4 +123,5 @@ all_tags=$(((1 << 32) - 1))
 riverctl map normal Super       0 set-focused-tags $all_tags
 riverctl map normal Super+Shift 0 set-view-tags    $all_tags
 
-rivertile -view-padding 2 -outer-padding 2
+#rivertile -view-padding 2 -outer-padding 2
+python3 ${HOME}/.config/river/toelayout.py -i 2 -o 2
