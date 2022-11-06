@@ -23,7 +23,7 @@ main_ratio_single = 0.6
 main_ratio_double = 0.4
 gaps_inner = 0
 gaps_outer = 0
-triple_column_min_width = 3000
+double_min_width = 3000
 
 def handle_demand(layout, view_count, usable_w, usable_h, tags, serial):
     stack_views = view_count - 1
@@ -43,7 +43,7 @@ def handle_demand(layout, view_count, usable_w, usable_h, tags, serial):
             y += (h + gaps_inner)
 
     else:
-        if usable_w >= triple_column_min_width:
+        if usable_w >= double_min_width:
             num_stack_columns = min(view_count, 3) - 1
         else:
             num_stack_columns = min(view_count, 2) - 1
@@ -158,10 +158,11 @@ def registry_handle_global_remove(registry, id):
             outputs.remove(output)
 
 ap = ArgumentParser()
-ap.add_argument("--main-ratio-single", "-s", required=False, dest="main_ratio_single", type=float, default=0.6, help="Main area ratio with single column stack")
-ap.add_argument("--main-ratio-double", "-d", required=False, dest="main_ratio_double", type=float, default=0.4, help="Main area ratio with double column stack")
-ap.add_argument("--gaps-inner", "-i", required=False, dest="gaps_inner", type=int, default=0, help="Inner gaps")
-ap.add_argument("--gaps-outer", "-o", required=False, dest="gaps_outer", type=int, default=0, help="Outer gaps")
+ap.add_argument("--double-min-width", "-w", required=False, dest="double_min_width", type=int, default=double_min_width, help="Minimum screen width to use double stack columns")
+ap.add_argument("--main-ratio-single", "-s", required=False, dest="main_ratio_single", type=float, default=main_ratio_single, help="Main area ratio with single column stack")
+ap.add_argument("--main-ratio-double", "-d", required=False, dest="main_ratio_double", type=float, default=main_ratio_double, help="Main area ratio with double column stack")
+ap.add_argument("--gaps-inner", "-i", required=False, dest="gaps_inner", type=int, default=gaps_inner, help="Inner gaps")
+ap.add_argument("--gaps-outer", "-o", required=False, dest="gaps_outer", type=int, default=gaps_outer, help="Outer gaps")
 args = ap.parse_args()
 
 main_ratio_single = args.main_ratio_single
