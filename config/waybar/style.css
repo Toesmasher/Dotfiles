@@ -1,10 +1,9 @@
 * {
     border: none;
     border-radius: 0;
-    font-weight: 400;
     font-family: 'Fira Code';
     font-size: 14pt;
-    font-weight: 200;
+    font-weight: 600;
     min-height: 0;
 }
 
@@ -30,7 +29,6 @@ window#waybar {
 }
 
 #clock {
-    font-weight: 600;
 }
 
 #battery {
