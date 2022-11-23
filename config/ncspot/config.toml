@@ -13,6 +13,9 @@ volnorm = true
 "o" = "open selected"
 "O" = "back"
 
+"+" = "volup 1"
+"-" = "voldown 1"
+
 "a" = "queue"
 "d" = "delete"
 
