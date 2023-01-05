@@ -33,7 +33,7 @@ riverctl float-filter-add app-id float
 riverctl float-filter-add title  "popup title with spaces"
 
 riverctl focus-follows-cursor normal
-riverctl set-cursor-warp      on-output-change
+riverctl set-cursor-warp      on-focus-change
 
 # New windows attach at the bottom of the stack
 riverctl attach-mode bottom
@@ -66,7 +66,7 @@ done
 
 # River control
 riverctl map normal      Super       W      close
-riverctl map normal      Super+Shift E      exit
+riverctl map normal      Super+Shift Y      exit
 riverctl map normal      Super       Space  toggle-float
 riverctl map normal      Super       F      toggle-fullscreen
 riverctl map normal      Super       F11    enter-mode passthrough
