@@ -80,8 +80,8 @@ riverctl map normal Super K focus-view   next
 riverctl map normal Super L focus-output right
 
 # Move windows between outputs
-riverctl map normal Super+Shift H spawn "riverctl send-to-output left && riverctl focus-output left"
-riverctl map normal Super+Shift L spawn "riverctl send-to-output right && riverctl focus-output right"
+riverctl map normal Super+Shift H spawn "riverctl send-to-output -current-tags left && riverctl focus-output left"
+riverctl map normal Super+Shift L spawn "riverctl send-to-output -current-tags right && riverctl focus-output right"
 
 # Rivertile commands
 riverctl map normal Super       Comma  send-layout-cmd rivertile "main-ratio -0.05"
