@@ -28,9 +28,9 @@ riverctl border-width           3
 riverctl set-repeat 35 175
 riverctl input      pointer-1739-52823-SYNA8009:00_06CB:CE57_Touchpad tap enabled
 
-# Make certain views start floating
-riverctl float-filter-add app-id float
-riverctl float-filter-add title  "popup title with spaces"
+# Rules
+riverctl rule-add float -app-id 'float'
+riverctl rule-add ssd   -app-id '*'
 
 riverctl focus-follows-cursor normal
 riverctl set-cursor-warp      on-focus-change
