@@ -108,7 +108,8 @@ do
     riverctl map normal Super $i set-focused-tags $tags
 
     # Super+Shift+[1-9] to tag focused view with tag [0-8]
-    riverctl map normal Super+Shift $i set-view-tags $tags
+    # riverctl map normal Super+Shift $i set-view-tags $tags
+    riverctl map normal Super+Shift $i spawn "riverctl set-view-tags $tags && riverctl set-focused-tags $tags"
 
     # Super+Ctrl+[1-9] to toggle focus of tag [0-8]
     riverctl map normal Super+Control $i toggle-focused-tags $tags
