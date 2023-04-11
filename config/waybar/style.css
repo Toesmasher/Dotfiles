@@ -12,7 +12,7 @@ window#waybar {
 #clock, #battery, #cpu, #memory, #network, #pulseaudio, #tags, #tray {
     font-weight: 600;
     font-size: 12pt;
-    border-radius: 8px;
+    border-radius: 0px 0px 8px 8px;
     padding: 0 5px;
     margin: 0 2px;
 }
