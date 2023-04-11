@@ -1,9 +1,10 @@
 {
+  // "output": [ "DP-1", "eDP-1" ],
   "layer": "bottom",
   "positon": "top",
-  "height": 25,
+  "height": 20,
 
-  "modules-left": ["river/tags", "river/window"],
+  "modules-left": ["river/tags"],
   "modules-center": [],
   "modules-right": ["tray", "network", "pulseaudio", "battery", "clock"],
 
@@ -21,7 +22,7 @@
     //"scroll-step": 1,
     "format": "{volume}% {icon}",
     "format-bluetooth": "{volume}% {icon}",
-    "format-muted": "",
+    "format-muted": "M ",
     "format-icons": {
         "headphones": "",
         "handsfree": "",
@@ -31,14 +32,6 @@
         "car": "",
         "default": ["", ""]
     }
-  },
-
-  "memory": {
-    "format": "{}% "
-  },
-
-  "cpu": {
-    "format": "{usage}% "
   },
 
   "network": {
@@ -62,7 +55,7 @@
   },
 
   "clock": {
-    "format": "{:%Y-%m-%d %H:%M} ",
+    "format": "{:%Y-%m-%d %H:%M}",
   },
 
   "tray": {
