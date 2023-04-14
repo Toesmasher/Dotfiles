@@ -5,7 +5,6 @@
 
 window#waybar {
     background: linear-gradient(to bottom, #32302f, transparent); /* dark0_soft */
-    background: transparent;
     color: #f2e5bc; /* light0_soft */
 }
 
