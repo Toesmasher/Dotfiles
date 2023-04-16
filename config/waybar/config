@@ -4,13 +4,17 @@
   "positon": "top",
   "height": 20,
 
-  "modules-left": ["river/tags"],
+  "modules-left": ["river/tags", "wlr/workspaces"],
   "modules-center": [],
   "modules-right": ["tray", "network", "pulseaudio", "battery", "clock"],
 
   "river/tags": {
     "num-tags": 5,
     "tag-labels": ["", "", "", "", ""] 
+  },
+
+  "wlr/workspaces": {
+    "format": "{icon}",
   },
 
   "river/window": {
