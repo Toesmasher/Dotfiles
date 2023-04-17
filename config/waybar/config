@@ -1,20 +1,16 @@
 {
   // "output": [ "DP-1", "eDP-1" ],
-  "layer": "bottom",
+  "layer": "top",
   "positon": "top",
   "height": 20,
 
-  "modules-left": ["river/tags", "wlr/workspaces"],
+  "modules-left": ["river/tags"],
   "modules-center": [],
   "modules-right": ["tray", "network", "pulseaudio", "battery", "clock"],
 
   "river/tags": {
     "num-tags": 5,
     "tag-labels": ["", "", "", "", ""] 
-  },
-
-  "wlr/workspaces": {
-    "format": "{icon}",
   },
 
   "river/window": {
@@ -33,7 +29,7 @@
         "headset": "",
         "phone": "",
         "portable": "",
-        "car": "",
+        "car":
         "default": ["", ""]
     }
   },

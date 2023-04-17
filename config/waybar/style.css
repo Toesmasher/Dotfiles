@@ -19,7 +19,7 @@ window#waybar {
 #tags {
     padding: 0px;
     margin: 0px;
-    background: linear-gradient(transparent, #427b58);
+    background: #427b58;
 }
 
 #tags button {
@@ -31,19 +31,19 @@ window#waybar {
 }
 
 #tray {
-    background: linear-gradient(transparent, #79740e); /* faded_green */
+    background: #79740e; /* faded_green */
 }
 
 #network {
-    background: linear-gradient(transparent, #8f3f71); /* faded_purple */
+    background: #8f3f71; /* faded_purple */
 }
 
 #network.disconnected {
-    background: linear-gradient(transparent, #cc241d); /* neutral_red */
+    background: #cc241d; /* neutral_red */
 }
 
 #pulseaudio {
-    background: linear-gradient(transparent, #076678); /* faded_blue */
+    background: #076678; /* faded_blue */
 }
 
 #custom-playerctl {
@@ -51,7 +51,7 @@ window#waybar {
 
 
 #battery {
-    background: linear-gradient(transparent, #af3a03); /* faded_orange */
+    background: #af3a03; /* faded_orange */
 }
 
 @keyframes blink {
@@ -71,5 +71,5 @@ window#waybar {
 }
 
 #clock {
-    background: linear-gradient(transparent, #427b58); /* faded_aqua */
+    background: #427b58; /* faded_aqua */
 }
