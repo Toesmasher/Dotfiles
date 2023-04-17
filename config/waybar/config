@@ -4,7 +4,7 @@
   "positon": "top",
   "height": 20,
 
-  "modules-left": ["river/tags"],
+  "modules-left": ["river/tags", "custom/media"],
   "modules-center": [],
   "modules-right": ["tray", "network", "pulseaudio", "battery", "clock"],
 
@@ -16,6 +16,19 @@
   "river/window": {
     "max-length": 120,
     "format": "{}",
+  },
+
+  "custom/media": {
+    "format": "{icon} {}",
+    "return-type": "json",
+    "max-length": 40,
+    "format-icons": {
+      "ncspot": "",
+      "chromium": "",
+      "default": " ",
+    },
+    "escape": true,
+    "exec": "${HOME}/.config/waybar/mediaplayer.py"
   },
 
   "pulseaudio": {

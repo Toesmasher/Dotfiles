@@ -8,7 +8,7 @@ window#waybar {
     color: #f2e5bc; /* light0_soft */
 }
 
-#clock, #battery, #cpu, #memory, #network, #pulseaudio, #tags, #tray {
+#clock, #custom-media, #battery, #cpu, #memory, #network, #pulseaudio, #tags, #tray {
     font-weight: 600;
     font-size: 12pt;
     border-radius: 0px 0px 8px 8px;
@@ -28,6 +28,10 @@ window#waybar {
 
 #tags button.focused {
     color: #f2e5bc;
+}
+
+#custom-media {
+    background: #af3a03;
 }
 
 #tray {
