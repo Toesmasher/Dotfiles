@@ -1,6 +1,6 @@
 {
   // "output": [ "DP-1", "eDP-1" ],
-  "layer": "top",
+  "layer": "bottom",
   "positon": "top",
   "height": 20,
 
@@ -10,12 +10,12 @@
 
   "river/tags": {
     "num-tags": 5,
-    "tag-labels": ["", "", "", "", ""] 
+    "tag-labels": ["", "", "", "", ""],
   },
 
   "river/window": {
     "max-length": 120,
-    "format": "{}"
+    "format": "{}",
   },
 
   "pulseaudio": {
@@ -29,8 +29,8 @@
         "headset": "",
         "phone": "",
         "portable": "",
-        "car":
-        "default": ["", ""]
+        "car": "",
+        "default": ["", ""],
     }
   },
 
@@ -38,7 +38,7 @@
     // "interface": "wlp2s0", // (Optional) To force the use of this interface
     "format-wifi": "{essid} {signalStrength}% ",
     "format-ethernet": "{ifname}: {ipaddr}/{cidr} ",
-    "format-disconnected": "Disconnected ⚠"
+    "format-disconnected": "Disconnected ⚠",
   },
 
   "battery": {
@@ -46,12 +46,12 @@
     "states": {
       "good": 95,
       "warning": 20,
-      "critical": 10
+      "critical": 10,
     },
     "format": "{capacity}% {icon}",
     "format-charging": "{capacity}% {icon} ",
     "format-plugged": "{capacity}% {icon} ",
-    "format-icons": ["", "", "", "", ""]
+    "format-icons": ["", "", "", "", ""],
   },
 
   "clock": {
@@ -59,6 +59,7 @@
   },
 
   "tray": {
+    "icon-size": 15,
     "spacing": 10
   },
 }
