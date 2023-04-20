@@ -4,20 +4,11 @@
   "positon": "top",
   "height": 20,
 
-  "modules-left": ["river/tags", "custom/media"],
-  "modules-center": [],
+  "modules-left": ["custom/media"],
+  "modules-center": ["wlr/workspaces"],
   "modules-right": ["tray", "network", "pulseaudio", "battery", "clock"],
 
-  "river/tags": {
-    "num-tags": 5,
-    "tag-labels": ["", "", "", "", ""],
-  },
-
-  "river/window": {
-    "max-length": 120,
-    "format": "{}",
-  },
-
+  // Left
   "custom/media": {
     "format": "{icon} {}",
     "return-type": "json",
@@ -31,6 +22,23 @@
     "exec": "${HOME}/.config/waybar/mediaplayer.py"
   },
 
+  // Center
+  "wlr/workspaces": {
+    "format": "{icon}",
+    "format-icons": {
+      "1": "",
+      "2": "",
+      "3": "",
+      "4": "",
+      "5": "",
+
+      "8": "",
+      "9": "",
+    },
+    "sort-by-number": true
+  },
+
+  // Right
   "pulseaudio": {
     //"scroll-step": 1,
     "format": "{volume}% {icon}",

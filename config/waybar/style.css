@@ -8,7 +8,7 @@ window#waybar {
     color: #f2e5bc; /* light0_soft */
 }
 
-#clock, #custom-media, #battery, #cpu, #memory, #network, #pulseaudio, #tags, #tray {
+#clock, #custom-media, #battery, #cpu, #memory, #network, #pulseaudio, #tray, #workspaces {
     font-weight: 600;
     font-size: 12pt;
     border-radius: 0px 0px 8px 8px;
@@ -16,17 +16,15 @@ window#waybar {
     margin: 0 2px;
 }
 
-#tags {
-    padding: 0px;
-    margin: 0px;
+#workspaces {
     background: #427b58;
 }
 
-#tags button {
+#workspaces button {
     color: #a89984;
 }
 
-#tags button.focused {
+#workspaces button.active {
     color: #f2e5bc;
 }
 
