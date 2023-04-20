@@ -4,26 +4,12 @@
   "positon": "top",
   "height": 20,
 
-  "modules-left": ["custom/media"],
-  "modules-center": ["wlr/workspaces"],
-  "modules-right": ["tray", "network", "pulseaudio", "battery", "clock"],
+  "modules-left": ["wlr/workspaces"],
+  "modules-center": ["custom/media"],
+  "modules-right": ["tray", "network", "pipewire", "battery", "clock"],
 
   // Left
-  "custom/media": {
-    "format": "{icon} {}",
-    "return-type": "json",
-    "max-length": 40,
-    "format-icons": {
-      "ncspot": "",
-      "chromium": "",
-      "default": " ",
-    },
-    "escape": true,
-    "exec": "${HOME}/.config/waybar/mediaplayer.py"
-  },
-
-  // Center
-  "wlr/workspaces": {
+   "wlr/workspaces": {
     "format": "{icon}",
     "format-icons": {
       "1": "",
@@ -38,8 +24,22 @@
     "sort-by-number": true
   },
 
-  // Right
-  "pulseaudio": {
+  // Center
+  "custom/media": {
+    "format": "{icon} {}",
+    "return-type": "json",
+    "max-length": 40,
+    "format-icons": {
+      "ncspot": "",
+      "chromium": "",
+      "default": " ",
+    },
+    "escape": true,
+    "exec": "${HOME}/.config/waybar/mediaplayer.py"
+  },
+
+   // Right
+  "pipewire": {
     //"scroll-step": 1,
     "format": "{volume}% {icon}",
     "format-bluetooth": "{volume}% {icon}",
@@ -57,8 +57,8 @@
 
   "network": {
     // "interface": "wlp2s0", // (Optional) To force the use of this interface
-    "format-wifi": "{essid} {signalStrength}% ",
-    "format-ethernet": "{ifname}: {ipaddr}/{cidr} ",
+    "format-wifi": "{essid} {ipaddr} {signalStrength}% ",
+    "format-ethernet": "{ifname}: {ipaddr} ",
     "format-disconnected": "Disconnected ⚠",
   },
 
