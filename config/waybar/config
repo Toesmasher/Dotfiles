@@ -6,7 +6,7 @@
 
   "modules-left": ["wlr/workspaces"],
   "modules-center": ["custom/media"],
-  "modules-right": ["tray", "network", "pipewire", "battery", "clock"],
+  "modules-right": ["tray", "network", "pulseaudio", "battery", "clock"],
 
   // Left
    "wlr/workspaces": {
@@ -39,7 +39,7 @@
   },
 
    // Right
-  "pipewire": {
+  "pulseaudio": {
     //"scroll-step": 1,
     "format": "{volume}% {icon}",
     "format-bluetooth": "{volume}% {icon}",
