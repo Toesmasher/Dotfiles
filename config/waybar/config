@@ -1,15 +1,14 @@
 {
-  // "output": [ "DP-1", "eDP-1" ],
   "layer": "bottom",
   "positon": "top",
   "height": 20,
 
-  "modules-left": ["wlr/workspaces"],
-  "modules-center": ["custom/media"],
+  "modules-left": ["wlr/workspaces", "custom/media"],
+  "modules-center": [],
   "modules-right": ["tray", "network", "pulseaudio", "battery", "clock"],
 
   // Left
-   "wlr/workspaces": {
+  "wlr/workspaces": {
     "format": "{icon}",
     "format-icons": {
       "1": "",
@@ -24,7 +23,6 @@
     "sort-by-number": true
   },
 
-  // Center
   "custom/media": {
     "format": "{icon} {}",
     "return-type": "json",
@@ -38,7 +36,9 @@
     "exec": "${HOME}/.config/waybar/mediaplayer.py"
   },
 
-   // Right
+  // Center
+
+  // Right
   "pulseaudio": {
     //"scroll-step": 1,
     "format": "{volume}% {icon}",
