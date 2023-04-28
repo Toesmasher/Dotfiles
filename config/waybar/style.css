@@ -8,10 +8,10 @@ window#waybar {
     background: transparent;
 }
 
+#backlight,
+#battery,
 #clock,
 #custom-media,
-#battery,
-#cpu,
 #memory,
 #network,
 #pulseaudio,
@@ -55,7 +55,7 @@ window#waybar {
     color: #ed8796;
 }
 
-#backlight: {
+#backlight {
     color: #91d7e3;
     border-radius: 0px;
     margin: 0px;
@@ -69,6 +69,7 @@ window#waybar {
 
 #battery {
     color: #8bd5ca;
+    border-radius: 0px;
     margin: 0px;
 }
 
