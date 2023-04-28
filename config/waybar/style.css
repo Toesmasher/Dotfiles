@@ -1,59 +1,75 @@
 * {
     font-family: 'Fira Code Nerd Font';
+    font-size: 12pt;
     min-height: 0px;
 }
 
 window#waybar {
     background: transparent;
-    color: #f2e5bc; /* light0_soft */
 }
 
-#clock, #custom-media, #battery, #cpu, #memory, #network, #pulseaudio, #tray, #workspaces {
+#clock,
+#custom-media,
+#battery,
+#cpu,
+#memory,
+#network,
+#pulseaudio,
+#tray,
+#workspaces {
+    color: #cad3f5;
+    border-radius: 1rem;
+    background-color: #363a4f;
     font-weight: 600;
     font-size: 12pt;
-    border-radius: 0px 0px 8px 8px;
     padding: 0px 8px;
-    margin: 0px 2px;
+    margin: 0px 5px;
 }
 
 #workspaces {
-    background: #427b58;
 }
 
 #workspaces button {
-    color: #a89984;
+    color: #cad3f5;
 }
 
 #workspaces button.active {
-    color: #f2e5bc;
+    background-color: #8aadf4;
+    color: #363a4f;
 }
 
 #custom-media {
-    background: #af3a03;
+    color: #eed49f;
 }
 
 #tray {
-    background: #79740e; /* faded_green */
 }
 
 #network {
-    background: #8f3f71; /* faded_purple */
+    color: #c6a0f6;
+    margin-right: 0px;
+    border-radius: 1rem 0rem 0rem 1rem;
 }
 
 #network.disconnected {
-    background: #cc241d; /* neutral_red */
+    color: #ed8796;
+}
+
+#backlight: {
+    color: #91d7e3;
+    border-radius: 0px;
+    margin: 0px;
 }
 
 #pulseaudio {
-    background: #076678; /* faded_blue */
+    color: #f5a97f;
+    border-radius: 0px;
+    margin: 0px;
 }
-
-#custom-playerctl {
-}
-
 
 #battery {
-    background: #af3a03; /* faded_orange */
+    color: #8bd5ca;
+    margin: 0px;
 }
 
 @keyframes blink {
@@ -73,5 +89,7 @@ window#waybar {
 }
 
 #clock {
-    background: #427b58; /* faded_aqua */
+  color: #a6da95;
+  margin-left: 0px;
+  border-radius: 0rem 1rem 1rem 0rem;
 }
