@@ -23,7 +23,7 @@ window#waybar {
     font-weight: 600;
     font-size: 12pt;
     padding: 0px 8px;
-    margin: 0px 5px;
+    margin: 2px 5px 0px 5px;
 }
 
 #workspaces {
@@ -58,19 +58,19 @@ window#waybar {
 #backlight {
     color: #91d7e3;
     border-radius: 0px;
-    margin: 0px;
+    margin: 2px 0px 0px 0px;
 }
 
 #pulseaudio {
     color: #f5a97f;
     border-radius: 0px;
-    margin: 0px;
+    margin: 2px 0px 0px 0px;
 }
 
 #battery {
     color: #8bd5ca;
     border-radius: 0px;
-    margin: 0px;
+    margin: 2px 0px 0px 0px;
 }
 
 @keyframes blink {
