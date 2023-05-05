@@ -1,6 +1,7 @@
 font=FiraCode Nerd Font 12
 border-radius=5
-default-timeout=3000
+width=800
+default-timeout=8000
 
 background-color=#24273abb
 text-color=#cad3f5
