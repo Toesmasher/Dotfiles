@@ -1,0 +1,3 @@
+[submodule "config/xplr/plugins/tri-pane.xplr"]
+	path = config/xplr/plugins/tri-pane
+	url = https://github.com/sayanarijit/tri-pane.xplr
