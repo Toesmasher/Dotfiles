@@ -4,10 +4,4 @@ export PAGER="less -R"
 export EDITOR="nvim"
 export BROWSER="brave"
 
-# NNN control
 export BAT_THEME="gruvbox-dark"
-export SPLIT="v"
-export NNN_BMS="h:$HOME;p:$HOME/Projects"
-export NNN_FIFO="/tmp/nnn.fifo"
-export NNN_PLUG="p:preview-tui"
-export NNN_OPTS="de"
