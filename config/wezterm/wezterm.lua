@@ -22,4 +22,5 @@ return {
       font = wezterm.font('FiraCode Nerd Font', { weight = 'Bold' }),
     },
   },
+  harfbuzz_features = { 'calt=0', 'clig=0', 'liga=0' },
 }
