@@ -23,4 +23,9 @@ return {
     },
   },
   harfbuzz_features = { 'calt=0', 'clig=0', 'liga=0' },
+
+  keys = {
+    { key = '+', mods = 'SUPER', action = wezterm.action.IncreaseFontSize },
+    { key = '-', mods = 'SUPER', action = wezterm.action.DecreaseFontSize }
+  }
 }
