@@ -52,10 +52,8 @@ window#waybar {
     color: #c6a0f6;
     margin-right: 0px;
 
-    border-left: 2px solid #cad3f5;
-    border-top: 2px solid #cad3f5;
-    border-bottom: 2px solid #cad3f5;
-    border-radius: 1rem 0rem 0rem 1rem;
+    border: 2px solid #cad3f5;
+    border-radius: 1rem;
 }
 
 #network.disconnected {
@@ -77,7 +75,8 @@ window#waybar {
 
     border-top: 2px solid #cad3f5;
     border-bottom: 2px solid #cad3f5;
-    border-radius: 0px;
+    border-left: 2px solid #cad3f5;
+    border-radius: 1rem 0rem 0rem 1rem;
 }
 
 #battery {
