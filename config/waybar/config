@@ -5,7 +5,7 @@
 
   "modules-left": ["network", "custom/media"],
   "modules-center": ["hyprland/workspaces"],
-  "modules-right": ["pulseaudio", "tray", "backlight", "battery", "clock"],
+  "modules-right": ["tray", "pulseaudio", "backlight", "battery", "clock"],
 
   // Left
   "hyprland/workspaces": {
