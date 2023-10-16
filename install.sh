@@ -1,4 +1,4 @@
-#!/usr/bin/env zsh
+#!/usr/bin/env sh
 
 symlinker() {
   SRC_PATH="$1"
@@ -25,14 +25,15 @@ LINUX_FONT_SRC="${SCRIPT_DIR}/local/share/fonts"
 LINUX_FONT_DST="${HOME}/.local/share/fonts"
 
 # Find all direcories in config/
-CONFIG_NAMES=()
-for d in ${CONFIG_SRC}/*/; do
-  CONFIG_NAMES+=("$(basename "${d}")")
+CONFIG_NAMES=""
+for d in "${CONFIG_SRC}/*/"; do
+  CONFIG_NAMES="${CONFIG_NAMES} $(basename $d)"
 done
 
-LINUX_FONT_NAMES=()
-for f in ${SCRIPT_DIR}/local/share/fonts/*; do
-  LINUX_FONT_NAMES+=("$(basename "${f}")")
+# List fonts
+LINUX_FONT_NAMES=""
+for f in "${SCRIPT_DIR}/local/share/fonts/*"; do
+  LINUX_FONT_NAMES="${LINUX_FONT_NAMES} $(basename $f)"
 done
 
 # Platform-specific stuff
@@ -56,7 +57,7 @@ case ${PLATFORM} in
     ;;
 esac
 
-for d in ${CONFIG_NAMES[@]}; do
+for d in ${CONFIG_NAMES}; do
   symlinker "${CONFIG_SRC}/${d}" "${CONFIG_DST}/${d}"
 done
 
