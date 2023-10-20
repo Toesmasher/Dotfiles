@@ -10,5 +10,5 @@ function fast_jlink
     set EXTRAARGS "$EXTRAARGS -USB $USB"
   end
 
-  JLinkExe -Device NRF52840_XXAA -If SWD -Speed 4000 -AutoConnect 1 $EXTRAARGS
+  eval JLinkExe -Device NRF52840_XXAA -If SWD -Speed 4000 -AutoConnect 1 $EXTRAARGS
 end
