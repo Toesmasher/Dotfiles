@@ -19,7 +19,8 @@ window#waybar {
 #workspaces {
     color: #cad3f5;
     border-radius: 1rem;
-    background-color: #363a4f;
+    background-color: rgba(54, 58, 79, 0.75);
+    /* background-color: #363a4f80; */
     font-weight: 600;
     font-size: 12pt;
     padding: 0px 8px;
@@ -27,7 +28,7 @@ window#waybar {
 }
 
 #workspaces {
-    border: 2px solid #cad3f5;
+    /* border: 2px solid #cad3f5; */
 }
 
 #workspaces button {
@@ -40,19 +41,19 @@ window#waybar {
 }
 
 #custom-media {
-    border: 2px solid #cad3f5;
+    /* border: 2px solid #cad3f5; */
     color: #eed49f;
 }
 
 #tray {
-    border: 2px solid #cad3f5;
+    /* border: 2px solid #cad3f5; */
 }
 
 #network {
     color: #c6a0f6;
     margin-right: 0px;
 
-    border: 2px solid #cad3f5;
+    /* border: 2px solid #cad3f5; */
     border-radius: 1rem;
 }
 
@@ -64,8 +65,8 @@ window#waybar {
     color: #91d7e3;
     margin: 2px 0px 0px 0px;
 
-    border-top: 2px solid #cad3f5;
-    border-bottom: 2px solid #cad3f5;
+    /* border-top: 2px solid #cad3f5; */
+    /* border-bottom: 2px solid #cad3f5; */
     border-radius: 0px;
 }
 
@@ -73,9 +74,9 @@ window#waybar {
     color: #f5a97f;
     margin: 2px 0px 0px 0px;
 
-    border-top: 2px solid #cad3f5;
-    border-bottom: 2px solid #cad3f5;
-    border-left: 2px solid #cad3f5;
+    /* border-top: 2px solid #cad3f5; */
+    /* border-bottom: 2px solid #cad3f5; */
+    /* border-left: 2px solid #cad3f5; */
     border-radius: 1rem 0rem 0rem 1rem;
 }
 
@@ -83,8 +84,8 @@ window#waybar {
     color: #b7bdf8;
     margin: 2px 0px 0px 0px;
 
-    border-top: 2px solid #cad3f5;
-    border-bottom: 2px solid #cad3f5;
+    /* border-top: 2px solid #cad3f5; */
+    /* border-bottom: 2px solid #cad3f5; */
     border-radius: 0px;
 }
 
@@ -108,8 +109,8 @@ window#waybar {
     color: #a6da95;
     margin-left: 0px;
 
-    border-right: 2px solid #cad3f5;
-    border-top: 2px solid #cad3f5;
-    border-bottom: 2px solid #cad3f5;
+    /* border-right: 2px solid #cad3f5; */
+    /* border-top: 2px solid #cad3f5; */
+    /* border-bottom: 2px solid #cad3f5; */
     border-radius: 0rem 1rem 1rem 0rem;
 }

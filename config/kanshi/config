@@ -10,8 +10,8 @@ profile laptop-home {
 
 profile laptop-work {
   output "Dell Inc. DELL U2419H G0Z3C23" position 0,0
-  output "Dell Inc. DELL U2419H 2XY3C23" position 1920,0
-  output eDP-1 position 3840,0 scale 1
+  output eDP-1 position 1920,0 scale 1
+  output "Dell Inc. DELL U2419H 2XY3C23" position 3840,0
 }
 
 profile laptop-work-meeting {
