@@ -18,17 +18,29 @@ window#waybar {
 #tray,
 #workspaces {
     color: #cad3f5;
-    border-radius: 1rem;
-    background-color: rgba(54, 58, 79, 0.75);
-    /* background-color: #363a4f80; */
+    background-color: rgba(54, 58, 79, 0.75); /* #363a4f */
     font-weight: 600;
     font-size: 12pt;
     padding: 0px 8px;
-    margin: 2px 2px 0px 2px;
+}
+
+#network {
+    color: #c6a0f6;
+    border-radius: 0px 0px 12px 12px;
+}
+
+#network.disconnected {
+    color: #ed8796;
+}
+
+#custom-media {
+    color: #eed49f;
+    margin: 0px 2px 0px 2px;
+    border-radius: 0px 0px 12px 12px;
 }
 
 #workspaces {
-    /* border: 2px solid #cad3f5; */
+    border-radius: 0px 0px 12px 12px;
 }
 
 #workspaces button {
@@ -36,57 +48,27 @@ window#waybar {
 }
 
 #workspaces button.active {
-    background-color: #8aadf4;
-    color: #363a4f;
-}
-
-#custom-media {
-    /* border: 2px solid #cad3f5; */
-    color: #eed49f;
+    color: #f5a97f;
+    text-decoration: underline;
 }
 
 #tray {
-    /* border: 2px solid #cad3f5; */
-}
-
-#network {
-    color: #c6a0f6;
-    margin-right: 0px;
-
-    /* border: 2px solid #cad3f5; */
-    border-radius: 1rem;
-}
-
-#network.disconnected {
-    color: #ed8796;
+  margin: 0px 2px 0px 2px;
+  border-radius: 0px 0px 12px 12px;
 }
 
 #backlight {
     color: #91d7e3;
-    margin: 2px 0px 0px 0px;
-
-    /* border-top: 2px solid #cad3f5; */
-    /* border-bottom: 2px solid #cad3f5; */
     border-radius: 0px;
 }
 
 #pulseaudio {
     color: #f5a97f;
-    margin: 2px 0px 0px 0px;
-
-    /* border-top: 2px solid #cad3f5; */
-    /* border-bottom: 2px solid #cad3f5; */
-    /* border-left: 2px solid #cad3f5; */
-    border-radius: 1rem 0rem 0rem 1rem;
+    border-radius: 0px 0px 0px 12px;
 }
 
 #battery {
     color: #b7bdf8;
-    margin: 2px 0px 0px 0px;
-
-    /* border-top: 2px solid #cad3f5; */
-    /* border-bottom: 2px solid #cad3f5; */
-    border-radius: 0px;
 }
 
 @keyframes blink {
@@ -108,9 +90,5 @@ window#waybar {
 #clock {
     color: #a6da95;
     margin-left: 0px;
-
-    /* border-right: 2px solid #cad3f5; */
-    /* border-top: 2px solid #cad3f5; */
-    /* border-bottom: 2px solid #cad3f5; */
-    border-radius: 0rem 1rem 1rem 0rem;
+    border-radius: 0px 0px 10px 0px;
 }
