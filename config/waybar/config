@@ -8,6 +8,13 @@
   "modules-right": ["tray", "pulseaudio", "backlight", "battery", "clock"],
 
   // Left
+  "network": {
+    "format-wifi": " {signalStrength}% {essid} {ipaddr}",
+    "format-ethernet": " {ifname}: {ipaddr}",
+    "format-disconnected": "⚠ Disconnected",
+  },
+
+  // Center
   "hyprland/workspaces": {
     "format": "{icon}",
     "format-icons": {
@@ -22,20 +29,6 @@
     "on-click": "activate",
   },
 
-  "custom/media": {
-    "format": "{icon} {}",
-    "return-type": "json",
-    "max-length": 40,
-    "format-icons": {
-      "ncspot": "",
-      "chromium": "",
-      "default": " ",
-    },
-    "escape": true,
-    "exec": "${HOME}/.config/waybar/mediaplayer.py"
-  },
-
-  // Center
 
   // Right
   "tray": {
@@ -57,12 +50,6 @@
         "car": "",
         "default": ["", ""],
     }
-  },
-
-  "network": {
-    "format-wifi": " {signalStrength}% {essid} {ipaddr}",
-    "format-ethernet": " {ifname}: {ipaddr}",
-    "format-disconnected": "⚠ Disconnected",
   },
 
   "backlight": {

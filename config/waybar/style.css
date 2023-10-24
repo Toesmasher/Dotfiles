@@ -11,7 +11,6 @@ window#waybar {
 #backlight,
 #battery,
 #clock,
-#custom-media,
 #memory,
 #network,
 #pulseaudio,
@@ -31,12 +30,6 @@ window#waybar {
 
 #network.disconnected {
     color: #ed8796;
-}
-
-#custom-media {
-    color: #eed49f;
-    margin: 0px 2px 0px 2px;
-    border-radius: 0px 0px 12px 12px;
 }
 
 #workspaces {
