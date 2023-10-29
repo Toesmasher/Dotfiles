@@ -19,6 +19,11 @@ profile laptop-work-meeting {
   output "Samsung Electric Company SAMSUNG 0x00000F00" mode 3840x2160@30 position 1920,0
 }
 
+profile laptop-work-meeting2 {
+  output eDP-1 position 0,0 scale 1
+  output "LG Electronics LG TV SSCR2 0x01010101" mode 1920x1080 position 1920,0
+}
+
 profile desktop {
   output "LG Electronics 34GN850 004NTBK70749" position 0,780
   output "Dell Inc. DELL U2715H GH85D69U092S" position 3440,0 transform 270
