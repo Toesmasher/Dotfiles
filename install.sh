@@ -1,4 +1,5 @@
 #!/usr/bin/env sh
+IFS=":"
 
 symlinker() {
   SRC_PATH="$1"
@@ -26,20 +27,20 @@ LINUX_FONT_DST="${HOME}/.local/share/fonts"
 
 # Find all direcories in config/
 CONFIG_NAMES=""
-for d in "${CONFIG_SRC}/*/"; do
-  CONFIG_NAMES="${CONFIG_NAMES} $(basename $d)"
+for d in ${CONFIG_SRC}/*; do
+  CONFIG_NAMES="$(basename "$d")${IFS}${CONFIG_NAMES}"
 done
 
 # List fonts
 LINUX_FONT_NAMES=""
-for f in "${SCRIPT_DIR}/local/share/fonts/*"; do
-  LINUX_FONT_NAMES="${LINUX_FONT_NAMES} $(basename $f)"
+for f in ${LINUX_FONT_SRC}/*; do
+  LINUX_FONT_NAMES="$(basename "$f")${IFS}${LINUX_FONT_NAMES}"
 done
 
 # Platform-specific stuff
 case ${PLATFORM} in
   Linux)
-    for f in "${LINUX_FONT_NAMES[@]}"; do
+    for f in ${LINUX_FONT_NAMES}; do
       symlinker "${LINUX_FONT_SRC}/${f}" "${LINUX_FONT_DST}/${f}"
     done
     fc-cache -f &
@@ -60,4 +61,3 @@ esac
 for d in ${CONFIG_NAMES}; do
   symlinker "${CONFIG_SRC}/${d}" "${CONFIG_DST}/${d}"
 done
-
