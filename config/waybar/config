@@ -16,6 +16,7 @@
 
   // Center
   "hyprland/workspaces": {
+    "all-outputs": true,
     "format": "{icon}",
     "format-icons": {
       "default": "",
