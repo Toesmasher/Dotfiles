@@ -1,10 +1,14 @@
-/* Dracula Theme */
-@define-color foreground rgb(248, 248, 242);
-@define-color background rgb(40, 42, 54);
-@define-color background-alpha rgba(40, 42, 54, 0.8);
-@define-color accent rgba(189, 147, 249, 0.8);
-@define-color current-line rgb(68, 71, 90);
-@define-color comment rgb(98, 114, 164);
+/* Catppuccin-machiato */
+@define-color foreground rgb(202, 211, 245); /* text */
+@define-color background rgb(54, 58, 79); /* surface0	*/
+@define-color background-alpha rgba(54, 58, 79, 0.8); /* surface0 */
+@define-color accent rgba(198, 160, 246, 0.8); /* mauve */
+@define-color current-line rgb(73, 77, 100); /* surface1 */
+@define-color comment rgb(110, 115, 141); /* overlay0	*/
+
+* {
+  font-family: "FiraCode Nerd Font";
+}
 
 .notification-row {
   transition: all 200ms ease;
