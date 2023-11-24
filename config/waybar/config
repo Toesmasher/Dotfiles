@@ -9,9 +9,9 @@
 
   // Left
   "network": {
-    "format-wifi": " {signalStrength}% {essid} {ipaddr}",
-    "format-ethernet": " {ifname}: {ipaddr}",
-    "format-disconnected": "⚠ Disconnected",
+    "format-wifi": "  {signalStrength}% {essid} {ipaddr}",
+    "format-ethernet": "  {ifname}: {ipaddr}",
+    "format-disconnected": "⚠  Disconnected",
   },
 
   // Center
