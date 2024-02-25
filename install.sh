@@ -22,6 +22,9 @@ PLATFORM=$(uname -s)
 CONFIG_SRC="${SCRIPT_DIR}/config"
 CONFIG_DST="${HOME}/.config"
 
+LOCAL_SCRIPTS_SRC="${SCRIPT_DIR}/scripts"
+LOCAL_SCRIPTS_DST="${HOME}/.local/bin"
+
 LINUX_FONT_SRC="${SCRIPT_DIR}/local/share/fonts"
 LINUX_FONT_DST="${HOME}/.local/share/fonts"
 
@@ -29,6 +32,11 @@ LINUX_FONT_DST="${HOME}/.local/share/fonts"
 CONFIG_NAMES=""
 for d in ${CONFIG_SRC}/*; do
   CONFIG_NAMES="$(basename "$d")${IFS}${CONFIG_NAMES}"
+done
+
+# Find scripts
+for s in ${LOCAL_SCRIPTS_SRC}/*; do
+  LOCAL_SCRIPTS_NAMES="$(basename "$s")${IFS}${LOCAL_SCRIPTS_NAMES}"
 done
 
 # List fonts
@@ -60,4 +68,8 @@ esac
 
 for d in ${CONFIG_NAMES}; do
   symlinker "${CONFIG_SRC}/${d}" "${CONFIG_DST}/${d}"
+done
+
+for s in ${LOCAL_SCRIPTS_NAMES}; do
+  symlinker "${LOCAL_SCRIPTS_SRC}/${s}" "${LOCAL_SCRIPTS_DST}/${s}"
 done
