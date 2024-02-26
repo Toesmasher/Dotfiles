@@ -1,3 +1,5 @@
+@import url("colors.css");
+
 * {
     font-family: 'FreeSans';
     font-size: 12pt;
@@ -16,21 +18,21 @@ window#waybar {
 #pulseaudio,
 #tray,
 #workspaces {
-    color: #cad3f5;
-    background-color: rgba(54, 58, 79, 0.75); /* #363a4f */
+    color: @bright;
+    background-color: @dark-alpha;
     font-weight: 600;
     font-size: 12pt;
     padding: 0px 8px;
 }
 
 #network {
-    color: #c6a0f6;
+    color: @mauve;
     margin: 0px 2px 0px 2px;
     border-radius: 0px 0px 12px 12px;
 }
 
 #network.disconnected {
-    color: #ed8796;
+    color: @red;
 }
 
 #workspaces {
@@ -38,11 +40,11 @@ window#waybar {
 }
 
 #workspaces button {
-    color: #cad3f5;
+    color: @bright;
 }
 
 #workspaces button.active {
-    color: #f5a97f;
+    color: @peach;
     text-decoration: underline;
 }
 
@@ -52,23 +54,23 @@ window#waybar {
 }
 
 #backlight {
-    color: #91d7e3;
+    color: @sky;
     border-radius: 0px;
 }
 
 #pulseaudio {
-    color: #f5a97f;
+    color: @peach;
     border-radius: 0px 0px 0px 12px;
 }
 
 #battery {
-    color: #b7bdf8;
+    color: @blue;
 }
 
 @keyframes blink {
     to {
-        background-color: #ffffff;
-        color: black;
+        background-color: @bright;
+        color: @red;
     }
 }
 
@@ -82,7 +84,7 @@ window#waybar {
 }
 
 #clock {
-    color: #a6da95;
+    color: @green;
     margin: 0px 2px 0px 0px;
     border-radius: 0px 0px 10px 0px;
 }
