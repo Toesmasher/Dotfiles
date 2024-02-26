@@ -1,9 +1,17 @@
 #!/usr/bin/env bash
 
-DEFAULT_SESSION="default"
+# Attach to unattached sessions, or create new if none exist
 
-if tmux has-session -t ${DEFAULT_SESSION}; then
-  tmux attach-session -t ${DEFAULT_SESSION}
+IFS=$'\n'
+UNATTACHED_SESSIONS=$(tmux ls | grep -v '(attached)')
+
+if [[ ! -z ${UNATTACHED_SESSIONS} ]]; then
+  for s in ${UNATTACHED_SESSIONS}; do
+    sname=${s%%: *}
+    exec tmux attach-session -t ${sname}
+    echo ${sname}
+    break
+  done
 else
-  tmux new-session -s ${DEFAULT_SESSION}
+  exec tmux
 fi
