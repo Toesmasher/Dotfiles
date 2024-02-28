@@ -9,8 +9,8 @@
 
   // Left
   "network": {
-    "format-wifi": "  {signalStrength}% {essid} {ipaddr}",
-    "format-ethernet": "  {ifname}: {ipaddr}",
+    "format-wifi": "   {signalStrength}% {essid} {ipaddr}",
+    "format-ethernet": "   {ifname}: {ipaddr}",
     "format-disconnected": "⚠  Disconnected",
   },
 
@@ -38,7 +38,7 @@
 
   "pulseaudio": {
     //"scroll-step": 1,
-    "format": "{icon} {volume}%",
+    "format": "{icon}  {volume}%",
     "format-bluetooth": "{icon}  {volume}%",
     "format-muted": "M ",
     "format-icons": {
