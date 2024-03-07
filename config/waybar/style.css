@@ -7,7 +7,8 @@
 }
 
 window#waybar {
-    background: transparent;
+    /* background: transparent; */
+    background: linear-gradient(to bottom, @dark-alpha, rgba(0, 0, 0, 0));
 }
 
 #backlight,
@@ -19,12 +20,12 @@ window#waybar {
 #tray,
 #workspaces {
     color: @bright;
-    background-color: @dark-alpha;
+    /* background-color: @dark-alpha; */
     font-weight: 600;
     font-size: 12pt;
     padding: 0px 8px;
 
-    border-radius: 12px 12px 12px 12px;
+    /* border-radius: 12px 12px 12px 12px; */
     margin: 2px 2px 0px 2px;
 }
 
