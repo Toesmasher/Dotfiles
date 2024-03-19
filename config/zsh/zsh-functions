@@ -1,4 +1,0 @@
-function clangd_gen() {
-  # Should include -B as well, but the mira make structure gets stuck (MIRA-2954)
-  make -nw $@ | compiledb -o- > compile_commands.json
-}

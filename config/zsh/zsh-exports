@@ -1,7 +1,0 @@
-export XDG_CONFIG_HOME="$HOME/.config"
-
-export PAGER="less -R"
-export EDITOR="nvim"
-export BROWSER="brave"
-
-export BAT_THEME="gruvbox-dark"
