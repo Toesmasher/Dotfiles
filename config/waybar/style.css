@@ -19,7 +19,7 @@ window#waybar {
 #pulseaudio,
 #tray,
 #workspaces {
-    color: @bright;
+    color: @text;
     background: linear-gradient(to bottom, transparent, @dark-alpha);
     font-weight: 600;
     font-size: 12pt;
@@ -41,7 +41,7 @@ window#waybar {
 }
 
 #workspaces button {
-    color: @bright;
+    color: @text;
 }
 
 #workspaces button.active {
@@ -66,13 +66,13 @@ window#waybar {
 
 @keyframes blink {
     to {
-        background-color: @bright;
+        background-color: @text;
         color: @red;
     }
 }
 
 #battery.warning {
-    color: @bright;
+    color: @text;
     animation-name: blink;
     animation-duration: 0.5s;
     animation-timing-function: linear;
