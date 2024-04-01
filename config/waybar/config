@@ -5,7 +5,7 @@
 
   "modules-left": ["network", "custom/media"],
   "modules-center": ["hyprland/workspaces"],
-  "modules-right": ["tray", "backlight", "battery", "pulseaudio", "clock"],
+  "modules-right": ["tray", "idle_inhibitor", "backlight", "battery", "pulseaudio", "clock"],
 
   // Left
   "network": {
@@ -34,6 +34,14 @@
   "tray": {
     "icon-size": 15,
     "spacing": 10
+  },
+
+  "idle_inhibitor": {
+	  "format": "{icon}",
+	  "format-icons": {
+	    "activated": "",
+	    "deactivated": ""
+	  }
   },
 
   "pulseaudio": {
