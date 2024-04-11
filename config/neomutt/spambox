@@ -1,0 +1,14 @@
+# vi: set ft=neomuttrc :
+set from = "spambox@toesmasher.se"
+set realname = "Niklas Berggren"
+
+set smtp_url = "smtps://spambox@toesmasher.se@smtp.gmail.com:465"
+
+set folder = "imaps://spambox@toesmasher.se@imap.gmail.com:993"
+set spoolfile = "+INBOX"
+set record = "+[Gmail]/Sent Mail"
+set trash = "+[Gmail]/Bin"
+set postponed = "+[Gmail]/Drafts"
+mailboxes =INBOX ="[Gmail]/Sent Mail" =[Gmail]/Bin =[Gmail]/Drafts =[Gmail]/Spam
+
+source $HOME/.config/neomutt/common
