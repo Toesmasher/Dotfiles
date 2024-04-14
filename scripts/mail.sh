@@ -2,8 +2,8 @@
 
 SNAME="mail"
 
-# Decrypt to make sure pgp agent has access
-gpg --decrypt ${HOME}/.password-store/mail/nicke.pgp > /dev/null 2>&1
+# Decrypt to make sure gpg agent has access
+gpg --decrypt ${HOME}/.password-store/email/nicke.gpg > /dev/null 2>&1
 
 tmux has-session -t ${SNAME} > /dev/null 2>&1
 if [[ ! $? -eq 0 ]]; then
