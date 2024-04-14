@@ -17,6 +17,7 @@ set include
 set mail_check_stats
 set sleep_time = 0
 set mailcap_path = "~/.config/neomutt/mailcap"
+auto_view text/html
 
 # Sidebar
 set sidebar_visible = yes
