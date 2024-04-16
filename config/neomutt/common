@@ -37,6 +37,8 @@ bind index,pager i noop
 bind index,pager g noop
 
 bind pager,attach h exit
+bind pager j next-line
+bind pager k previous-line
 bind index l display-message
 bind index,pager R group-reply
 
@@ -44,7 +46,6 @@ bind index,pager u sidebar-next
 bind index,pager i sidebar-prev
 bind index,pager o sidebar-open
 macro index s <sync-mailbox>
-
 
 # Colors
 # Default index colors:
