@@ -1,0 +1,42 @@
+[general]
+accounts = nicke,spambox
+ui = ttyui
+pythonfile = ~/.config/offlineimap/offlineimap.py
+maxconnections = 3
+maxsyncaccounts = 3
+
+[Account nicke]
+localrepository = nicke-local
+remoterepository = nicke-remote
+autorefresh = 1
+
+[Repository nicke-local]
+type = Maildir
+localfolders = ~/Mail/nicke
+restoreatime = no
+
+[Repository nicke-remote]
+type = IMAP
+remoteuser = nicke@toesmasher.se
+remotepasseval = get_pass("email/nicke")
+remotehost = imap.gmail.com
+ssl = yes
+sslcacertfile = /etc/ssl/certs/ca-certificates.crt
+
+[Account spambox]
+localrepository = spambox-local
+remoterepository = spambox-remote
+autorefresh = 1
+
+[Repository spambox-local]
+type = Maildir
+localfolders = ~/Mail/spambox
+restoreatime = no
+
+[Repository spambox-remote]
+type = IMAP
+remoteuser = spambox@toesmasher.se
+remotepasseval = get_pass("email/spambox")
+remotehost = imap.gmail.com
+ssl = yes
+sslcacertfile = /etc/ssl/certs/ca-certificates.crt

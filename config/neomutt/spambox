@@ -1,18 +1,19 @@
 # vi: set ft=neomuttrc :
 set from = "spambox@toesmasher.se"
-set realname = "Niklas Berggren"
+set real_name = "Niklas Berggren"
 set my_pass = "`pass email/spambox`"
 
 set smtp_url = "smtps://spambox@toesmasher.se@smtp.gmail.com:465"
 set smtp_pass=$my_pass
 
-set folder = "imaps://spambox@toesmasher.se@imap.gmail.com:993"
-set imap_pass=$my_pass
+set folder = "~/Mail/spambox"
+set mbox_type = "Maildir"
 
-set spoolfile = "+INBOX"
-set record = "+[Gmail]/Sent Mail"
-set trash = "+[Gmail]/Bin"
-set postponed = "+[Gmail]/Drafts"
-mailboxes =INBOX ="[Gmail]/Sent Mail" =[Gmail]/Bin =[Gmail]/Drafts =[Gmail]/Spam
+set spool_file = "+INBOX"
+set record = "+[Gmail].Sent Mail"
+set trash = "+[Gmail].Bin"
+set postponed = "+[Gmail].Drafts"
+
+mailboxes `find ~/Mail/spambox -type d -not -name "spambox" -not -name cur -not -name new -not -name tmp -printf "=\"%P\" "`
 
 source $HOME/.config/neomutt/common
