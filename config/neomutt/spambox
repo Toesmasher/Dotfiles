@@ -4,7 +4,7 @@ set real_name = "Niklas Berggren"
 set my_pass = "`pass email/spambox`"
 
 set smtp_url = "smtps://spambox@toesmasher.se@smtp.gmail.com:465"
-set smtp_pass=$my_pass
+set smtp_pass = $my_pass
 
 set folder = "~/Mail/spambox"
 set mbox_type = "Maildir"

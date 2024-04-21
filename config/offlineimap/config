@@ -1,5 +1,5 @@
 [general]
-accounts = nicke,spambox
+accounts = nicke,spambox,lumenradio
 ui = ttyui
 pythonfile = ~/.config/offlineimap/offlineimap.py
 maxconnections = 3
@@ -17,9 +17,9 @@ restoreatime = no
 
 [Repository nicke-remote]
 type = IMAP
+remotehost = imap.gmail.com
 remoteuser = nicke@toesmasher.se
 remotepasseval = get_pass("email/nicke")
-remotehost = imap.gmail.com
 ssl = yes
 sslcacertfile = /etc/ssl/certs/ca-certificates.crt
 
@@ -35,8 +35,56 @@ restoreatime = no
 
 [Repository spambox-remote]
 type = IMAP
+remotehost = imap.gmail.com
 remoteuser = spambox@toesmasher.se
 remotepasseval = get_pass("email/spambox")
-remotehost = imap.gmail.com
 ssl = yes
 sslcacertfile = /etc/ssl/certs/ca-certificates.crt
+
+[Account lumenradio]
+localrepository = lumenradio-local
+remoterepository = lumenradio-remote
+autorefresh = 1
+
+[Repository lumenradio-local]
+type = Maildir
+localfolders = ~/Mail/lumenradio
+restoreatime = no
+
+[Repository lumenradio-remote]
+type = IMAP
+remotehost = outlook.office365.com
+remoteuser = niklas.berggren@lumenradio.com
+auth_mechanisms = XOAUTH2
+oauth2_request_url = https://login.microsoftonline.com/common/oauth2/v2.0/token
+oauth2_client_id = 08162f7c-0fd2-4200-a84a-f25a4db0b584
+oauth2_client_secret = TxRBilcHdC6WGBee]fs?QR:SJ8nI[g82
+oauth2_refresh_token_eval = get_token("work/email-token")
+ssl = yes
+sslcacertfile = /etc/ssl/certs/ca-certificates.crt
+
+folderfilter = lambda folder: not folder.startswith('Calendar') and not folder.startswith('Contacts')
+
+[Account consat]
+localrepository = consat-local
+remoterepository = consat-remote
+autorefresh = 1
+
+[Repository consat-local]
+type = Maildir
+localfolders = ~/Mail/consat
+restoreatime = no
+
+[Repository consat-remote]
+type = IMAP
+remotehost = outlook.office365.com
+remoteuser = niklas.berggren@consat.com
+auth_mechanisms = XOAUTH2
+oauth2_request_url = https://login.microsoftonline.com/common/oauth2/v2.0/token
+oauth2_client_id = 08162f7c-0fd2-4200-a84a-f25a4db0b584
+oauth2_client_secret = TxRBilcHdC6WGBee]fs?QR:SJ8nI[g82
+oauth2_refresh_token_eval = get_token("consat/email-token")
+ssl = yes
+sslcacertfile = /etc/ssl/certs/ca-certificates.crt
+
+folderfilter = lambda folder: not folder.startswith('Calendar') and not folder.startswith('Contacts')
