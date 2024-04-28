@@ -27,6 +27,10 @@ if [[ ! $? -eq 0 ]]; then
     tmux rename-window lumenradio
     tmux send-keys "neomutt -F ${HOME}/.config/neomutt/lumenradio" C-M
 
+    tmux new-window
+    tmux rename-window consat
+    tmux send-keys "neomutt -F ${HOME}/.config/neomutt/consat" C-M
+
     # offlineimap
     tmux new-window
     tmux rename-window offlineimap
