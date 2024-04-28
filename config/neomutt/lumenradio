@@ -3,9 +3,6 @@ set from = "niklas.berggren@lumenradio.com"
 set real_name = "Niklas Berggren"
 set my_pass = "`pass work/email`"
 
-set smtp_url = "smtps://nicke@toesmasher.se@smtp.gmail.com:465"
-set smtp_pass = $my_pass
-
 set folder = "~/Mail/lumenradio"
 set mbox_type = "Maildir"
 
@@ -18,6 +15,6 @@ mailboxes `find ~/Mail/lumenradio -type d -not -name "lumenradio" -not -name cur
 
 # New mail notification
 set new_mail_command = "notify-send --icon=/usr/share/neomutt/logo/neomutt-256.png \
-  -t 60000 'Lumenradio.com' 'New mail (%n)'"
+  'Lumenradio.com' 'New mail (%n)'"
 
 source $HOME/.config/neomutt/common

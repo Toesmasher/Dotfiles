@@ -2,12 +2,21 @@
 set from = "nicke@toesmasher.se"
 set real_name = "Niklas Berggren"
 set my_pass = "`pass email/nicke`"
-
-set smtp_url = "smtps://nicke@toesmasher.se@smtp.gmail.com:465"
-set smtp_pass = $my_pass
+set my_secret = "`pass email/toesmasher.se-secret`"
+set my_smtp_refresh_token="`pass email/nicke-token`"
 
 set folder = "~/Mail/nicke"
 set mbox_type = "Maildir"
+
+# SMTP
+set smtp_url = "smtps://smtp.gmail.com:465"
+set smtp_user = "nicke@toesmasher.se"
+set smtp_authenticators="oauthbearer"
+set smtp_oauth_refresh_command="python ~/.config/neomutt/oauth2.py \
+  --quiet \
+  --client_id=541987573942-5us1b6pi8j3psa9i101e0s9hbcc79icp.apps.googleusercontent.com \
+  --client_secret=$my_secret \
+  --refresh_token=$my_smtp_refresh_token"
 
 set spool_file = "+INBOX"
 set record = "+[Gmail].Sent Mail"
@@ -18,6 +27,6 @@ mailboxes `find ~/Mail/nicke -type d -not -name "nicke" -not -name cur -not -nam
 
 # New mail notification
 set new_mail_command = "notify-send --icon=/usr/share/neomutt/logo/neomutt-256.png \
-  -t 60000 'Toesmasher.se' 'New mail (%n)'"
+  'Toesmasher.se' 'New mail (%n)'"
 
 source $HOME/.config/neomutt/common
