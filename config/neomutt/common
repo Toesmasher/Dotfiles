@@ -48,6 +48,8 @@ hdr_order from to cc date subject
 # Keybinds
 bind index,pager i noop
 bind index,pager g noop
+bind index j next-entry
+bind index k previous-entry
 
 bind pager,attach h exit
 bind pager j next-line
@@ -58,6 +60,5 @@ bind index,pager R group-reply
 bind index,pager u sidebar-next
 bind index,pager i sidebar-prev
 bind index,pager o sidebar-open
-macro index s <sync-mailbox>
 
 source ~/.config/neomutt/colors
