@@ -61,4 +61,6 @@ bind index,pager u sidebar-next
 bind index,pager i sidebar-prev
 bind index,pager o sidebar-open
 
+macro index s <sync-mailbox>
+
 source ~/.config/neomutt/colors
