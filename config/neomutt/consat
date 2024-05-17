@@ -20,7 +20,9 @@ set record = "+Sent Items"
 set trash = "+Trash"
 set postponed = "+Drafts"
 
-mailboxes `find ~/Mail/consat -type d -not -name "consat" -not -name cur -not -name new -not -name tmp -printf "=\"%P\" "`
+#mailboxes `find ~/Mail/consat -type d -not -name "consat" -not -name cur -not -name new -not -name tmp -printf "=\"%P\" "`
+mailboxes ="INBOX" ="Archive" ="Drafts" ="Sent Items" ="Junk Email" ="Trash" \
+          ="its4support" ="status-mail" ="vehicle"
 
 # New mail notification
 set new_mail_command = "notify-send --icon=/usr/share/neomutt/logo/neomutt-256.png \

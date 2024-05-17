@@ -19,7 +19,8 @@ set record = "+[Gmail].Sent Mail"
 set trash = "+[Gmail].Trash"
 set postponed = "+[Gmail].Drafts"
 
-mailboxes `find ~/Mail/nicke -type d -not -name "nicke" -not -name cur -not -name new -not -name tmp -printf "=\"%P\" "`
+mailboxes ="INBOX" ="[Gmail].All Mail" ="[Gmail].Drafts" ="[Gmail].Sent Mail" \
+          ="[Gmail].Spam" ="[Gmail].Trash"
 
 # New mail notification
 set new_mail_command = "notify-send --icon=/usr/share/neomutt/logo/neomutt-256.png \

@@ -16,9 +16,10 @@ set smtp_oauth_refresh_command="python ~/.config/neomutt/mutt_oauth2.py ~/.confi
 
 set spool_file = "+INBOX"
 set record = "+[Gmail].Sent Mail"
-set trash = "+[Gmail].Bin"
+set trash = "+[Gmail].Trash"
 set postponed = "+[Gmail].Drafts"
 
-mailboxes `find ~/Mail/spambox -type d -not -name "spambox" -not -name cur -not -name new -not -name tmp -printf "=\"%P\" "`
+mailboxes ="INBOX" ="[Gmail].All Mail" ="[Gmail].Drafts" ="[Gmail].Sent Mail" \
+          ="[Gmail].Spam" ="[Gmail].Trash"
 
 source $HOME/.config/neomutt/common
