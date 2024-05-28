@@ -24,10 +24,6 @@ if [[ ! $? -eq 0 ]]; then
 
     # Work
     tmux new-window
-    tmux rename-window lumenradio
-    tmux send-keys "neomutt -F ${HOME}/.config/neomutt/lumenradio" C-M
-
-    tmux new-window
     tmux rename-window consat
     tmux send-keys "neomutt -F ${HOME}/.config/neomutt/consat" C-M
 

@@ -5,7 +5,7 @@ set my_pass = "`pass email/nicke`"
 set my_secret = "`pass email/toesmasher.se-secret`"
 set my_smtp_refresh_token="`pass email/nicke-token`"
 
-set folder = "~/Mail/nicke"
+set folder = "~/.mail/nicke"
 set mbox_type = "Maildir"
 
 # SMTP

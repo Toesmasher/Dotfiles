@@ -5,7 +5,7 @@ set my_pass = "`pass email/spambox`"
 set my_secret = "`pass email/toesmasher.se-secret`"
 set my_smtp_refresh_token="`pass email/spambox-token`"
 
-set folder = "~/Mail/spambox"
+set folder = "~/.mail/spambox"
 set mbox_type = "Maildir"
 
 # SMTP

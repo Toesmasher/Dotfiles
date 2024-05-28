@@ -4,7 +4,7 @@ set real_name = "Niklas Berggren"
 set my_pass = "`pass consat/office365`"
 set my_smtp_refresh_token="`pass consat/email-token`"
 
-set folder = "~/Mail/consat"
+set folder = "~/.mail/consat"
 set mbox_type = "Maildir"
 
 # SMTP
