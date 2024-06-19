@@ -14,5 +14,6 @@ function i4m_setup
   set -gx PATH {$ANT_HOME}/bin:{$GROOVY_HOME}/bin:{$HOME}/bin:{$ASX_TOOL_DIR}/bin:{$QT_HOME}/target/linux/i386/bin:{$PATH}
   set -gx LD_LIBRARY_PATH {$QT_HOME}/target/linux/i386/lib/:{$OMNI_HOME}/target/linux/i386/lib:$LD_LIBRARY_PATH 
 
-  alias ant="ant -DapplyOnRequiredComponents=compile"
+  alias ant="ant -v -DapplyOnRequiredComponents=compile"
+  alias ant_mx4="ant -v -DapplyOnRequiredComponents=compile -Dtarget.type=MX4 -Dtarget.os.arch=armv7 -Dtarget.os.version=26 -Dtarget.os.name=linux"
 end
