@@ -1,5 +1,5 @@
 function i4m_setup
-  set -gx CVSROOT "niklas.berggren@vault:/cvsroot/i4m"
+  set -gx CVSROOT "niklas.berggren@sauron:/cvsroot/i4m"
   set -gx CVS_RSH "ssh"
 
   set -gx WORKSPACE {$HOME}/Projects/consat/i4m
