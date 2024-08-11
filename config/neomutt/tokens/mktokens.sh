@@ -4,7 +4,7 @@
 
 # Main
 TOESMASHER_SECRET=$(pass show email/toesmasher.se-secret)
-python mutt_oauth2.py \
+python ../mutt_oauth2.py \
   --authorize \
   --authflow authcode \
   --provider google \
@@ -14,7 +14,7 @@ python mutt_oauth2.py \
   nicke
 
 # Spam
-python mutt_oauth2.py \
+python ../mutt_oauth2.py \
   --authorize \
   --authflow authcode \
   --provider google \
@@ -24,7 +24,7 @@ python mutt_oauth2.py \
   spambox
 
 # Work
-python mutt_oauth2.py \
+python ../mutt_oauth2.py \
   --authorize \
   --authflow localhostauthcode \
   --provider microsoft \

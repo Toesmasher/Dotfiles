@@ -2,7 +2,7 @@ set -gx XDG_CONFIG_HOME "$HOME/.config"
 set -gx ELECTRON_OZONE_PLATFORM_HINT "wayland"
 
 if type -q nvim
-  set -gx PAGER "nvim +Man!"
+  # set -gx PAGER "nvim +Man!"
   set -gx EDITOR "nvim"
 end
 
