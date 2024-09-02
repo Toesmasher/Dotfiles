@@ -8,6 +8,10 @@ set my_smtp_refresh_token="`pass email/nicke-token`"
 set folder = "~/.mail/nicke"
 set mbox_type = "Maildir"
 
+set crypt_use_gpgme = yes
+set crypt_autosign
+set pgp_sign_as=0x2CF9BDB85306FB85B71F610CEAD3ED8F18DFF1FB
+
 # SMTP
 set smtp_url = "smtps://smtp.gmail.com:465"
 set smtp_user = "nicke@toesmasher.se"
