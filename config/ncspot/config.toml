@@ -42,31 +42,11 @@ volnorm = true
 "k" = "move up 1"
 "l" = "move right 1"
 
-"Q" = "quit"
+"q" = "quit"
 
 [notification_format]
 title = "NCSpot"
 body = "%artists - %title (%duration)"
-
-# Gruvbox
-#[theme]
-#background = "default"
-#primary = "#32302f"
-#primary = "#646261"
-#secondary = "light black"
-#title = "#8ec07c"
-#playing = "#689d6a"
-#playing_bg = "#383838"
-#playing_selected = "#ebdbb2"
-#highlight = "#d5c4a1"
-#highlight_bg = "#383838"
-#error = "#fbf1c7"
-#error_bg = "#cc241d"
-#statusbar_progress = "#458588"
-#statusbar_bg = "#282828"
-#statusbar = "#98971a"
-#cmdline = "#d5c4a1"
-#cmdline_bg = "#383838"
 
 # Catppuccin-macchiato
 [theme]
