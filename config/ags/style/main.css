@@ -1,0 +1,56 @@
+@import url("colors.css");
+
+* {
+  font-family: 'FreeSans';
+  font-weight: bold;
+  font-size: 12pt;
+
+  margin: 0px;
+  padding: 0px;
+  background-image: none;
+  box-shadow: none;
+}
+
+window.bar {
+  color: @text;
+}
+
+button {
+  margin: 0px 2px;
+  border-color: transparent;
+  color: @text;
+}
+
+button.active {
+  color: @peach;
+  text-decoration: underline;
+}
+
+button:hover {
+  color: @red;
+}
+
+label {
+}
+
+.workspaces {
+    border-radius: 12px;
+}
+
+.workspaces button {
+    padding: 0px 5px;
+    /* background-color: @sky-alpha; */
+}
+
+.workspaces button.focused {
+    background-color: @surface0;
+}
+
+.client-title {
+    color: @text;
+}
+
+levelbar block,
+highlight {
+    min-height: 30px;
+}
