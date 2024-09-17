@@ -1,15 +1,6 @@
-import { Workspaces } from "./modules/workspaces.js";
-
-const hyprland = await Service.import("hyprland")
-// const notifications = await Service.import("notifications")
-// const mpris = await Service.import("mpris")
-// const audio = await Service.import("audio")
-// const battery = await Service.import("battery")
-// const systemtray = await Service.import("systemtray")
-
-// widgets can be only assigned as a child in one container
-// so to make a reuseable widget, make it a function
-// then you can simply instantiate one by calling it
+import { Clock } from "./modules/clock.js"
+import { Workspaces } from "./modules/workspaces.js"
+import { Systray } from "./modules/systray.js"
 
 function Left() {
     return Widget.Box({
@@ -33,6 +24,8 @@ function Right() {
         hpack: "end",
         spacing: 8,
         children: [
+          Systray(),
+          Clock()
         ],
     })
 }

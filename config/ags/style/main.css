@@ -1,14 +1,8 @@
 @import url("colors.css");
 
 * {
-  font-family: 'FreeSans';
-  font-weight: bold;
-  font-size: 12pt;
-
   margin: 0px;
   padding: 0px;
-  background-image: none;
-  box-shadow: none;
 }
 
 window.bar {
@@ -16,14 +10,16 @@ window.bar {
 }
 
 button {
+  background-image: none;
+  box-shadow: none;
+
   margin: 0px 2px;
+  padding: 0px 5px;
   border-color: transparent;
   color: @text;
 }
 
-button.active {
-  color: @peach;
-  text-decoration: underline;
+button:active {
 }
 
 button:hover {
@@ -31,26 +27,35 @@ button:hover {
 }
 
 label {
+  font-family: 'FreeSans';
+  font-weight: bold;
+  font-size: 12pt;
 }
 
-.workspaces {
+.clock_box {
+    background-color: @surface0;
+    /* background: linear-gradient(to bottom, @dark-alpha, transparent); */
+    color: @green;
+    padding: 2px 8px;
     border-radius: 12px;
 }
 
-.workspaces button {
-    padding: 0px 5px;
-    /* background-color: @sky-alpha; */
-}
-
-.workspaces button.focused {
+.systray_box {
     background-color: @surface0;
+    padding: 2px 8px;
+    border-radius: 12px;
 }
 
-.client-title {
-    color: @text;
+.workspace_box {
+    border-radius: 12px;
+}
+
+.workspace_box button.active {
+  color: @peach;
+  text-decoration: underline;
 }
 
 levelbar block,
 highlight {
-    min-height: 30px;
+    /* min-height: 30px; */
 }

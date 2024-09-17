@@ -1,8 +1,6 @@
-const hyprland = await Service.import("hyprland")
+import { Range } from "./../utils/utils.js"
 
-export function range(i) {
-  return [...Array(i).keys()]
-}
+const hyprland = await Service.import("hyprland")
 
 export function Workspaces() {
   const workspaceLabel = (id) => {
@@ -16,7 +14,7 @@ export function Workspaces() {
     return Widget.Label(workspaceIcons[id] ?? "");
   }
 
-  const workspaceButtons = () => range(9).map((i) => {
+  const workspaceButtons = () => Range(9).map((i) => {
     let b = Widget.Button({
       on_clicked: () => hyprland.messageAsync(`dispatch workspace ${i + 1}`),
       child: workspaceLabel(i + 1),
@@ -30,7 +28,7 @@ export function Workspaces() {
   })
 
   return Widget.Box({
-    class_name: "workspaces",
+    class_name: "workspace_box",
     children: workspaceButtons()
   })
 }
