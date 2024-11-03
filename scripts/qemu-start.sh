@@ -39,7 +39,7 @@ if [[ ! -f "${OVMF_VARS_FILE}" ]]; then
   exit 1
 fi
 
-source ${MACHINE_DIR}/qemu-args.sh
+source ${ARGS_FILE}
 QEMU_ARGS+=" ${EXTRA_ARGS}"
 
-qemu-system-x86_64 ${QEMU_ARGS} 
+echo qemu-system-x86_64 ${QEMU_ARGS} 
