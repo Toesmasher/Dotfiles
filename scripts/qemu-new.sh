@@ -2,6 +2,8 @@
 
 set -e
 
+SCRIPT_DIR=$( cd -- "$( dirname -- "$(realpath ${BASH_SOURCE[0]})" )" &> /dev/null && pwd )
+
 MACHINE_DIR="$1"
 DISK_SIZE="$2"
 
@@ -22,8 +24,10 @@ fi
 mkdir ${MACHINE_DIR}
 cp ${OVMF_VARS_ORIG} ${OVMF_VARS_FILE}
 
-QEMU_ARGS="create -f qcow2 ${DISK_FILE} "
-QEMU_ARGS+="-o nocow=on "
-QEMU_ARGS+="${DISK_SIZE}G"
+QEMU_IMG_ARGS="create -f qcow2 ${DISK_FILE} "
+QEMU_IMG_ARGS+="-o nocow=on "
+QEMU_IMG_ARGS+="${DISK_SIZE}G"
 
-qemu-img ${QEMU_ARGS}
+qemu-img ${QEMU_IMG_ARGS}
+
+cp ${SCRIPT_DIR}/qemu-args.sh ${MACHINE_DIR}/qemu-args.sh
