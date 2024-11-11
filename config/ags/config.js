@@ -49,10 +49,6 @@ App.config({
     style: "./style/main.css",
     windows: [
         Bar(),
-
-        // you can call it, for each monitor
-        // Bar(0),
-        // Bar(1)
     ],
 })
 
