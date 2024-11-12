@@ -12,7 +12,7 @@ set mbox_type = "Maildir"
 set smtp_url = "smtps://smtp.gmail.com:465"
 set smtp_user = "spambox@toesmasher.se"
 set smtp_authenticators="oauthbearer"
-set smtp_oauth_refresh_command="python ~/.config/neomutt/mutt_oauth2.py ~/.config/neomutt/tokens/nicke"
+set smtp_oauth_refresh_command="python ~/.config/neomutt/mutt_oauth2.py ~/.config/neomutt/tokens/spambox"
 
 set spool_file = "+INBOX"
 set record = "+[Gmail].Sent Mail"
