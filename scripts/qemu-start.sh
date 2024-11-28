@@ -27,6 +27,5 @@ if [[ ! -f "${ARGS_FILE}" ]]; then
 fi
 
 source ${ARGS_FILE}
-QEMU_ARGS+=" ${EXTRA_ARGS}"
 
 qemu-system-x86_64 ${QEMU_ARGS} 
