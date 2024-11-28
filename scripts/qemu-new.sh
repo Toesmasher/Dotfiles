@@ -8,8 +8,8 @@ MACHINE_DIR="$1"
 DISK_SIZE="$2"
 
 DISK_FILE="${MACHINE_DIR}/disk.qcow2"
-OVMF_VARS_FILE="${MACHINE_DIR}/OVMF_VARS.fd"
-OVMF_VARS_ORIG="/usr/share/OVMF/x64/OVMF_VARS.fd"
+OVMF_VARS_FILE="${MACHINE_DIR}/OVMF_VARS.4m.fd"
+OVMF_VARS_ORIG="/usr/share/OVMF/x64/OVMF_VARS.4m.fd"
 
 if [[ -d "${MACHINE_DIR}" ]]; then
   echo "Dir ${MACHINE_DIR} exists"
