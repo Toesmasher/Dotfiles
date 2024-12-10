@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-set -e
+SCRIPT_DIR=$(cd -- "$(dirname -- "$(realpath ${BASH_SOURCE[0]})")" &> /dev/null && pwd)
 
 # Simple machine starter
 
@@ -10,6 +10,7 @@ EXTRA_ARGS="$@"
 
 DISK_FILE="${MACHINE_DIR}/disk.qcow2"
 ARGS_FILE="${MACHINE_DIR}/qemu-args.sh"
+NW_BR="virbr0"
 
 if [[ -z "${MACHINE_DIR}" ]]; then
   echo "No machine given"
@@ -27,5 +28,16 @@ if [[ ! -f "${ARGS_FILE}" ]]; then
 fi
 
 source ${ARGS_FILE}
+
+if [[ ! -z "${NW_BR}" ]]; then
+  ip link show ${NW_BR}
+  if [[ $? -eq 1 ]]; then
+    echo "create"
+    sudo ip link add ${NW_BR} type bridge
+    sudo ip set dev ${NW_BR} up
+    sudo ip link set ${NW_IFACE} master ${NW_BR}
+    sudo dhclient ${NW_BR}
+  fi
+fi
 
 qemu-system-x86_64 ${QEMU_ARGS} 
