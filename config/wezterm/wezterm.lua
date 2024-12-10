@@ -7,7 +7,7 @@ return {
 
   default_prog = { 'tmux.sh' },
 
-  font_size = 10.0,
+  font_size = 11.0,
   font = wezterm.font('FiraCode Nerd Font'),
   font_rules = {
     {
