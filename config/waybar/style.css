@@ -28,13 +28,21 @@ window#waybar {
   margin: 0px;
 }
 
-#window {
-  color: @maroon;
+#network {
   border-radius: 0px 0px 12px 0px;
+  color: @mauve;
+}
+
+#network.disconnected {
+  color: @red;
 }
 
 #workspaces {
   border-radius: 0px 0px 12px 12px;
+}
+
+#workspaces {
+  font-size: 18pt;
 }
 
 #workspaces button {
@@ -46,36 +54,28 @@ window#waybar {
 }
 
 #tray {
-  margin: 0px 3px;
+  margin-right: 3px;
   border-radius: 0px 0px 12px 12px;
 }
 
 #idle_inhibitor {
-  margin: 0px 3px;
+  margin-right: 3px;
   border-radius: 0px 0px 12px 12px;
 
   color: @red;
 }
 
-#network {
-  border-radius: 0px 0px 0px 12px;
-  color: @mauve;
-}
-
-#network.disconnected {
-  color: @red;
-}
-
-#backlight {
-  color: @teal;
-}
-
 #pulseaudio {
+  border-radius: 0px 0px 0px 12px;
   color: @sky;
 }
 
-#battery {
+#backlight {
   color: @sapphire;
+}
+
+#battery {
+  color: @blue;
 }
 
 @keyframes blink {
@@ -95,5 +95,5 @@ window#waybar {
 }
 
 #clock {
-  color: @blue;
+  color: @lavender;
 }
