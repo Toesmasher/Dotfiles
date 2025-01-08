@@ -3,15 +3,18 @@
   "positon": "top",
   "height": 20,
 
-  "modules-left": ["network", "custom/media"],
-  "modules-center": ["hyprland/workspaces"],
-  "modules-right": ["tray", "idle_inhibitor", "backlight", "battery", "pulseaudio", "clock"],
+  "modules-left": [ "hyprland/window" ],
+  "modules-center": [ "hyprland/workspaces" ],
+  "modules-right": [ "tray", "idle_inhibitor", "network", "backlight", "battery", "pulseaudio", "clock"],
 
   // Left
-  "network": {
-    "format-wifi": "   {signalStrength}% {essid} {ipaddr}",
-    "format-ethernet": "   {ifname}: {ipaddr}",
-    "format-disconnected": "⚠  Disconnected",
+  "hyprland/window": {
+    "format": "{}",
+    "max-length": 35,
+    "rewrite": {
+      "": "Harsh"
+    },
+    "separate-outputs": true,
   },
 
   // Center
@@ -29,7 +32,6 @@
     "on-click": "activate",
   },
 
-
   // Right
   "tray": {
     "icon-size": 15,
@@ -37,29 +39,20 @@
   },
 
   "idle_inhibitor": {
-	  "format": "{icon}",
+	  "format": "{icon} ",
 	  "format-icons": {
 	    "activated": "",
-	    "deactivated": ""
+	    "deactivated": "",
 	  }
   },
 
-  "pulseaudio": {
-    //"scroll-step": 1,
-    "format": "{icon}  {volume}%",
-    "format-bluetooth": "{icon}  {volume}%",
-    "format-muted": "M ",
-    "format-icons": {
-        "headphones": "",
-        "handsfree": "",
-        "headset": "",
-        "phone": "",
-        "portable": "",
-        "car": "",
-        "default": ["", ""],
-    }
+  "network": {
+    "interval": 2,
+    "format-wifi": "   {signalStrength}% {essid} {ipaddr}",
+    "format-ethernet": "   {ifname}: {ipaddr}",
+    "format-disconnected": "⚠  Disconnected",
   },
-
+  
   "backlight": {
     "device": "intel_backlight",
     "format": " {icon} {percent}%",
@@ -79,6 +72,22 @@
     "format-charging": " {capacity}%",
     "format-plugged": " {capacity}%",
     "format-icons": ["", "", "", "", "", "", "", "", "", "", "", ""],
+  },
+
+  "pulseaudio": {
+    //"scroll-step": 1,
+    "format": "{icon}  {volume}%",
+    "format-bluetooth": "{icon}  {volume}%",
+    "format-muted": "M ",
+    "format-icons": {
+        "headphones": "",
+        "handsfree": "",
+        "headset": "",
+        "phone": "",
+        "portable": "",
+        "car": "",
+        "default": ["", ""],
+    }
   },
 
   "clock": {

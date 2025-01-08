@@ -1,14 +1,13 @@
 @import url("colors.css");
 
 * {
-    font-family: 'FreeSans';
-    font-size: 12pt;
-    min-height: 0px;
+  font-family: 'FreeSans';
+  font-size: 12pt;
+  min-height: 0px;
 }
 
 window#waybar {
-    background: transparent;
-    /* background: linear-gradient(to bottom, @dark, @dark-alpha); */
+  background: transparent;
 }
 
 #backlight,
@@ -19,72 +18,82 @@ window#waybar {
 #pulseaudio,
 #tray,
 #idle_inhibitor,
+#window,
 #workspaces {
-    color: @text;
-    background: linear-gradient(to bottom, transparent, @dark-alpha);
-    font-weight: 600;
-    font-size: 12pt;
-    padding: 0px 8px;
-
-    border-radius: 12px 12px 12px 12px;
-    margin: 2px 2px 0px 2px;
+  color: @text;
+  background: @surface0-alpha;
+  font-weight: 600;
+  font-size: 12pt;
+  padding: 0px 8px;
+  margin: 0px;
 }
 
-#network {
-    color: @mauve;
-}
-
-#network.disconnected {
-    color: @red;
+#window {
+  color: @maroon;
+  border-radius: 0px 0px 12px 0px;
 }
 
 #workspaces {
+  border-radius: 0px 0px 12px 12px;
 }
 
 #workspaces button {
-    color: @text;
+  color: @text;
 }
 
 #workspaces button.active {
-    color: @peach;
-    text-decoration: underline;
+  color: @peach;
 }
 
 #tray {
+  margin: 0px 3px;
+  border-radius: 0px 0px 12px 12px;
 }
 
 #idle_inhibitor {
-   color: @red;
+  margin: 0px 3px;
+  border-radius: 0px 0px 12px 12px;
+
+  color: @red;
+}
+
+#network {
+  border-radius: 0px 0px 0px 12px;
+  color: @mauve;
+}
+
+#network.disconnected {
+  color: @red;
 }
 
 #backlight {
-    color: @sky;
+  color: @teal;
 }
 
 #pulseaudio {
-    color: @peach;
+  color: @sky;
 }
 
 #battery {
-    color: @blue;
+  color: @sapphire;
 }
 
 @keyframes blink {
-    to {
-        background-color: @text;
-        color: @red;
-    }
+  to {
+    background-color: @text;
+    color: @red;
+  }
 }
 
 #battery.warning {
-    color: @text;
-    animation-name: blink;
-    animation-duration: 0.5s;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
+  color: @text;
+  animation-name: blink;
+  animation-duration: 0.5s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
 }
 
 #clock {
-    color: @green;
+  color: @blue;
 }
