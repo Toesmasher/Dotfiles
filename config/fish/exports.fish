@@ -1,6 +1,8 @@
 set -gx XDG_CONFIG_HOME "$HOME/.config"
 set -gx ELECTRON_OZONE_PLATFORM_HINT "wayland"
 
+set -gx BAT_STYLE "plain"
+
 if type -q nvim
   set -gx MANPAGER "nvim +Man!"
   set -gx EDITOR "nvim"

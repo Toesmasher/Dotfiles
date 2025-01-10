@@ -1,3 +1,6 @@
+if type -q bat
+  alias cat bat
+end
 
 switch (uname -s)
   case FreeBSD
