@@ -10,7 +10,7 @@ EXTRA_ARGS="$@"
 
 DISK_FILE="${MACHINE_DIR}/disk.qcow2"
 ARGS_FILE="${MACHINE_DIR}/qemu-args.sh"
-NW_BR="virbr0"
+NW_BR="mainbr0"
 
 if [[ -z "${MACHINE_DIR}" ]]; then
   echo "No machine given"
@@ -32,11 +32,8 @@ source ${ARGS_FILE}
 if [[ ! -z "${NW_BR}" ]]; then
   ip link show ${NW_BR}
   if [[ $? -eq 1 ]]; then
-    echo "create"
-    sudo ip link add ${NW_BR} type bridge
-    sudo ip set dev ${NW_BR} up
-    sudo ip link set ${NW_IFACE} master ${NW_BR}
-    sudo dhclient ${NW_BR}
+    echo "Bridge ${NW_BR} does not exist"
+    exit 1
   fi
 fi
 

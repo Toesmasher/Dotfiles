@@ -1,8 +1,6 @@
 OVMF_VARS_FILE="${MACHINE_DIR}/OVMF_VARS.4m.fd"
 OVMF_CODE_FILE="/usr/share/OVMF/x64/OVMF_CODE.4m.fd"
 
-NW_IFACE="eno1"
-
 # Basics
 QEMU_ARGS="--enable-kvm -M q35 "
 QEMU_ARGS+="-m 4096 -cpu host -smp 4,sockets=1,cores=4,threads=1 "
