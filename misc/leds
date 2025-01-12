@@ -1,0 +1,14 @@
+PATH=/usr/bin
+
+case "$1" in
+  pre)
+    echo 0 0 100 0 0 0 > /sys/class/leds/chromeos:multicolor:charging/multi_intensity
+    echo 1 > /sys/class/leds/chromeos:multicolor:charging/brightness
+    ;;
+
+  post)
+    echo chromeos-auto > /sys/class/leds/chromeos:multicolor:charging/trigger
+    ;;
+esac
+
+exit 0
