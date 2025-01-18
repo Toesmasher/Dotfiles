@@ -1,0 +1,7 @@
+ignore-empty-password
+font=FiraCode Nerd Font
+
+indicator-radius=200
+
+image=~/Pictures/wallpapers/wallpaper.png
+scaling=fill

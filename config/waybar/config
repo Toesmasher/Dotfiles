@@ -1,7 +1,7 @@
 {
   "layer": "top",
   "positon": "top",
-  "height": 20,
+  "height": 25,
 
   "modules-left": [ "network" ],
   "modules-center": [ "hyprland/workspaces" ],

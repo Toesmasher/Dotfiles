@@ -3,5 +3,4 @@ __pycache__
 config/ncspot/userstate.cbor
 config/btop/btop.log
 
-config/offlineimap/M365-IMAP
-config/offlineimap/gmail-oauth2-tools
+config/neomutt/tokens/*
