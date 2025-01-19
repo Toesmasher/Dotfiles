@@ -48,9 +48,10 @@ cursor {
 }
 
 // Outputs, home
-output "BOE NE135A1M-NY1" {
+// BOE NE135A1M-NY1
+output "eDP-1" {
   scale 1.5
-  position x=-2880 y=0
+  position x=0 y=0
 }
 output "LG Electronics 34GN850 004NTBK70749" {
   scale 1
