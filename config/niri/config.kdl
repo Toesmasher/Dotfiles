@@ -51,16 +51,16 @@ cursor {
 // BOE NE135A1M-NY1
 output "eDP-1" {
   scale 1.5
-  position x=0 y=0
+  position x=4880 y=0
 }
 output "LG Electronics 34GN850 004NTBK70749" {
   scale 1
-  position x=2880 y=650
+  position x=0 y=650
   variable-refresh-rate
 }
 output "Dell Inc. DELL U2715H GH85D69U092S" {
   scale 1
-  position x=6320 y=0
+  position x=3440 y=0
   transform "270"
 }
 
