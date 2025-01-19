@@ -39,11 +39,11 @@ input {
   }
 
   warp-mouse-to-focus
-  // focus-follows-mouse max-scroll-amount="50%"
+  focus-follows-mouse max-scroll-amount="50%"
 }
 
 cursor {
-  // xcursor-theme ""
+  xcursor-theme "Bibata-Modern-Classic"
   xcursor-size 24
 }
 
@@ -54,12 +54,12 @@ output "BOE NE135A1M-NY1" {
 }
 output "LG Electronics 34GN850 004NTBK70749" {
   scale 1
-  position x=0 y=650
+  position x=2880 y=650
   variable-refresh-rate
 }
 output "Dell Inc. DELL U2715H GH85D69U092S" {
   scale 1
-  position x=3440 y=0
+  position x=6320 y=0
   transform "270"
 }
 
@@ -123,6 +123,7 @@ binds {
     Mod+R { spawn "fuzzel"; }
 
     Super+Shift+o { spawn "swaylock"; }
+    Super+Shift+s { spawn "screenshot-wayland.sh" "region-copy"; }
 
     // Media keys
     XF86AudioRaiseVolume   allow-when-locked=true { spawn "wpctl" "set-volume" "@DEFAULT_AUDIO_SINK@" "0.1+"; }
@@ -138,23 +139,23 @@ binds {
     XF86AudioNext          { spawn "playerctl" "next"; }
 
     // Column/Window handling
-    Mod+W              { close-window; }
+    Mod+W               { close-window; }
 
-    Mod+H              { focus-column-left; }
-    Mod+J              { focus-window-down; }
-    Mod+K              { focus-window-up; }
-    Mod+L              { focus-column-right; }
+    Mod+H               { focus-column-left; }
+    Mod+J               { focus-window-down; }
+    Mod+K               { focus-window-up; }
+    Mod+L               { focus-column-right; }
 
-    Mod+Shift+H        { move-column-left-or-to-monitor-left; }
-    Mod+Shift+J        { move-window-down; }
-    Mod+Shift+K        { move-window-up; }
-    Mod+Shift+L        { move-column-right-or-to-monitor-right; }
+    Mod+Ctrl+H          { move-column-left-or-to-monitor-left; }
+    Mod+Ctrl+J          { move-window-down; }
+    Mod+Ctrl+K          { move-window-up; }
+    Mod+Ctrl+L          { move-column-right-or-to-monitor-right; }
 
-    Mod+Shift+Comma    { consume-or-expel-window-left; }
-    Mod+Shift+Period   { consume-or-expel-window-right; }
+    Mod+Ctrl+Comma      { consume-or-expel-window-left; }
+    Mod+Ctrl+Period     { consume-or-expel-window-right; }
 
-    Mod+Ctrl+H         { focus-monitor-left; }
-    Mod+Ctrl+L         { focus-monitor-right; }
+    Mod+Shift+H         { focus-monitor-left; }
+    Mod+Shift+L         { focus-monitor-right; }
 
     Mod+Page_Down      { focus-workspace-down; }
     Mod+Page_Up        { focus-workspace-up; }
