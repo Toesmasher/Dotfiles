@@ -1,6 +1,7 @@
 environment {
   QT_QPA_PLATFORM "wayland"
   DISPLAY ":0"
+  XDG_CURRENT_DESKTOP "niri"
 }
 
 hotkey-overlay {
@@ -136,6 +137,10 @@ binds {
   XF86AudioPrev          { spawn "playerctl" "previous"; }
   XF86AudioNext          { spawn "playerctl" "next"; }
 
+  // SwayNC
+  Mod+N               { spawn "swaync-client" "-t"; }
+  Mod+D               { spawn "swaync-client" "-n"; }
+
   // Column/Window handling
   Mod+W               { close-window; }
 
@@ -204,5 +209,6 @@ output "Dell Inc. DELL U2715H GH85D69U092S" {
 spawn-at-startup "waybar"
 spawn-at-startup "xwayland-satellite"
 spawn-at-startup "swayidle"
+spawn-at-startup "swaync"
 spawn-at-startup "sh" "-c" "swaybg -m fill -i ~/Pictures/wallpapers/wallpaper.png"
 
