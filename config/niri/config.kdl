@@ -55,12 +55,12 @@ output "eDP-1" {
 }
 output "LG Electronics 34GN850 004NTBK70749" {
   scale 1.0
-  position x=2880 y=650
+  position x=0 y=650
   variable-refresh-rate
 }
 output "Dell Inc. DELL U2715H GH85D69U092S" {
   scale 1.0
-  position x=6320 y=0
+  position x=3440 y=0
   transform "270"
 }
 
@@ -115,12 +115,25 @@ animations {
   // slowdown 3.0
 }
 
-workspace "browser"
-workspace "dev 1"
-workspace "dev 2"
-workspace "heavy"
-workspace "chat"
-workspace "media"
+workspace "browser" {
+  open-on-output "LG Electronics 34GN850 004NTBK70749"
+}
+workspace "dev 1" {
+  open-on-output "LG Electronics 34GN850 004NTBK70749"
+}
+workspace "dev 2" {
+  open-on-output "LG Electronics 34GN850 004NTBK70749"
+}
+workspace "heavy" {
+  open-on-output "LG Electronics 34GN850 004NTBK70749"
+}
+
+workspace "chat" {
+  open-on-output "Dell Inc. DELL U2715H GH85D69U092S"
+}
+workspace "media" {
+  open-on-output "Dell Inc. DELL U2715H GH85D69U092S"
+}
 
 window-rule {
   geometry-corner-radius 12
