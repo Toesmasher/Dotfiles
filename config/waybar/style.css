@@ -10,9 +10,14 @@ window#waybar {
   background: transparent;
 }
 
+tooltip {
+  background: @surface0-alpha;
+}
+
 #backlight,
 #battery,
 #clock,
+#custom-weather,
 #memory,
 #network,
 #pulseaudio,
@@ -63,6 +68,13 @@ window#waybar {
   border-radius: 0px 0px 12px 12px;
 
   color: @red;
+}
+
+#custom-weather {
+  margin-right: 3px;
+  border-radius: 0px 0px 12px 12px;
+
+  color: @peach;
 }
 
 #pulseaudio {
