@@ -1,0 +1,19 @@
+workspace "browser" {
+  open-on-output "LG Electronics 34GN850 004NTBK70749"
+}
+workspace "dev 1" {
+  open-on-output "LG Electronics 34GN850 004NTBK70749"
+}
+workspace "dev 2" {
+  open-on-output "LG Electronics 34GN850 004NTBK70749"
+}
+workspace "heavy" {
+  open-on-output "LG Electronics 34GN850 004NTBK70749"
+}
+
+workspace "chat" {
+  open-on-output "Dell Inc. DELL U2715H GH85D69U092S"
+}
+workspace "media" {
+  open-on-output "Dell Inc. DELL U2715H GH85D69U092S"
+}

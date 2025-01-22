@@ -47,42 +47,6 @@ cursor {
   xcursor-size 24
 }
 
-// Outputs, home
-// BOE NE135A1M-NY1
-output "eDP-1" {
-  scale 1.5
-  position x=4880 y=0
-}
-output "LG Electronics 34GN850 004NTBK70749" {
-  scale 1.0
-  position x=0 y=650
-  variable-refresh-rate
-}
-output "Dell Inc. DELL U2715H GH85D69U092S" {
-  scale 1.0
-  position x=3440 y=0
-  transform "270"
-}
-
-// Outputs, work
-output "Dell Inc. DELL U2424H 38GZ9P3" {
-  scale 1.0
-  position x=0 y=0
-  transform "270"
-}
-
-output "Dell Inc. DELL S3221QSA 4DX09R3" {
-  scale 1.0
-  position x=1080 y=0
-  // variable-refresh-rate
-}
-
-output "Dell Inc. DELL U2424H G8GZ9P3" {
-  scale 1.0
-  position x=4920 y=0
-  transform "270"
-}
-
 layout {
   gaps 6
   center-focused-column "never"
@@ -113,26 +77,6 @@ layout {
 animations {
   // off
   // slowdown 3.0
-}
-
-workspace "browser" {
-  open-on-output "LG Electronics 34GN850 004NTBK70749"
-}
-workspace "dev 1" {
-  open-on-output "LG Electronics 34GN850 004NTBK70749"
-}
-workspace "dev 2" {
-  open-on-output "LG Electronics 34GN850 004NTBK70749"
-}
-workspace "heavy" {
-  open-on-output "LG Electronics 34GN850 004NTBK70749"
-}
-
-workspace "chat" {
-  open-on-output "Dell Inc. DELL U2715H GH85D69U092S"
-}
-workspace "media" {
-  open-on-output "Dell Inc. DELL U2715H GH85D69U092S"
 }
 
 window-rule {
@@ -200,13 +144,13 @@ binds {
   Mod+K               { focus-window-up; }
   Mod+L               { focus-column-right; }
 
-  Mod+Ctrl+H          { move-column-left-or-to-monitor-left; }
+  Mod+Ctrl+H          { consume-or-expel-window-left; }
   Mod+Ctrl+J          { move-window-down; }
   Mod+Ctrl+K          { move-window-up; }
-  Mod+Ctrl+L          { move-column-right-or-to-monitor-right; }
+  Mod+Ctrl+L          { consume-or-expel-window-right; }
 
-  Mod+Ctrl+Comma      { consume-or-expel-window-left; }
-  Mod+Ctrl+Period     { consume-or-expel-window-right; }
+  Mod+Ctrl+Comma      { move-window-to-monitor-left; }
+  Mod+Ctrl+Period     { move-window-to-monitor-right; }
 
   Mod+Shift+H         { focus-monitor-left; }
   Mod+Shift+L         { focus-monitor-right; }
@@ -243,11 +187,22 @@ binds {
   Ctrl+Alt+Delete { quit; }
 }
 
+output "LG Electronics 34GN850 004NTBK70749" {
+  scale 1.0
+  position x=0 y=650
+  variable-refresh-rate
+}
+output "Dell Inc. DELL U2715H GH85D69U092S" {
+  scale 1.0
+  position x=3440 y=0
+  transform "270"
+}
+
 // prefer-no-csd
-screenshot-path "~/Pictures/Screenshots/Screen %Y-%m-%d %H-%M-%S.png"
 
 // Startups
 spawn-at-startup "waybar"
 spawn-at-startup "xwayland-satellite"
 spawn-at-startup "swayidle"
 spawn-at-startup "sh" "-c" "swaybg -m fill -i ~/Pictures/wallpapers/wallpaper.png"
+

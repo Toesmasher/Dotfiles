@@ -1,0 +1,37 @@
+output "Dell Inc. DELL U2424H 38GZ9P3" {
+  scale 1.0
+  position x=0 y=0
+  transform "270"
+}
+
+output "Dell Inc. DELL S3221QSA 4DX09R3" {
+  scale 1.0
+  position x=1080 y=0
+  // variable-refresh-rate
+}
+
+output "Dell Inc. DELL U2424H G8GZ9P3" {
+  scale 1.0
+  position x=4920 y=0
+  transform "270"
+}
+
+workspace "browser" {
+  open-on-output "Dell Inc. DELL S3221QSA 4DX09R3"
+}
+workspace "dev 1" {
+  open-on-output "Dell Inc. DELL S3221QSA 4DX09R3"
+}
+workspace "dev 2" {
+  open-on-output "Dell Inc. DELL S3221QSA 4DX09R3"
+}
+workspace "heavy" {
+  open-on-output "Dell Inc. DELL S3221QSA 4DX09R3"
+}
+
+workspace "chat" {
+  open-on-output "Dell Inc. DELL U2424H G8GZ9P3"
+}
+workspace "media" {
+  open-on-output "Dell Inc. DELL U2424H G8GZ9P3"
+}
