@@ -2,5 +2,6 @@ __pycache__
 
 config/ncspot/userstate.cbor
 config/btop/btop.log
+config/niri/config.kdl
 
 config/neomutt/tokens/*
