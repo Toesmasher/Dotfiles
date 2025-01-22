@@ -1,3 +1,14 @@
+output "LG Electronics 34GN850 004NTBK70749" {
+  scale 1.0
+  position x=0 y=650
+  variable-refresh-rate
+}
+output "Dell Inc. DELL U2715H GH85D69U092S" {
+  scale 1.0
+  position x=1440 y=0
+  transform "270"
+}
+
 workspace "browser" {
   open-on-output "LG Electronics 34GN850 004NTBK70749"
 }
