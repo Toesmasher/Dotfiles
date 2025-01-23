@@ -58,6 +58,10 @@ layout {
     proportion 0.66667
   }
 
+  default-column-width {
+    proportion 0.33333
+  }
+
   focus-ring {
     // off
     width 2
@@ -91,6 +95,11 @@ window-rule {
 }
 
 window-rule {
+  match app-id=r#"^com\.mitchellh\.ghostty$"#
+  draw-border-with-background false
+}
+
+window-rule {
   match app-id=r#"^brave-browser$"#
   open-on-workspace "browser"
 }
@@ -116,8 +125,8 @@ window-rule {
 
 binds {
   // Spawning
-  Mod+Shift+Return { spawn "wezterm"; }
-  Mod+Ctrl+Return  { spawn "wezterm" "start" "--" "fish"; }
+  Mod+Shift+Return { spawn "ghostty"; }
+  Mod+Ctrl+Return  { spawn "ghostty" "-e" "fish"; }
 
   Mod+R { spawn "fuzzel"; }
 
@@ -139,7 +148,7 @@ binds {
 
   // SwayNC
   Mod+N               { spawn "swaync-client" "-t"; }
-  Mod+D               { spawn "swaync-client" "-n"; }
+  Mod+D               { spawn "swaync-client" "-d"; }
 
   // Column/Window handling
   Mod+W               { close-window; }
@@ -203,7 +212,7 @@ output "Dell Inc. DELL U2715H GH85D69U092S" {
   transform "270"
 }
 
-// prefer-no-csd
+prefer-no-csd
 
 // Startups
 spawn-at-startup "waybar"

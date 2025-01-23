@@ -1,0 +1,12 @@
+theme = catppuccin-macchiato
+background-opacity = 0.85
+
+font-family = FiraCode Nerd Font
+font-feature = -calt
+font-feature = -clig
+font-feature = -liga
+
+window-decoration = false
+confirm-close-surface = false
+
+command = tmux.sh
