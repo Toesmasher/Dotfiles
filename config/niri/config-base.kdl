@@ -126,7 +126,7 @@ window-rule {
 binds {
   // Spawning
   Mod+Shift+Return { spawn "ghostty"; }
-  Mod+Ctrl+Return  { spawn "ghostty" "-e" "fish"; }
+  Mod+Ctrl+Return  { spawn "ghostty" "-e" "tmux.sh"; }
 
   Mod+R { spawn "fuzzel"; }
 
