@@ -5,7 +5,7 @@ output "LG Electronics 34GN850 004NTBK70749" {
 }
 output "Dell Inc. DELL U2715H GH85D69U092S" {
   scale 1.0
-  position x=1440 y=0
+  position x=3440 y=0
   transform "270"
 }
 
