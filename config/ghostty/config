@@ -8,3 +8,7 @@ font-feature = -liga
 
 window-decoration = false
 confirm-close-surface = false
+
+keybind = clear
+keybind = super+plus=increase_font_size:1
+keybind = super+minus=decrease_font_size:1
