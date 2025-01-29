@@ -11,3 +11,7 @@ confirm-close-surface = false
 
 window-padding-x = 3
 window-padding-y = 3
+
+keybind = clear
+keybind = super+plus=increase_font_size:1
+keybind = super+minus=decrease_font_size:1
