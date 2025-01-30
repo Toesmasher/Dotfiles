@@ -1,4 +1,4 @@
-function i4m_setup
+function i4m-setup
   set -gx CVSROOT "niklas.berggren@sauron:/cvsroot/i4m"
   set -gx CVS_RSH "ssh"
 

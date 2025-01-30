@@ -1,4 +1,4 @@
-function i4m_git
+function i4m-git
   set -l TRACKAFFIXES "*.cpp" "*.hpp" "*.h" "*.java" "*.xsd" "*.sh" "*.xml"
 
   if test -z "$WORKSPACE"
