@@ -6,6 +6,7 @@
   lol = log --graph --pretty=format:'%C(auto)%h%d%Creset %C(cyan)(%ci)%Creset %C(green)%ce%Creset %s'
 
 [pull]
-	rebase = false
+	rebase = true
+
 [init]
 	defaultBranch = master
