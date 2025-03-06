@@ -5,7 +5,7 @@ set editor = "nvim"
 set sort = "threads"
 set sort_aux = "reverse-last-date-received"
 set date_format="%Y/%m/%d %H:%M:%S"
-set index_format="%4C %Z %d %-25.25L (%<l?%4l&%4c>) %s"
+set index_format="%4C %-10.10<[d?%[%H:%M]&%[%Y-%m-%d]> %Z %-15.15L %s"
 
 # Look and feel
 set pager_index_lines = 8
