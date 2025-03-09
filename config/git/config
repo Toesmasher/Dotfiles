@@ -3,7 +3,7 @@
 	name = Niklas Berggren
 
 [alias]
-  lol = log --graph --pretty=format:'%C(auto)%h%d%Creset %C(cyan)(%ci)%Creset %C(green)%ce%Creset %s'
+  lol = log --all --graph --decorate --pretty=format:'%C(auto)%h%d%Creset %C(cyan)(%ci)%Creset %C(green)%ce%Creset %s'
 
 [pull]
 	rebase = true
