@@ -51,7 +51,8 @@ QEMU_ARGS+="-device ich9-intel-hda -device hda-output,audiodev=snd0 "
 #    --tpmstate dir=${TPM_DIR} \
 #    --ctrl type=unixio,path=${TPM_SOCK} \
 #    --log level=120 \
-#    --tpm2
+#    --tpm2 \
+#    -d
 #fi
 #QEMU_ARGS+="-chardev socket,id=chrtpm,path=${TPM_SOCK} "
 #QEMU_ARGS+="-tpmdev emulator,id=tpm0,chardev=chrtpm "
