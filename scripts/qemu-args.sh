@@ -40,6 +40,23 @@ QEMU_ARGS+="-device usb-tablet " # Needed for windows guests
 QEMU_ARGS+="-audiodev pipewire,id=snd0 "
 QEMU_ARGS+="-device ich9-intel-hda -device hda-output,audiodev=snd0 "
 
+# TPM
+#TPM_DIR="${MACHINE_DIR}/tpm"
+#TPM_SOCK="${TPM_DIR}/sock"
+#if [[ ! -d "${TPM_DIR}" ]]; then
+#  mkdir ${TPM_DIR}
+#fi
+#if [[ ! -e "${TPM_SOCK}" ]]; then
+#  swtpm socket \
+#    --tpmstate dir=${TPM_DIR} \
+#    --ctrl type=unixio,path=${TPM_SOCK} \
+#    --log level=120 \
+#    --tpm2
+#fi
+#QEMU_ARGS+="-chardev socket,id=chrtpm,path=${TPM_SOCK} "
+#QEMU_ARGS+="-tpmdev emulator,id=tpm0,chardev=chrtpm "
+#QEMU_ARGS+="-device tpm-tis,tpmdev=tpm0 "
+
 # Boot menu
 # QEMU_ARGS+="-boot menu=on "
 
