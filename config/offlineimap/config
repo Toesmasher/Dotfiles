@@ -1,5 +1,5 @@
 [general]
-accounts = nicke,spambox,consat
+accounts = nicke,spambox
 ui = ttyui
 pythonfile = ~/.config/offlineimap/offlineimap.py
 maxconnections = 1
