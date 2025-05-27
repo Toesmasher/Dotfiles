@@ -2,6 +2,10 @@ if type -q bat
   alias cat bat
 end
 
+if type -q rg
+  alias rg "rg --hidden"
+end
+
 switch (uname -s)
   case FreeBSD
     alias ls "ls -CFG"
