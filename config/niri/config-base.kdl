@@ -66,9 +66,9 @@ layout {
     // off
     width 2
     // active-color "#8aadf4"
-    // inactive-color "#eed59f"
-    active-gradient from="#8aadf4" to="#c6a9f6" angle=45 relative-to="workspace-view"
-    inactive-gradient from="#eed49f" to="#f5a97f" angle=45 relative-to="workspace-view"
+    inactive-color "#00000000"
+    active-gradient from="#eed49f" to="#f5a97f" angle=45 relative-to="workspace-view"
+    // inactive-gradient from="#8aadf4" to="#c6a9f6" angle=45 relative-to="workspace-view"
   }
 
   struts {
