@@ -23,9 +23,9 @@ if [[ ! $? -eq 0 ]]; then
     tmux send-keys "neomutt -F ${HOME}/.config/neomutt/spambox" C-M
 
     # Work
-    tmux new-window
-    tmux rename-window consat
-    tmux send-keys "neomutt -F ${HOME}/.config/neomutt/consat" C-M
+    #tmux new-window
+    #tmux rename-window consat
+    #tmux send-keys "neomutt -F ${HOME}/.config/neomutt/consat" C-M
 
     # offlineimap
     tmux new-window
