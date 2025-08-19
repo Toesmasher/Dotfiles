@@ -1,6 +1,8 @@
 theme = catppuccin-macchiato
 background-opacity = 0.85
 
+mouse-hide-while-typing = true
+
 font-family = FiraCode Nerd Font
 font-feature = -calt
 font-feature = -clig
