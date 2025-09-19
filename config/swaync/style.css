@@ -3,7 +3,6 @@
 @define-color background rgb(54, 58, 79); /* surface0	*/
 @define-color background-alpha rgba(54, 58, 79, 0.8); /* surface0 */
 @define-color accent rgba(198, 160, 246, 0.8); /* mauve */
-@define-color current-line rgb(73, 77, 100); /* surface1 */
 @define-color comment rgb(110, 115, 141); /* overlay0	*/
 
 * {
@@ -29,8 +28,7 @@
 .notification-row:hover .notification {
   box-shadow: 0 1px 3px 1px rgba(0, 0, 0, 0.5);
   border: 0px solid @accent;
-  background: @current-line;
-}
+  background: @background-alpha
 
 .control-center .notification {
   box-shadow: none;
@@ -74,8 +72,7 @@
 }
 
 .close-button {
-  background: @current-line;
-  color: @foreground;
+  background: @background-alpha color: @foreground;
   text-shadow: none;
   padding: 0;
   border-radius: 100%;
@@ -99,16 +96,14 @@
   padding: 4px;
   margin: 0;
   box-shadow: none;
-  background: @current-line;
-  border: 2px solid @accent;
+  background: @background-alpha border: 2px solid @accent;
   color: @foreground;
 }
 
 .notification-default-action:hover,
 .notification-action:hover {
   -gtk-icon-effect: none;
-  background: @current-line;
-}
+  background: @background-alpha
 
 .notification-default-action {
   border-radius: 8px;
