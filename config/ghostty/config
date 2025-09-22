@@ -1,3 +1,5 @@
+window-inherit-working-directory = false
+
 theme = Catppuccin Macchiato
 background-opacity = 0.85
 
