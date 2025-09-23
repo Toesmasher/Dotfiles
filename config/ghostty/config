@@ -22,3 +22,5 @@ copy-on-select = true
 keybind = clear
 keybind = super+plus=increase_font_size:1
 keybind = super+minus=decrease_font_size:1
+
+custom-shader = shaders/cursor_blaze.glsl
