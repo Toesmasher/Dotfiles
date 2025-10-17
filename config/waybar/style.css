@@ -97,7 +97,7 @@ tooltip {
   }
 }
 
-#battery.warning {
+#battery.warning #battery.critical {
   color: @text;
   animation-name: blink;
   animation-duration: 0.5s;
