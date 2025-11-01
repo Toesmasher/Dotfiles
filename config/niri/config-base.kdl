@@ -89,6 +89,11 @@ window-rule {
   clip-to-geometry true
 }
 
+window-rule {
+  match app-id=r#"^com\.mitchellh\.ghostty$"#
+  draw-border-with-background false
+}
+
 /-window-rule {
   match app-id=r#"^org\.keepassxc\.KeePassXC$"#
   match app-id=r#"^org\.gnome\.World\.Secrets$"#
