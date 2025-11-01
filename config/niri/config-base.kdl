@@ -89,38 +89,16 @@ window-rule {
   clip-to-geometry true
 }
 
-window-rule {
-  match app-id=r#"^org\.wezfurlong\.wezterm$"#
-  default-column-width {}
-}
-
-window-rule {
-  match app-id=r#"^com\.mitchellh\.ghostty$"#
-  draw-border-with-background false
-}
-
-window-rule {
-  match app-id=r#"^brave-browser$"#
-  open-on-workspace "browser"
-}
-
-window-rule {
-  match app-id=r#"^teams-for-linux$"#
-  open-on-workspace "chat"
-}
-
-window-rule {
-  match app-id=r#"^WebCord$"#
-  open-on-workspace "chat"
-}
-
-
 /-window-rule {
   match app-id=r#"^org\.keepassxc\.KeePassXC$"#
   match app-id=r#"^org\.gnome\.World\.Secrets$"#
 
   block-out-from "screen-capture"
   block-out-from "screencast"
+}
+
+overview {
+  zoom 0.75
 }
 
 binds {
@@ -202,7 +180,7 @@ prefer-no-csd
 // Startups
 spawn-at-startup "waybar"
 spawn-at-startup "xwayland.sh"
-spawn-at-startup "swayidle"
+spawn-at-startup "swayidle -w"
 spawn-at-startup "swaync"
 spawn-at-startup "sh" "-c" "swaybg -m fill -i ~/Pictures/wallpapers/wallpaper.png"
 
