@@ -1,3 +1,4 @@
-timeout 300 swaylock
+lock "swaylock"
+timeout 300 "loginctl lock-session"
 timeout 900 "niri msg action power-off-monitors"
-before-sleep swaylock
+before-sleep "loginctl lock-session"

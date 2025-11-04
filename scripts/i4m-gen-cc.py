@@ -7,7 +7,7 @@ import re
 
 cwd = os.getcwd()
 
-proj_dirs_regexps = [ "net\\.volvo\\.vms\\.libraries\\..*", "net\\.volvo\\.vms\\.services\\..*", "net\\.volvo\\.vms\\.canlets\\..*" ]
+proj_dirs_regexps = [ "org\\..*", "net\\.volvo\\.vms\\.libraries\\..*", "net\\.volvo\\.vms\\.services\\..*", "net\\.volvo\\.vms\\.canlets\\..*" ]
 source_files_regexps = [ ".*\\.c", ".*\\.cpp", ".*\\.h", ".*\\.hpp" ]
 
 def is_lib_dir(d: str):

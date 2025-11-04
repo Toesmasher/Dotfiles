@@ -32,7 +32,7 @@ mode.select = "SELECT"
 
 [editor.lsp]
 display-progress-messages = true
-display-inlay-hints = true
+# display-inlay-hints = true
 
 [editor.inline-diagnostics]
 #cursor-line = "info"
@@ -49,5 +49,7 @@ C-l = "jump_view_right"
 
 H = "goto_first_nonwhitespace"
 L = "goto_line_end"
+
+p = "paste_before"
 
 space.B = ":echo %sh{git blame -L %{cursor_line},+1 %{buffer_name}}"
