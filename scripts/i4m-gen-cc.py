@@ -41,7 +41,11 @@ for p in projs:
                 if re.search(r, f):
                     proj_files.append(os.path.join(dir, f))
 
-    final_args.append("-I%s/build/generated-src" % p)
+    for d, _, _ in os.walk(os.path.join(p, "build/generated-src")):
+        final_args.append("-I%s" % d)
+
+    for d, _, _ in os.walk(os.path.join(p, "src")):
+        final_args.append("-I%s" % d)
 
     for f in proj_files:
         cc.append({
