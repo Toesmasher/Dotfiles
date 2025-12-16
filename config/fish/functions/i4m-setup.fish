@@ -5,6 +5,7 @@ function i4m-setup
   set -gx WORKSPACE {$HOME}/Projects/consat/i4m
 
   set -gx JAVA_HOME {$WORKSPACE}/net.volvo.vms.scm.util.jdks/target/linux/x86-64/jdk8/
+  set -gx JAVA21_HOME /usr/lib/jvm/zulu21-fx-bin/
   set -gx ANT_HOME {$WORKSPACE}/org.apache.ant/ 
 
   set -gx PATH {$ANT_HOME}/bin:{$PATH}
