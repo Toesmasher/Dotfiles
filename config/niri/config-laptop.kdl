@@ -1,3 +1,5 @@
+spawn-at-startup "battery-monitor.sh"
+
 output "BOE NE135A1M-NY1 Unknown" {
   scale 1.5
   position x=0 y=0
