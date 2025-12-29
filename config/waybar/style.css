@@ -2,8 +2,9 @@
 
 * {
   font-family: 'FreeSans';
-  font-size: 12pt;
+  font-size: 14px;
   min-height: 0px;
+  font-weight: bold;
 }
 
 window#waybar {
@@ -25,16 +26,32 @@ tooltip {
 #idle_inhibitor,
 #window,
 #workspaces {
+  transition: all 0.2s ease-in-out;
   color: @text;
-  background: @surface0-alpha;
+  background: @base-alpha;
   font-weight: 600;
   font-size: 12pt;
   padding: 0px 8px;
-  margin: 0px;
+  margin: 0px 4px;
+  border-radius: 0px 0px 10px 10px;
+}
+
+#workspaces button {
+  transition: all 0.3s ease-in-out;
+  min-width: 30px;
+}
+
+#workspaces button:hover {
+  color: @red; 
+  border: 0px;
+}
+
+#workspaces button.active {
+  background: @surface0-alpha;
+  min-width: 50px;
 }
 
 #network {
-  border-radius: 0px 0px 12px 0px;
   color: @mauve;
 }
 
@@ -43,7 +60,6 @@ tooltip {
 }
 
 #workspaces {
-  border-radius: 0px 0px 12px 12px;
 }
 
 #workspaces {
@@ -60,52 +76,38 @@ tooltip {
 
 #tray {
   margin-right: 3px;
-  border-radius: 0px 0px 12px 12px;
-}
-
-#idle_inhibitor {
-  margin-right: 3px;
-  border-radius: 0px 0px 12px 12px;
-
-  color: @red;
 }
 
 #custom-weather {
   margin-right: 3px;
-  border-radius: 0px 0px 12px 12px;
 
   color: @peach;
 }
 
 #pulseaudio {
-  border-radius: 0px 0px 0px 12px;
   color: @sky;
 }
 
 #backlight {
-  color: @sapphire;
+  color: @maroon;
 }
 
 #battery {
   color: @blue;
 }
 
-@keyframes blink {
-  to {
-    background-color: @text;
-    color: @red;
-  }
+#battery.charging, #battery.plugged {
+
 }
 
-#battery.warning #battery.critical {
-  color: @text;
+#battery.critical:not(.charging) {
   animation-name: blink;
   animation-duration: 0.5s;
-  animation-timing-function: linear;
+  animation-timing-function: steps(12);
   animation-iteration-count: infinite;
   animation-direction: alternate;
 }
 
 #clock {
-  color: @lavender;
+  color: @yellow;
 }

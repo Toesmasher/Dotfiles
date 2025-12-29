@@ -3,39 +3,29 @@
   "positon": "top",
   "height": 25,
 
-  "modules-left": [ "network" ],
+  "modules-left": [ "network", "network#wg" ],
   "modules-center": [ "niri/workspaces" ],
-  "modules-right": [ "tray", "idle_inhibitor", "custom/weather", "pulseaudio", "backlight", "battery", "clock"],
+  "modules-right": [ "tray", "custom/weather", "pulseaudio", "backlight", "battery", "clock"],
 
   // Left
   "network": {
     "interval": 2,
-    "format-wifi": "   {signalStrength}% {essid} {ipaddr}",
-    "format-ethernet": "   {ifname}: {ipaddr}",
+    "format-wifi": "   {signalStrength}% {essid}",
+    "format-ethernet": "   {ifname}",
     "format-disconnected": "⚠  Disconnected",
+    "tooltip-format": "{ipaddr}",
   },
 
-  // Hyprland
-  "hyprland/window": {
-    "format": "{}",
-    "max-length": 35,
-    "separate-outputs": true,
+  "network#wg": {
+    "interface": "wg0",
+    "interval": 2,
+    "format-wifi": "   {signalStrength}% {essid}",
+    "format-ethernet": "   {ifname}",
+    "format-disconnected": "⚠  wg0: Disconnected",
+    "tooltip-format": "{ipaddr}",
   },
 
   // Center
-  "hyprland/workspaces": {
-    "all-outputs": true,
-    "format": "{icon}",
-    "format-icons": {
-      "default": "",
-      "1": "",
-      "7": "",
-      "8": "󰭹",
-      "9": "",
-    },
-    "sort-by-number": true,
-    "on-click": "activate",
-  },
 
   // Niri
   "niri/window": {
