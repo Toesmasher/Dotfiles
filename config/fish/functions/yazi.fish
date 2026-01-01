@@ -1,6 +1,6 @@
 function yazi
 	set tmp (mktemp -t "yazi-cwd.XXXXXX")
-	(which yazi) $argv --cwd-file="$tmp"
+	y=(which yazi) $y $argv --cwd-file="$tmp"
 	if read -z cwd < "$tmp"; and [ -n "$cwd" ]; and [ "$cwd" != "$PWD" ]
 		builtin cd -- "$cwd"
 	end
