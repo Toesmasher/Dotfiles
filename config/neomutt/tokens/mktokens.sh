@@ -24,10 +24,10 @@ python ../mutt_oauth2.py \
   spambox
 
 # Work
-python ../mutt_oauth2.py \
-  --authorize \
-  --authflow localhostauthcode \
-  --provider microsoft \
-  --email niklas.berggren@consat.se \
-  --client-id d111b787-42af-4e80-91da-e6d3efcb62d9 \
-  consat
+#python ../mutt_oauth2.py \
+#  --authorize \
+#  --authflow localhostauthcode \
+#  --provider microsoft \
+#  --email niklas.berggren@consat.se \
+#  --client-id d111b787-42af-4e80-91da-e6d3efcb62d9 \
+#  consat

@@ -10,6 +10,6 @@ if type -q nvim
   set -gx EDITOR "nvim"
 end
 
-if type -q brave
-  set -gx BROWSER "brave"
+if type -q zen-browser
+  set -gx BROWSER "zen-browser"
 end
