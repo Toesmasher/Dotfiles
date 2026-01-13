@@ -7,6 +7,12 @@ output "Dell Inc. DELL U2715H GH85D69U092S" {
   scale 1.0
   position x=3440 y=0
   transform "270"
+
+  layout {
+    default-column-width {
+      proportion 1.0;
+    }
+  }
 }
 
 workspace "browser" {
