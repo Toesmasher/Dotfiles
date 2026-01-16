@@ -114,6 +114,7 @@ binds {
   Mod+R repeat=false { spawn "fuzzel"; }
 
   Super+Shift+o repeat=false { spawn "swaylock"; }
+  Super+Shift+p repeat=false { power-off-monitors; }
   Super+Shift+s repeat=false { spawn "screenshot-wayland.sh" "region-copy"; }
 
   // Media keys
