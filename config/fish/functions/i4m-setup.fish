@@ -14,5 +14,5 @@ function i4m-setup
   alias ant_mx4="ant -v -DapplyOnRequiredComponents=compile -Dtarget.type=MX4 -Dtarget.os.arch=armv7 -Dtarget.os.version=26 -Dtarget.os.name=linux"
   alias ant_cvc="ant -v -DapplyOnRequiredComponents=compile -Dtarget.type=CVC -Dtarget.os.arch=aarch64 -Dtarget.os.version=26 -Dtarget.os.name=linux"
 
-  set -gx PASSWORD_STORE_DIR {$HOME}/.conpass-store
+  # set -gx PASSWORD_STORE_DIR {$HOME}/.conpass-store
 end
