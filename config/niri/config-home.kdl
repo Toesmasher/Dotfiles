@@ -3,9 +3,17 @@ output "LG Electronics 34GN850 004NTBK70749" {
   position x=0 y=650
   variable-refresh-rate
 }
+
+output "ASUSTek COMPUTER INC PG32UCDM3 TCLMAS018703" {
+  mode "3840x2160@240"
+  scale 1.0
+  position x=0 y=250
+  //variable-refresh-rate
+}
+
 output "Dell Inc. DELL U2715H GH85D69U092S" {
   scale 1.0
-  position x=3440 y=0
+  position x=3840 y=0
   transform "270"
 
   layout {
