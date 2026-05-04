@@ -1,24 +1,23 @@
 # vi: set ft=neomuttrc :
-set from = "spambox@toesmasher.se"
+set from = "niklas.berggren@bitaddict.se"
 set real_name = "Niklas Berggren"
-set my_pass = "`pass email/spambox`"
-set my_secret = "`pass email/toesmasher.se-secret`"
-set my_smtp_refresh_token="`pass email/spambox-token`"
+set my_pass = "`pass bitaddict/mail/password`"
+set my_secret = "`pass bitaddict/mail/secret`"
+set my_smtp_refresh_token="`pass bitaddict/mail/token`"
 
-set folder = "~/.mail/spambox"
+set folder = "~/.mail/bitaddict"
 set mbox_type = "Maildir"
 
 # SMTP
 set smtp_url = "smtps://smtp.gmail.com:465"
-set smtp_user = "spambox@toesmasher.se"
+set smtp_user = "niklas.berggren@bitaddict.se"
 set smtp_authenticators="oauthbearer"
 set smtp_oauth_refresh_command="python ~/.config/neomutt/tokens/oauth2.py \
   --quiet \
-  --user=spambox@toesmasher.se \
-  --client_id=541987573942-5us1b6pi8j3psa9i101e0s9hbcc79icp.apps.googleusercontent.com \
+  --user=niklas.berggren@bitaddict.se \
+  --client_id=419635704791-e8ouna7jgofh7jr0v8hsds1ct0tbfalu.apps.googleusercontent.com \
   --client_secret=$my_secret \
   --refresh_token=$my_smtp_refresh_token"
-
 
 set spool_file = "+INBOX"
 set record = "+[Gmail].Sent Mail"

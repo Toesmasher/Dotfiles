@@ -1,5 +1,5 @@
 [general]
-accounts = nicke,spambox
+accounts = nicke,spambox,bitaddict
 ui = ttyui
 pythonfile = ~/.config/offlineimap/offlineimap.py
 maxconnections = 1
@@ -49,26 +49,24 @@ oauth2_refresh_token_eval = get_token("email/spambox-token")
 ssl = yes
 sslcacertfile = /etc/ssl/certs/ca-certificates.crt
 
-[Account consat]
-localrepository = consat-local
-remoterepository = consat-remote
+[Account bitaddict]
+localrepository = bitaddict-local
+remoterepository = bitaddict-remote
 autorefresh = 1
 
-[Repository consat-local]
+[Repository bitaddict-local]
 type = Maildir
-localfolders = ~/.mail/consat
+localfolders = ~/.mail/bitaddict
 restoreatime = no
 
-[Repository consat-remote]
+[Repository bitaddict-remote]
 type = IMAP
-remotehost = outlook.office365.com
-remoteuser = niklas.berggren@consat.se
+remotehost = imap.gmail.com
+remoteuser = niklas.berggren@bitaddict.se
 auth_mechanisms = XOAUTH2
-oauth2_request_url = https://login.microsoftonline.com/common/oauth2/v2.0/token
-oauth2_client_id = d111b787-42af-4e80-91da-e6d3efcb62d9
-oauth2_client_secret = 
-oauth2_refresh_token_eval = get_token("consat/email-token")
+oauth2_request_url = https://accounts.google.com/o/oauth2/token
+oauth2_client_id = 419635704791-e8ouna7jgofh7jr0v8hsds1ct0tbfalu.apps.googleusercontent.com
+oauth2_client_secret_eval = get_token("bitaddict/mail/secret")
+oauth2_refresh_token_eval = get_token("bitaddict/mail/token")
 ssl = yes
 sslcacertfile = /etc/ssl/certs/ca-certificates.crt
-
-folderfilter = lambda folder: not folder.startswith('Calendar') and not folder.startswith('Contacts')

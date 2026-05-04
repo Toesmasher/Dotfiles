@@ -1,33 +1,24 @@
 #!/usr/bin/env sh
 
-# Note: mutt_oauth2.py modified so that it always produces a refreh token from google
-
 # Main
 TOESMASHER_SECRET=$(pass show email/toesmasher.se-secret)
-python ../mutt_oauth2.py \
-  --authorize \
-  --authflow authcode \
-  --provider google \
-  --email nicke@toesmasher.se \
-  --client-id 541987573942-5us1b6pi8j3psa9i101e0s9hbcc79icp.apps.googleusercontent.com \
-  --client-secret ${TOESMASHER_SECRET} \
-  nicke
+python oauth2.py \
+  --user=nicke@toesmasher.se \
+  --client_id=541987573942-5us1b6pi8j3psa9i101e0s9hbcc79icp.apps.googleusercontent.com \
+  --client_secret=${TOESMASHER_SECRET} \
+  --generate_oauth2_token
 
 # Spam
-python ../mutt_oauth2.py \
-  --authorize \
-  --authflow authcode \
-  --provider google \
-  --email spambox@toesmasher.se \
-  --client-id 541987573942-5us1b6pi8j3psa9i101e0s9hbcc79icp.apps.googleusercontent.com \
-  --client-secret ${TOESMASHER_SECRET} \
-  spambox
+python oauth2.py \
+  --user=spambox@toesmasher.se \
+  --client_id=541987573942-5us1b6pi8j3psa9i101e0s9hbcc79icp.apps.googleusercontent.com \
+  --client_secret=${TOESMASHER_SECRET} \
+  --generate_oauth2_token
 
 # Work
-#python ../mutt_oauth2.py \
-#  --authorize \
-#  --authflow localhostauthcode \
-#  --provider microsoft \
-#  --email niklas.berggren@consat.se \
-#  --client-id d111b787-42af-4e80-91da-e6d3efcb62d9 \
-#  consat
+BITADDICT_SECRET=$(pass show bitaddict/mail/secret)
+python oauth2.py \
+  --user=niklas.berggren@bitaddict.se \
+  --client_id=419635704791-e8ouna7jgofh7jr0v8hsds1ct0tbfalu.apps.googleusercontent.com  \
+  --client_secret=${BITADDICT_SECRET}  \
+  --generate_oauth2_token
