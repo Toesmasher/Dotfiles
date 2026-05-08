@@ -27,4 +27,8 @@ set postponed = "+[Gmail].Drafts"
 mailboxes ="INBOX" ="[Gmail].All Mail" ="[Gmail].Drafts" ="[Gmail].Sent Mail" \
           ="[Gmail].Spam" ="[Gmail].Trash"
 
+# New mail notification
+set new_mail_command = "notify-send --icon=/usr/share/neomutt/logo/neomutt-256.png \
+  'bitaddict.se' 'New mail (%n)'"
+
 source $HOME/.config/neomutt/common
