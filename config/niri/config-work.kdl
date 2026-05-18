@@ -1,43 +1,9 @@
-output "Dell Inc. DELL U2424H 38GZ9P3" {
+output "AU Optronics 0x25ED Unknown" {
   scale 1.0
   position x=0 y=530
-  // transform "270"
 }
 
-output "Dell Inc. DELL S3221QSA 4DX09R3" {
+output "Lenovo Group Limited L32p-30 U511ANPW" {
   scale 1.0
-  position x=1920 y=0
-  // variable-refresh-rate
-}
-
-output "Dell Inc. DELL U2424H G8GZ9P3" {
-  scale 1.0
-  position x=5760 y=120
-  transform "270"
-
-  layout {
-    default-column-width {
-      proportion 1.0;
-    }
-  }
-}
-
-workspace "browser" {
-  open-on-output "Dell Inc. DELL S3221QSA 4DX09R3"
-}
-workspace "dev 1" {
-  open-on-output "Dell Inc. DELL S3221QSA 4DX09R3"
-}
-workspace "dev 2" {
-  open-on-output "Dell Inc. DELL S3221QSA 4DX09R3"
-}
-workspace "heavy" {
-  open-on-output "Dell Inc. DELL S3221QSA 4DX09R3"
-}
-
-workspace "chat" {
-  open-on-output "Dell Inc. DELL U2424H 38GZ9P3"
-}
-workspace "media" {
-  open-on-output "Dell Inc. DELL U2424H 38GZ9P3"
+  position x=-3840 y=0
 }
