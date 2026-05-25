@@ -7,3 +7,22 @@ output "Lenovo Group Limited L32p-30 U511ANPW" {
   scale 1.0
   position x=-3840 y=0
 }
+
+workspace "browser" {
+  open-on-output "Lenovo Group Limited L32p-30 U511ANPW"
+}
+workspace "dev 1" {
+  open-on-output "Lenovo Group Limited L32p-30 U511ANPW"
+}
+workspace "dev 2" {
+  open-on-output "Lenovo Group Limited L32p-30 U511ANPW"
+}
+workspace "heavy" {
+  open-on-output "Lenovo Group Limited L32p-30 U511ANPW"
+}
+workspace "chat" {
+  open-on-output "Lenovo Group Limited L32p-30 U511ANPW"
+}
+workspace "media" {
+  open-on-output "Lenovo Group Limited L32p-30 U511ANPW"
+}
