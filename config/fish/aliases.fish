@@ -8,7 +8,7 @@ end
 
 if type -q eza
   alias ls "eza --color=always --group-directories-first --icons"
-  alias ll "eza -la --color=always --group-directories-first --icons"
+  alias ll "eza -lag --color=always --group-directories-first --icons"
 end
 
 switch (uname -s)
