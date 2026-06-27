@@ -1,46 +1,74 @@
-#!/usr/bin/sh
+#!/usr/bin/env bash
 
-BATTERY_PATH=/sys/class/power_supply/BAT1
+BATTERY_OBJ_PATH="/org/freedesktop/UPower/devices/battery_BAT1"
 
-if [[ ! -d ${BATTERY_PATH} ]]; then
-  return 1;
-fi
+BRIGHTNESS_SAVED=65535
+BAT_NEXT_WARN=100
 
-LAST_WARNING_PERCENT=100
-CHARGE_FULL=$(cat ${BATTERY_PATH}/charge_full)
+BAT_STATE="charging"
+BAT_PERCENTAGE=100
 
-while [[ True ]]; do
-  BATTERY_STATE=$(cat ${BATTERY_PATH}/status)
-
-  if [[ "${BATTERY_STATE}" == "Discharging" ]]; then
-    CHARGE_NOW=$(cat ${BATTERY_PATH}/charge_now)
-    CHARGE_NOW_PERCENT=$((100 * ${CHARGE_NOW}/${CHARGE_FULL}))
-
-    if [[ ${CHARGE_NOW_PERCENT} -lt 10 && ${LAST_WARNING_PERCENT} -gt 10 ]]; then
-      notify-send -i /usr/share/icons/Adwaita/symbolic/status/battery-level-10-symbolic.svg \
-        -u critical Battery "Battery at ${CHARGE_NOW_PERCENT}%"
-      LAST_WARNING_PERCENT=10
-
-    elif [[ ${CHARGE_NOW_PERCENT} -lt 20 && ${LAST_WARNING_PERCENT} -gt 20 ]]; then
-      notify-send -t 30000 -i /usr/share/icons/Adwaita/symbolic/status/battery-level-20-symbolic.svg \
-        -u normal Battery "Battery at ${CHARGE_NOW_PERCENT}%"
-      BRIGHTNESS_SAVED=$(brightnessctl get)
-      brightnessctl set 30%
-      LAST_WARNING_PERCENT=20
-
-    elif [[ ${CHARGE_NOW_PERCENT} -lt 30 && ${LAST_WARNING_PERCENT} -gt 30 ]]; then
-      notify-send -t 30000 -i /usr/share/icons/Adwaita/symbolic/status/battery-level-30-symbolic.svg \
-        -u low Battery "Battery at ${CHARGE_NOW_PERCENT}%!" 
-      LAST_WARNING_PERCENT=30
-    fi
+/usr/bin/upower -i "${BATTERY_OBJ_PATH}" --monitor-detail | while read UP_OUT; do
+  if [[ "${UP_OUT}" =~ ^"state: " ]]; then
+    BAT_STATE=${UP_OUT#*state: }
+    BAT_STATE=$(printf "%s" $BAT_STATE) # Trim leading whitespace
+  elif [[ "${UP_OUT}" =~ ^"percentage: " ]]; then
+    BAT_PERCENTAGE=${UP_OUT#*percentage: }
+    BAT_PERCENTAGE=${BAT_PERCENTAGE%\%} # Trim trailing percent sign
+    BAT_PERCENTAGE=$(printf "%s" $BAT_PERCENTAGE) # Trim leading whitespace
   else
-    LAST_WARNING_PERCENT=100
-
-    if [[ ! -z "${BRIGHTNESS_SAVED}" ]]; then
-      brightnessctl set ${BRIGHTNESS_SAVED}
-      BRIGHTNESS_SAVED=""
-    fi
+    continue
   fi
 
-  sleep 20
+  if [[ "${BAT_STATE}" == "charging" ]]; then
+    BAT_NEXT_WARN=100
+    /usr/bin/brightnessctl set ${BRIGHTNESS_SAVED}
+    continue
+  fi
+
+  if [[ ${BAT_PERCENTAGE} -lt 10 && ${BAT_NEXT_WARN} -ge 10 ]]; then
+    /usr/bin/notify-send \
+      -i /usr/share/icons/Adwaita/symbolic/status/battery-level-10-symbolic.svg \
+      -u critical \
+      Battery \
+      "Battery at ${BAT_PERCENTAGE}%"
+
+      BAT_NEXT_WARN=0
+
+  elif [[ ${BAT_PERCENTAGE} -lt 20 && ${BAT_NEXT_WARN} -ge 20 ]]; then
+    /usr/bin/notify-send \
+      -i /usr/share/icons/Adwaita/symbolic/status/battery-level-20-symbolic.svg \
+      -u normal \
+      -t 30000 \
+      Battery \
+      "Battery at ${BAT_PERCENTAGE}%"
+
+      BRIGHTNESS_SAVED=$(/usr/bin/brightnessctl get)
+      /usr/bin/brightnessctl set 30%
+
+      BAT_NEXT_WARN=10
+
+  elif [[ ${BAT_PERCENTAGE} -lt 30 && ${BAT_NEXT_WARN} -ge 30 ]]; then
+    /usr/bin/notify-send \
+      -i /usr/share/icons/Adwaita/symbolic/status/battery-level-30-symbolic.svg \
+      -u normal \
+      -t 30000 \
+      Battery \
+      "Battery at ${BAT_PERCENTAGE}%"
+
+      BAT_NEXT_WARN=20     
+
+  elif [[ ${BAT_PERCENTAGE} -lt 50 && ${BAT_NEXT_WARN} -ge 50 ]]; then
+    /usr/bin/notify-send \
+      -i /usr/share/icons/Adwaita/symbolic/status/battery-level-50-symbolic.svg \
+      -u normal \
+      -t 10000 \
+      Battery \
+      "Battery at ${BAT_PERCENTAGE}%"
+
+      BAT_NEXT_WARN=30
+  fi
+
+  echo ${BAT_STATE}
+  echo ${BAT_PERCENTAGE}
 done
