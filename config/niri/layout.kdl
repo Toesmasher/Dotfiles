@@ -1,0 +1,41 @@
+prefer-no-csd
+
+overview {
+  zoom 0.75
+}
+
+layout {
+  gaps 6
+  center-focused-column "never"
+
+  preset-column-widths {
+    proportion 0.3333
+    proportion 0.5
+    proportion 0.6666
+  }
+
+  default-column-width {
+    proportion 0.3333
+  }
+
+  focus-ring {
+    // off
+    width 2
+    // active-color "#8aadf4"
+    inactive-color "#00000000"
+    active-gradient from="#eed49f" to="#f5a97f" angle=45 relative-to="workspace-view"
+    // inactive-gradient from="#8aadf4" to="#c6a9f6" angle=45 relative-to="workspace-view"
+  }
+
+  struts {
+    left -2
+    right -2
+    top -2
+    bottom -2
+  }
+}
+
+animations {
+  // off
+  // slowdown 3.0
+}

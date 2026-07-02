@@ -1,0 +1,39 @@
+input {
+  keyboard {
+    xkb {
+      layout "se"
+      options "caps:none"
+    }
+
+    repeat-delay 200
+    repeat-rate 75
+  }
+
+  touchpad {
+    // off
+    tap
+    // dwt
+    // dwtp
+    natural-scroll
+    // accel-speed 0.2
+    // accel-profile "flat"
+    // scroll-method "two-finger"
+    // disabled-on-external-mouse
+  }
+
+  mouse {
+    // off
+    // natural-scroll
+    // accel-speed 0.2
+    // accel-profile "flat"
+    // scroll-method "no-scroll"
+  }
+
+  warp-mouse-to-focus
+  focus-follows-mouse max-scroll-amount="50%"
+}
+
+cursor {
+  xcursor-theme "Bibata-Modern-Classic"
+  xcursor-size 24
+}

@@ -1,0 +1,33 @@
+spawn-at-startup "battery-monitor.sh"
+
+output "BOE NE135A1M-NY1 Unknown" {
+  scale 1.5
+  position x=3840 y=0
+  variable-refresh-rate
+}
+
+output "PNP(WAM) TYPE-C demoset-1" {
+  scale 1.0
+  position x=0 y=0
+  variable-refresh-rate
+}
+
+workspace "browser" {
+  open-on-output "PNP(WAM) TYPE-C demoset-1"
+}
+workspace "dev 1" {
+  open-on-output "PNP(WAM) TYPE-C demoset-1"
+}
+workspace "dev 2" {
+  open-on-output "PNP(WAM) TYPE-C demoset-1"
+}
+workspace "heavy" {
+  open-on-output "PNP(WAM) TYPE-C demoset-1"
+}
+
+workspace "chat" {
+  open-on-output "BOE NE135A1M-NY1 Unknown"
+}
+workspace "media" {
+  open-on-output "BOE NE135A1M-NY1 Unknown"
+}

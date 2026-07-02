@@ -1,0 +1,17 @@
+environment {
+  QT_QPA_PLATFORM "wayland"
+  DISPLAY ":0"
+  XDG_CURRENT_DESKTOP "niri"
+}
+
+hotkey-overlay {
+  skip-at-startup
+}
+
+include "input.kdl"
+include "layout.kdl"
+include "window-rules.kdl"
+include "binds.kdl"
+include "startup.kdl"
+
+include "locations/laptop-lumenradio.kdl"

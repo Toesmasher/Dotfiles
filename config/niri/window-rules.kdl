@@ -1,0 +1,17 @@
+window-rule {
+  geometry-corner-radius 12
+  clip-to-geometry true
+}
+
+window-rule {
+  match app-id=r#"^com\.mitchellh\.ghostty$"#
+  draw-border-with-background false
+}
+
+/-window-rule {
+  match app-id=r#"^org\.keepassxc\.KeePassXC$"#
+  match app-id=r#"^org\.gnome\.World\.Secrets$"#
+
+  block-out-from "screen-capture"
+  block-out-from "screencast"
+}
