@@ -24,16 +24,16 @@ output "Dell Inc. DELL U2715H GH85D69U092S" {
 }
 
 workspace "browser" {
-  open-on-output "LG Electronics 34GN850 004NTBK70749"
+  open-on-output "ASUSTek COMPUTER INC PG32UCDM3 TCLMAS018703"
 }
 workspace "dev 1" {
-  open-on-output "LG Electronics 34GN850 004NTBK70749"
+  open-on-output "ASUSTek COMPUTER INC PG32UCDM3 TCLMAS018703"
 }
 workspace "dev 2" {
-  open-on-output "LG Electronics 34GN850 004NTBK70749"
+  open-on-output "ASUSTek COMPUTER INC PG32UCDM3 TCLMAS018703"
 }
 workspace "heavy" {
-  open-on-output "LG Electronics 34GN850 004NTBK70749"
+  open-on-output "ASUSTek COMPUTER INC PG32UCDM3 TCLMAS018703"
 }
 
 workspace "chat" {
