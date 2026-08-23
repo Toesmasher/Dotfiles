@@ -30,6 +30,7 @@ if [[ ! $? -eq 0 ]]; then
     # offlineimap
     tmux new-window
     tmux rename-window offlineimap
+    tmux send-keys "cd tmp; source venv/bin/activate.fish" C-M
     tmux send-keys "offlineimap" C-M
 
     # First box as default
