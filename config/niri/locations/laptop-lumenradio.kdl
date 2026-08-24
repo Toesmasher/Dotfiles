@@ -12,9 +12,6 @@ output "PNP(WAM) TYPE-C demoset-1" {
   variable-refresh-rate
 }
 
-workspace "browser" {
-  open-on-output "PNP(WAM) TYPE-C demoset-1"
-}
 workspace "dev 1" {
   open-on-output "PNP(WAM) TYPE-C demoset-1"
 }
@@ -25,6 +22,9 @@ workspace "heavy" {
   open-on-output "PNP(WAM) TYPE-C demoset-1"
 }
 
+workspace "browser" {
+  open-on-output "BOE NE135A1M-NY1 Unknown"
+}
 workspace "chat" {
   open-on-output "BOE NE135A1M-NY1 Unknown"
 }
