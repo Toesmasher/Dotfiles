@@ -2,6 +2,7 @@ spawn-at-startup "waybar"
 spawn-at-startup "xwayland.sh"
 spawn-at-startup "swayidle"
 spawn-at-startup "swaync"
+spawn-at-startup "wayland-pipewire-idle-inhibit"
 spawn-at-startup "/usr/lib/xdg-desktop-portal"
 spawn-at-startup "sh" "-c" "swaybg -m fill -i ~/Pictures/wallpapers/wallpaper.png"
 
