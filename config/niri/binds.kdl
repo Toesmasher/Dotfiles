@@ -1,7 +1,6 @@
 binds {
   // Spawning
   Mod+Shift+Return repeat=false { spawn "ghostty"; }
-  Mod+Ctrl+Return  repeat=false { spawn "ghostty" "-e" "tmux.sh"; }
 
   Mod+R repeat=false { spawn "fuzzel"; }
 
