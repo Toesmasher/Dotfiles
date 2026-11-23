@@ -36,19 +36,35 @@ tooltip {
   border-radius: 0px 0px 10px 10px;
 }
 
-#workspaces button {
+#workspaces button label {
   transition: all 0.3s ease-in-out;
   min-width: 30px;
 }
 
 #workspaces button:hover {
-  color: @red; 
   border: 0px;
+  box-shadow: none;
+}
+
+#workspaces button:hover label {
+  color: @peach; 
+  min-width: 40px;
 }
 
 #workspaces button.active {
   background: @surface0-alpha;
+}
+
+#workspaces button.active label {
   min-width: 50px;
+}
+
+#workspaces button {
+  color: @text;
+}
+
+#workspaces button.active {
+  color: @peach;
 }
 
 #network {
@@ -64,14 +80,6 @@ tooltip {
 
 #workspaces {
   font-size: 18pt;
-}
-
-#workspaces button {
-  color: @text;
-}
-
-#workspaces button.active {
-  color: @peach;
 }
 
 #tray {
