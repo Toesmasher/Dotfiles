@@ -1,17 +1,18 @@
 {
   "$schema": "https://opencode.ai/config.json",
+  "model": "ollama/qwen3.5:opencode",
   "provider": {
     "ollama": {
       "npm": "@ai-sdk/openai-compatible",
+      "name": "Ollama@Home",
       "options": {
-        "baseURL": "http://10.99.0.50:11434/v1"
+        "baseURL": "http://10.99.0.50:11434/v1",
+        "apiKey": "ollama"
       },
       "models": {
         "qwen3.5:opencode": {
-          "tools": true
-        },
-        "gemma4:opencode": {
-          "tools": true
+          "name": "Qwen 3.5",
+          "tool_call": true
         }
       }
     }
