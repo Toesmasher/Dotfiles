@@ -1,6 +1,6 @@
 {
   "$schema": "https://opencode.ai/config.json",
-  "model": "ollama/qwen3.5:opencode",
+  "model": "ollama/gemma4:opencode",
   "provider": {
     "ollama": {
       "npm": "@ai-sdk/openai-compatible",
@@ -12,9 +12,19 @@
       "models": {
         "qwen3.5:opencode": {
           "name": "Qwen 3.5",
-          "tool_call": true
-        }
-      }
-    }
-  }
+          "tool_call": true,
+          "limit": {
+            "context": 32768
+          },
+        },
+        "gemma4:opencode": {
+          "name": "Gemma 4",
+          "tool_call": true,
+          "limit": {
+            "context": 262144
+          },
+        },
+      },
+    },
+  },
 }
